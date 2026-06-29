@@ -37,7 +37,7 @@ seaes:justificacion_seaes
 
 seaes:seaes
   a rdf:Property ;
-  rdfs:label "Criterios SEAES"@es ;
+  rdfs:label "SEAES"@es ;
   rdfs:comment "Registra en una sola expresión el criterio SEAES y su justificación."@es ;
   dcterms:description "Registra en una sola expresión el criterio SEAES y su justificación."@es ;
   rdfs:isDefinedBy <https://biblioteca.colmex.mx/vocabularios/seaes> .

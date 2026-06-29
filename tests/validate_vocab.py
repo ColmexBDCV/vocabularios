@@ -21,7 +21,7 @@ PROPERTIES = {
         "Registra la justificación breve de la correlación entre una tesis y el criterio SEAES seleccionado.",
     ),
     "seaes": (
-        "Criterios SEAES",
+        "SEAES",
         "Registra en una sola expresión el criterio SEAES y su justificación.",
     ),
 }

@@ -75,7 +75,7 @@
       "@id": "seaes:seaes",
       "@type": "rdf:Property",
       "label": {
-        "@value": "Criterios SEAES",
+        "@value": "SEAES",
         "@language": "es"
       },
       "rdfs:comment": {
