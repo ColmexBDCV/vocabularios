@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vocabulario SEAES</title>
+    <link rel="stylesheet" href="/assets/vocabularios.css">
+  </head>
+  <body>
+    <main class="page">
+      <a class="site-logo" href="/vocabularios" aria-label="Biblioteca Daniel Cosío Villegas">
+        <img src="/assets/biblioteca-dcv-cm-rojo.png" alt="Biblioteca Daniel Cosío Villegas, abierta a todo público">
+      </a>
+
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+        <span>Usted está aquí:</span>
+        <a href="/vocabularios">Catálogo público de vocabularios locales</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">SEAES</span>
+      </nav>
+
+      <header class="page-header">
+        <h1>Vocabulario SEAES</h1>
+        <dl class="metadata">
+          <div>
+            <dt>Namespace</dt>
+            <dd><code>https://biblioteca.colmex.mx/vocabularios/seaes#</code></dd>
+          </div>
+          <div>
+            <dt>Fecha de emisión</dt>
+            <dd>2026-06-29</dd>
+          </div>
+          <div>
+            <dt>Mantenedor</dt>
+            <dd>CID_BIBLIOTECA_COLMEX</dd>
+          </div>
+        </dl>
+        <ul class="inline-links">
+          <li><a href="/vocabularios/seaes.ttl">Turtle</a></li>
+          <li><a href="/vocabularios/seaes.jsonld">JSON-LD</a></li>
+        </ul>
+      </header>
+
+      <section class="description-block" aria-labelledby="description">
+        <h2 id="description">Descripción</h2>
+        <p>
+          Vocabulario para registrar criterios del Sistema de Evaluación y Acreditación
+          de la Educación Superior (SEAES) asociados a tesis y trabajos de investigación.
+          Este vocabulario permite documentar, de manera estructurada, el criterio aplicable
+          y la justificación de su relación con el trabajo académico.
+          Para más información, consulte el
+          <a href="https://educacionsuperior.sep.gob.mx/SEAES" target="_blank" rel="noopener">
+            sitio oficial del SEAES de la Secretaría de Educación Pública
+          </a>.
+        </p>
+      </section>
+
+      <section aria-labelledby="properties">
+        <h2 id="properties">Propiedades RDF</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>URI</th>
+                <th>Etiqueta</th>
+                <th>Definición</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>https://biblioteca.colmex.mx/vocabularios/seaes#criterio_seaes</code></td>
+                <td>Criterio SEAES</td>
+                <td>Registra el criterio SEAES con el que una tesis se correlaciona.</td>
+              </tr>
+              <tr>
+                <td><code>https://biblioteca.colmex.mx/vocabularios/seaes#justificacion_seaes</code></td>
+                <td>Justificación SEAES</td>
+                <td>Registra la justificación breve de la correlación entre una tesis y el criterio SEAES seleccionado.</td>
+              </tr>
+              <tr>
+                <td><code>https://biblioteca.colmex.mx/vocabularios/seaes#seaes</code></td>
+                <td>Criterios SEAES</td>
+                <td>Registra en una sola expresión el criterio SEAES y su justificación.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="controlled-values">
+        <h2 id="controlled-values">Valores controlados</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>URI</th>
+                <th>Etiqueta</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>https://biblioteca.colmex.mx/vocabularios/seaes#compromiso_responsabilidad_social</code></td>
+                <td>Compromiso con la responsabilidad social</td>
+              </tr>
+              <tr>
+                <td><code>https://biblioteca.colmex.mx/vocabularios/seaes#equidad_social_genero</code></td>
+                <td>Equidad social y de género</td>
+              </tr>
+              <tr>
+                <td><code>https://biblioteca.colmex.mx/vocabularios/seaes#inclusion</code></td>
+                <td>Inclusión</td>
+              </tr>
+              <tr>
+                <td><code>https://biblioteca.colmex.mx/vocabularios/seaes#excelencia</code></td>
+                <td>Excelencia</td>
+              </tr>
+              <tr>
+                <td><code>https://biblioteca.colmex.mx/vocabularios/seaes#innovacion_social</code></td>
+                <td>Innovación social</td>
+              </tr>
+              <tr>
+                <td><code>https://biblioteca.colmex.mx/vocabularios/seaes#vanguardia</code></td>
+                <td>Vanguardia</td>
+              </tr>
+              <tr>
+                <td><code>https://biblioteca.colmex.mx/vocabularios/seaes#interculturalidad</code></td>
+                <td>Interculturalidad</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="license-block" aria-labelledby="license">
+        <img src="/assets/cc0-1-0-deed.png" alt="CC0 1.0 Deed, CC0 1.0 Universal">
+        <div>
+          <h2 id="license">Licencia</h2>
+          <p>Este vocabulario se publica bajo CC0 1.0 Universal. La institución renuncia, en la medida permitida por la ley, a los derechos de autor y derechos conexos sobre las definiciones, etiquetas y archivos RDF de este vocabulario, con el fin de facilitar su reutilización, interoperabilidad y preservación.</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

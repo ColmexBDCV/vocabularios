@@ -1,0 +1,162 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "seaes": "https://biblioteca.colmex.mx/vocabularios/seaes#",
+    "label": "rdfs:label",
+    "definition": "dcterms:description"
+  },
+  "@graph": [
+    {
+      "@id": "https://biblioteca.colmex.mx/vocabularios/seaes",
+      "@type": "skos:ConceptScheme",
+      "dcterms:title": {
+        "@value": "Vocabulario SEAES",
+        "@language": "es"
+      },
+      "dcterms:issued": "2026-06-29",
+      "dcterms:publisher": "CID_BIBLIOTECA_COLMEX",
+      "dcterms:license": { "@id": "https://creativecommons.org/publicdomain/zero/1.0/" },
+      "dcterms:description": {
+        "@value": "Vocabulario para registrar criterios del Sistema de Evaluación y Acreditación de la Educación Superior (SEAES) asociados a tesis y trabajos de investigación.",
+        "@language": "es"
+      },
+      "skos:prefLabel": {
+        "@value": "Criterios SEAES",
+        "@language": "es"
+      },
+      "skos:hasTopConcept": [
+        { "@id": "seaes:compromiso_responsabilidad_social" },
+        { "@id": "seaes:equidad_social_genero" },
+        { "@id": "seaes:inclusion" },
+        { "@id": "seaes:excelencia" },
+        { "@id": "seaes:innovacion_social" },
+        { "@id": "seaes:vanguardia" },
+        { "@id": "seaes:interculturalidad" }
+      ]
+    },
+    {
+      "@id": "seaes:criterio_seaes",
+      "@type": "rdf:Property",
+      "label": {
+        "@value": "Criterio SEAES",
+        "@language": "es"
+      },
+      "rdfs:comment": {
+        "@value": "Registra el criterio SEAES con el que una tesis se correlaciona.",
+        "@language": "es"
+      },
+      "definition": {
+        "@value": "Registra el criterio SEAES con el que una tesis se correlaciona.",
+        "@language": "es"
+      },
+      "rdfs:isDefinedBy": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" }
+    },
+    {
+      "@id": "seaes:justificacion_seaes",
+      "@type": "rdf:Property",
+      "label": {
+        "@value": "Justificación SEAES",
+        "@language": "es"
+      },
+      "rdfs:comment": {
+        "@value": "Registra la justificación breve de la correlación entre una tesis y el criterio SEAES seleccionado.",
+        "@language": "es"
+      },
+      "definition": {
+        "@value": "Registra la justificación breve de la correlación entre una tesis y el criterio SEAES seleccionado.",
+        "@language": "es"
+      },
+      "rdfs:isDefinedBy": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" }
+    },
+    {
+      "@id": "seaes:seaes",
+      "@type": "rdf:Property",
+      "label": {
+        "@value": "Criterios SEAES",
+        "@language": "es"
+      },
+      "rdfs:comment": {
+        "@value": "Registra en una sola expresión el criterio SEAES y su justificación.",
+        "@language": "es"
+      },
+      "definition": {
+        "@value": "Registra en una sola expresión el criterio SEAES y su justificación.",
+        "@language": "es"
+      },
+      "rdfs:isDefinedBy": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" }
+    },
+    {
+      "@id": "seaes:compromiso_responsabilidad_social",
+      "@type": "skos:Concept",
+      "skos:prefLabel": {
+        "@value": "Compromiso con la responsabilidad social",
+        "@language": "es"
+      },
+      "skos:inScheme": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" },
+      "skos:topConceptOf": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" }
+    },
+    {
+      "@id": "seaes:equidad_social_genero",
+      "@type": "skos:Concept",
+      "skos:prefLabel": {
+        "@value": "Equidad social y de género",
+        "@language": "es"
+      },
+      "skos:inScheme": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" },
+      "skos:topConceptOf": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" }
+    },
+    {
+      "@id": "seaes:inclusion",
+      "@type": "skos:Concept",
+      "skos:prefLabel": {
+        "@value": "Inclusión",
+        "@language": "es"
+      },
+      "skos:inScheme": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" },
+      "skos:topConceptOf": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" }
+    },
+    {
+      "@id": "seaes:excelencia",
+      "@type": "skos:Concept",
+      "skos:prefLabel": {
+        "@value": "Excelencia",
+        "@language": "es"
+      },
+      "skos:inScheme": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" },
+      "skos:topConceptOf": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" }
+    },
+    {
+      "@id": "seaes:innovacion_social",
+      "@type": "skos:Concept",
+      "skos:prefLabel": {
+        "@value": "Innovación social",
+        "@language": "es"
+      },
+      "skos:inScheme": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" },
+      "skos:topConceptOf": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" }
+    },
+    {
+      "@id": "seaes:vanguardia",
+      "@type": "skos:Concept",
+      "skos:prefLabel": {
+        "@value": "Vanguardia",
+        "@language": "es"
+      },
+      "skos:inScheme": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" },
+      "skos:topConceptOf": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" }
+    },
+    {
+      "@id": "seaes:interculturalidad",
+      "@type": "skos:Concept",
+      "skos:prefLabel": {
+        "@value": "Interculturalidad",
+        "@language": "es"
+      },
+      "skos:inScheme": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" },
+      "skos:topConceptOf": { "@id": "https://biblioteca.colmex.mx/vocabularios/seaes" }
+    }
+  ]
+}

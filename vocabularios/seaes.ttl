@@ -1,0 +1,85 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix seaes: <https://biblioteca.colmex.mx/vocabularios/seaes#> .
+
+<https://biblioteca.colmex.mx/vocabularios/seaes>
+  a skos:ConceptScheme ;
+  dcterms:title "Vocabulario SEAES"@es ;
+  dcterms:issued "2026-06-29" ;
+  dcterms:publisher "CID_BIBLIOTECA_COLMEX" ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  dcterms:description "Vocabulario para registrar criterios del Sistema de Evaluación y Acreditación de la Educación Superior (SEAES) asociados a tesis y trabajos de investigación."@es ;
+  skos:prefLabel "Criterios SEAES"@es ;
+  skos:hasTopConcept
+    seaes:compromiso_responsabilidad_social,
+    seaes:equidad_social_genero,
+    seaes:inclusion,
+    seaes:excelencia,
+    seaes:innovacion_social,
+    seaes:vanguardia,
+    seaes:interculturalidad .
+
+seaes:criterio_seaes
+  a rdf:Property ;
+  rdfs:label "Criterio SEAES"@es ;
+  rdfs:comment "Registra el criterio SEAES con el que una tesis se correlaciona."@es ;
+  dcterms:description "Registra el criterio SEAES con el que una tesis se correlaciona."@es ;
+  rdfs:isDefinedBy <https://biblioteca.colmex.mx/vocabularios/seaes> .
+
+seaes:justificacion_seaes
+  a rdf:Property ;
+  rdfs:label "Justificación SEAES"@es ;
+  rdfs:comment "Registra la justificación breve de la correlación entre una tesis y el criterio SEAES seleccionado."@es ;
+  dcterms:description "Registra la justificación breve de la correlación entre una tesis y el criterio SEAES seleccionado."@es ;
+  rdfs:isDefinedBy <https://biblioteca.colmex.mx/vocabularios/seaes> .
+
+seaes:seaes
+  a rdf:Property ;
+  rdfs:label "Criterios SEAES"@es ;
+  rdfs:comment "Registra en una sola expresión el criterio SEAES y su justificación."@es ;
+  dcterms:description "Registra en una sola expresión el criterio SEAES y su justificación."@es ;
+  rdfs:isDefinedBy <https://biblioteca.colmex.mx/vocabularios/seaes> .
+
+seaes:compromiso_responsabilidad_social
+  a skos:Concept ;
+  skos:prefLabel "Compromiso con la responsabilidad social"@es ;
+  skos:inScheme <https://biblioteca.colmex.mx/vocabularios/seaes> ;
+  skos:topConceptOf <https://biblioteca.colmex.mx/vocabularios/seaes> .
+
+seaes:equidad_social_genero
+  a skos:Concept ;
+  skos:prefLabel "Equidad social y de género"@es ;
+  skos:inScheme <https://biblioteca.colmex.mx/vocabularios/seaes> ;
+  skos:topConceptOf <https://biblioteca.colmex.mx/vocabularios/seaes> .
+
+seaes:inclusion
+  a skos:Concept ;
+  skos:prefLabel "Inclusión"@es ;
+  skos:inScheme <https://biblioteca.colmex.mx/vocabularios/seaes> ;
+  skos:topConceptOf <https://biblioteca.colmex.mx/vocabularios/seaes> .
+
+seaes:excelencia
+  a skos:Concept ;
+  skos:prefLabel "Excelencia"@es ;
+  skos:inScheme <https://biblioteca.colmex.mx/vocabularios/seaes> ;
+  skos:topConceptOf <https://biblioteca.colmex.mx/vocabularios/seaes> .
+
+seaes:innovacion_social
+  a skos:Concept ;
+  skos:prefLabel "Innovación social"@es ;
+  skos:inScheme <https://biblioteca.colmex.mx/vocabularios/seaes> ;
+  skos:topConceptOf <https://biblioteca.colmex.mx/vocabularios/seaes> .
+
+seaes:vanguardia
+  a skos:Concept ;
+  skos:prefLabel "Vanguardia"@es ;
+  skos:inScheme <https://biblioteca.colmex.mx/vocabularios/seaes> ;
+  skos:topConceptOf <https://biblioteca.colmex.mx/vocabularios/seaes> .
+
+seaes:interculturalidad
+  a skos:Concept ;
+  skos:prefLabel "Interculturalidad"@es ;
+  skos:inScheme <https://biblioteca.colmex.mx/vocabularios/seaes> ;
+  skos:topConceptOf <https://biblioteca.colmex.mx/vocabularios/seaes> .
