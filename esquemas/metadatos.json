@@ -1,0 +1,5873 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://biblioteca.colmex.mx/esquemas/metadatos.json",
+  "title": "Esquema de metadatos de la Biblioteca Daniel Cosío Villegas",
+  "description": "Esquema publicado para apoyar el mapeo de campos externos, como columnas CSV, a los términos de metadatos usados por la Biblioteca Daniel Cosío Villegas.",
+  "issued": "2026-07-03",
+  "maintainer": "CID_BIBLIOTECA_COLMEX",
+  "namespace": "https://biblioteca.colmex.mx/esquemas/metadatos#",
+  "mappingGuidance": [
+    "Compare source CSV headers against code, labels, predicates, MARC mappings, templates and notes.",
+    "Prefer exact matches on code or known labels.",
+    "When labels are ambiguous, use template applicability, predicate and notes to select the closest field.",
+    "Do not map a source column when the intended use cannot be inferred with confidence."
+  ],
+  "deprecatedSources": [
+    "no usar METADATOS BASICOS"
+  ],
+  "fields": [
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#academic_degree",
+      "code": "academic_degree",
+      "labels": [
+        "Grado académico",
+        "Grado Académico"
+      ],
+      "templates": [
+        "Tesis"
+      ],
+      "predicates": [
+        "rdaw:academicDegree"
+      ],
+      "marc": [
+        "916$$e"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "thesis": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#access_level",
+      "code": "Access Level",
+      "labels": [
+        "Licencia de uso"
+      ],
+      "templates": [
+        "Conacyt (no programar en HYRAX)"
+      ],
+      "predicates": [
+        "dc:rights"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#access_restrictions",
+      "code": "access_restrictions",
+      "labels": [
+        "Restricción de acceso del recurso"
+      ],
+      "templates": [
+        "Tesis"
+      ],
+      "predicates": [
+        "rdam:restrictionsOnAccessToManifestation"
+      ],
+      "marc": [
+        "506"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#agent_name",
+      "code": "agent_Name",
+      "labels": [
+        "Entidad responsable de la digitalización"
+      ],
+      "templates": [
+        "Preservación"
+      ],
+      "predicates": [
+        "premis:agentName"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#alternate_title",
+      "code": "alternate_title",
+      "labels": [
+        "Variante de título",
+        "Título variante"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:variantTitle"
+      ],
+      "marc": [
+        "246"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#alternative_numeric_and_or_alphabethic_designation",
+      "code": "alternative_numeric_and_or_alphabethic_designation",
+      "labels": [
+        "Númeración o designación alternativa"
+      ],
+      "templates": [
+        "Arquetipo Analíticas Tipo 1"
+      ],
+      "predicates": [
+        "rdam:alternativeNumericAndOrAlphabeticDesignation"
+      ],
+      "marc": [
+        "963 __$j"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "books": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#analysis_of_work",
+      "code": "analysis_of_work",
+      "labels": [
+        "Análisis"
+      ],
+      "templates": [
+        "Bases de datos"
+      ],
+      "predicates": [
+        "rdaw:analysisOfWork"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#assistant",
+      "code": "assistant",
+      "labels": [
+        "Secretario"
+      ],
+      "templates": [
+        "Tesis jurisprudenciales"
+      ],
+      "predicates": [
+        "rdaa:assistant"
+      ],
+      "marc": [
+        "100,700$$easistente,secretario"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#audience",
+      "code": "Audience",
+      "labels": [
+        "Audiencia"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaw:intendedAudience"
+      ],
+      "marc": [
+        "Ignorar"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#awards",
+      "code": "awards",
+      "labels": [
+        "Premios",
+        "awards"
+      ],
+      "templates": [
+        "Tesis"
+      ],
+      "predicates": [
+        "rdae:award"
+      ],
+      "marc": [
+        "586$$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "thesis": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#based_near",
+      "code": "based_near",
+      "labels": [
+        "Ubicación geoespacial"
+      ],
+      "templates": [
+        "General",
+        "General - Incluidos por defecto"
+      ],
+      "predicates": [
+        "foaf:basedNear",
+        "FOAF.based_near",
+        "BF2.geographicCoverage"
+      ],
+      "marc": [],
+      "notes": [
+        "relationship relates two \"spatial things\" (anything that can be somewhere),"
+      ],
+      "proposalNotes": [
+        "http://id.loc.gov/ontologies/bibframe.html#c_GeographicCoverage"
+      ],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": false
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#beginning",
+      "code": "beginning",
+      "labels": [
+        "Inicio del hecho"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdat:hasBeginning"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#bibliographic_citation",
+      "code": "bibliographic_citation",
+      "labels": [
+        "Cómo citar",
+        "Como citar"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:preferredCitation"
+      ],
+      "marc": [
+        "Ignorar"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#center",
+      "code": "center",
+      "labels": [
+        "Centro"
+      ],
+      "templates": [
+        "Tesis",
+        "General"
+      ],
+      "predicates": [
+        "schema:deparment",
+        "SCHEMA.deparment",
+        "rdaw:grantingInstitutionOrFaculty"
+      ],
+      "marc": [
+        "Ignorar 502 $c",
+        "Ignorar"
+      ],
+      "notes": [],
+      "proposalNotes": [
+        "https://schema.org/department"
+      ],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "thesis": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#classification",
+      "code": "classification",
+      "labels": [
+        "Clasificación"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "bf2:Classification",
+        "BF2.Classification"
+      ],
+      "marc": [
+        "082",
+        "82"
+      ],
+      "notes": [
+        "Se usa bibframe porque este concepto esta mezclado con 650 en rdaw:subjectRelationship y necesitamos crear divisiones semanticas"
+      ],
+      "proposalNotes": [
+        "http://id.loc.gov/ontologies/bibframe.html#c_Classification"
+      ],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#collective_agent",
+      "code": "collective_agent",
+      "labels": [
+        "Congreso"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdac:collectiveAgent"
+      ],
+      "marc": [
+        "711 $$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "books": true,
+        "videos": true
+      },
+      "multiple": true,
+      "required": false,
+      "inUse": false
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#collective_title",
+      "code": "collective_title",
+      "labels": [
+        "Título colectivo"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "bf2:CollectiveTitle"
+      ],
+      "marc": [
+        "246"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#collector_collective_agent",
+      "code": "collector_collective_agent",
+      "labels": [
+        "Repositorio"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdai:collectorCollectiveAgent"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#commentator",
+      "code": "commentator",
+      "labels": [
+        "Reseñista/comentarista"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdda:isCommentatorAgentOf"
+      ],
+      "marc": [
+        "700 $$e reseñista $$e comentarista"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#compiler",
+      "code": "compiler",
+      "labels": [
+        "Compilador"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:isCompilerAgentFor"
+      ],
+      "marc": [
+        "700$$ecompilador"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "books": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#complainant",
+      "code": "complainant",
+      "labels": [
+        "Quejoso (víctima y ofendido)"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "MARCRelators:complainant"
+      ],
+      "marc": [
+        "100,700$$equejoso"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#complemented_by_work",
+      "code": "complemented_by_work",
+      "labels": [
+        "Documentos complementarios"
+      ],
+      "templates": [
+        "Bases de datos"
+      ],
+      "predicates": [
+        "rdaw:complementedByWork"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#contained_in",
+      "code": "contained_in",
+      "labels": [
+        "Incluido en:",
+        "Contenido en"
+      ],
+      "templates": [
+        "General",
+        "Analiticas de Revistas COLMEX"
+      ],
+      "predicates": [
+        "rdaw:containedInWork"
+      ],
+      "marc": [
+        "773 0_ $$t"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#content_location_type",
+      "code": "content_Location_Type",
+      "labels": [
+        "Tipo de localización del objeto original"
+      ],
+      "templates": [
+        "Preservación"
+      ],
+      "predicates": [
+        "premis:contentLocationType"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#content_location_value",
+      "code": "content_Location_Value",
+      "labels": [
+        "Localización del objeto digital"
+      ],
+      "templates": [
+        "Preservación"
+      ],
+      "predicates": [
+        "premis:contentLocationValue"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#contestee",
+      "code": "contestee",
+      "labels": [
+        "Representante legal, defensor, etc."
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "MARCRelators:contestee"
+      ],
+      "marc": [
+        "100,700$$e representante legal $$e defensor"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#contributor",
+      "code": "contributor",
+      "labels": [
+        "Colaborador"
+      ],
+      "templates": [
+        "General",
+        "General - Incluidos por defecto"
+      ],
+      "predicates": [
+        "dc11:contributor",
+        "DC11.contributor"
+      ],
+      "marc": [
+        "100...$$ecolaborador"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#contributor_conacyt",
+      "code": "contributor_conacyt",
+      "labels": [],
+      "templates": [
+        "Conacyt"
+      ],
+      "predicates": [
+        "mods:name",
+        "MODS.name"
+      ],
+      "marc": [
+        "100, 700$$e"
+      ],
+      "notes": [
+        "Campo especial para la cosecha de Conacyt"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#copyright",
+      "code": "copyright",
+      "labels": [
+        "Copyright"
+      ],
+      "templates": [
+        "Arquetipo Libros/Capitulos /Videos"
+      ],
+      "predicates": [
+        "rdam:hasCopyrightDate"
+      ],
+      "marc": [
+        "264_4$$c"
+      ],
+      "notes": [
+        "Se agrego videos al arquetipo debido a necesidades del proyecto TIMX https://teams.microsoft.com/l/message/19:1fbb95cc629741b981d4d366bd3b415a@thread.skype/1677521827946?tenantId=93db1ea2-0b31-43e8-aece-2228fabb7af1&groupId=de3945e8-a78d-487d-a1ea-aabbd62feda8&parentMessageId=1677521827946&teamName=Proyectos%20BDCV&channelName=Repositorio%20Colmex&createdTime=1677521827946&allowXTenantAccess=false"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "books": true,
+        "videos": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#corporate_body",
+      "code": "corporate_body",
+      "labels": [
+        "Autor corporativo"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdac:corporateBody"
+      ],
+      "marc": [
+        "710 $$a autor corporativo"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "books": true,
+        "videos": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#creator",
+      "code": "creator",
+      "labels": [
+        "Autor"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:authorOf"
+      ],
+      "marc": [
+        "100...$$eautor"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": true,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#creator_conacyt",
+      "code": "creator_conacyt",
+      "labels": [],
+      "templates": [
+        "Conacyt"
+      ],
+      "predicates": [
+        "mods:namePrincipal",
+        "MODS.namePrincipal"
+      ],
+      "marc": [
+        "100, 700$$e"
+      ],
+      "notes": [
+        "Campo especial para la cosecha de Conacyt"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#curator_collective_agent_of",
+      "code": "curator_collective_agent_of",
+      "labels": [
+        "Organismo que selecciona el recurso"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:isCuratorCollectiveAgentOf"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [
+        "Quien arregla, describe o cagaloga una obra"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#custodian_agent_of",
+      "code": "custodian_agent_of",
+      "labels": [
+        "Organismo custodio"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:isCustodianAgentOf"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#database",
+      "code": "database",
+      "labels": [
+        "Base de datos"
+      ],
+      "templates": [
+        "Analiticas de Revistas COLMEX"
+      ],
+      "predicates": [
+        "rdaz:sourceConsulted.en"
+      ],
+      "marc": [],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020"
+      ],
+      "usage": {
+        "facet": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#date_created",
+      "code": "date_created",
+      "labels": [
+        "Año",
+        "Fecha de producción/publicación"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:dateOfPublication"
+      ],
+      "marc": [
+        "264 o 260 $$c",
+        "008/07-14"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#date_of_manifestation",
+      "code": "date_of_manifestation",
+      "labels": [
+        "Fecha"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:dateOfManifestation"
+      ],
+      "marc": [
+        "515"
+      ],
+      "notes": [
+        "dd/mm/aaaaa"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#date_of_presentation_of_the_thesis",
+      "code": "date_of_presentation_of_the_thesis",
+      "labels": [
+        "Fecha de presentación de la tesis"
+      ],
+      "templates": [
+        "Tesis"
+      ],
+      "predicates": [
+        "rdaw:yearDegreeGranted"
+      ],
+      "marc": [
+        "502$$d"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#degree_program",
+      "code": "degree_program",
+      "labels": [
+        "Programa de estudios"
+      ],
+      "templates": [
+        "Tesis"
+      ],
+      "predicates": [
+        "rdaw:grantingInstitutionOrFaculty"
+      ],
+      "marc": [
+        "916$$e 502 $b",
+        "916$$e"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "thesis": true,
+        "videos": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#depositor_agent",
+      "code": "depositor_agent",
+      "labels": [
+        "Persona depositante"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdai:depositoryAgent"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#depository_collective_agent",
+      "code": "depository_collective_agent",
+      "labels": [
+        "Organismo depositante"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdai:depositoryCollectiveAgent"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#description",
+      "code": "description",
+      "labels": [
+        "Resumen"
+      ],
+      "templates": [
+        "General",
+        "General - Incluidos por defecto"
+      ],
+      "predicates": [
+        "rdae:summarizationOfTheContent",
+        "DC11.description"
+      ],
+      "marc": [
+        "520"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "thesis": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#digital_file_characteristics",
+      "code": "digital_file_characteristics",
+      "labels": [
+        "Características del archivo digital"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:digitalFileCharacteristic"
+      ],
+      "marc": [
+        "347 $$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false,
+        "thesis": false
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#digital_representation_of_cartographic_content",
+      "code": "digital_representation_of_cartographic_content",
+      "labels": [
+        "Datos geoespaciales"
+      ],
+      "templates": [
+        "Mapas"
+      ],
+      "predicates": [
+        "rdam:digitalRepresentationOfCartographicContent"
+      ],
+      "marc": [
+        "255$$d"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#digital_resource_generation_information",
+      "code": "digital_resource_generation_information",
+      "labels": [
+        "Información sobre la fuente del archivo digital",
+        "detailsOfGenerationOfDigitalResource"
+      ],
+      "templates": [
+        "General",
+        "Tesis"
+      ],
+      "predicates": [
+        "rdam:detailsOfGenerationOfDigitalResource"
+      ],
+      "marc": [
+        "Ignorar"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#dimensions",
+      "code": "dimensions",
+      "labels": [
+        "Dimensiones"
+      ],
+      "templates": [
+        "General",
+        "Tesis"
+      ],
+      "predicates": [
+        "rdam:dimensions"
+      ],
+      "marc": [
+        "300 $$c"
+      ],
+      "notes": [
+        "Estaba en General"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#dimensions_of_still_image",
+      "code": "dimensions_of_still_image",
+      "labels": [
+        "Dimensiones de la fotografía"
+      ],
+      "templates": [
+        "Fotografía"
+      ],
+      "predicates": [
+        "rdam:dimensionsOfStillImage"
+      ],
+      "marc": [
+        "300$$c"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#director",
+      "code": "director",
+      "labels": [
+        "Director de tesis",
+        "Director de Tesis"
+      ],
+      "templates": [
+        "Tesis"
+      ],
+      "predicates": [
+        "rdaa:degreeSupervisorOf"
+      ],
+      "marc": [
+        "700$$e = director de tesis",
+        "700$$0"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "thesis": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#doi",
+      "code": "doi",
+      "labels": [
+        "DOI"
+      ],
+      "templates": [
+        "General",
+        "General - Incluidos por defecto"
+      ],
+      "predicates": [
+        "bf2:DOI",
+        "BF2.Doi"
+      ],
+      "marc": [
+        "024 $$e identificador de publicación"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": false,
+      "required": false,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#draftsman",
+      "code": "draftsman",
+      "labels": [
+        "Dibujante"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdda:isDraftsmanAgenOf"
+      ],
+      "marc": [
+        "700$$edibujante"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": false,
+      "inUse": false
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#edition",
+      "code": "edition",
+      "labels": [
+        "Edición"
+      ],
+      "templates": [
+        "General",
+        "Tesis"
+      ],
+      "predicates": [
+        "rdam:designationOfEdition"
+      ],
+      "marc": [
+        "250"
+      ],
+      "notes": [
+        "Estaba en General"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "books": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#editor",
+      "code": "editor",
+      "labels": [
+        "Editor"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:isEditorPersonOfTextOf"
+      ],
+      "marc": [
+        "700$$eeditor"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "books": true,
+        "videos": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#enacting_juridiction_of",
+      "code": "enacting_juridiction_of",
+      "labels": [
+        "Instancia promulgadora o emisora"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "rdaa:enactingJuridictionOf"
+      ],
+      "marc": [
+        "110,710$$epromulgadora o emisora"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#encoding_format_details",
+      "code": "encoding_format_details",
+      "labels": [
+        "detailsOfEncodingFormat"
+      ],
+      "templates": [
+        "Tesis"
+      ],
+      "predicates": [
+        "rdam:detailsOfEncodingFormat"
+      ],
+      "marc": [
+        "Ignorar"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#ending",
+      "code": "ending",
+      "labels": [
+        "Fin del hecho"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdat:hasEnding"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#event_date_time",
+      "code": "event_Date_Time",
+      "labels": [
+        "Fecha de la digitalización"
+      ],
+      "templates": [
+        "Preservación"
+      ],
+      "predicates": [
+        "premis:eventDateTime"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#exemplar_of_manifestation",
+      "code": "exemplar_of_manifestation",
+      "labels": [
+        "Ejemplares"
+      ],
+      "templates": [
+        "Tesis",
+        "QUITAR"
+      ],
+      "predicates": [
+        "rdam:exemplarOfManifestation"
+      ],
+      "marc": [
+        "903$$a $$e"
+      ],
+      "notes": [
+        "Estaba en Quitar"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#extension",
+      "code": "extension",
+      "labels": [
+        "Extensión"
+      ],
+      "templates": [
+        "General",
+        "Tesis",
+        "QUITAR"
+      ],
+      "predicates": [
+        "rdam:extent"
+      ],
+      "marc": [
+        "300 $$a"
+      ],
+      "notes": [
+        "Aplica a páginas, tamaño de archivos, duración de videos // El 050623 ASM, RCH y CEV acordaron que la vista pública sea Extensión (páginas, duración), pues sólo mostraba \"Páginas\" y no aclaraba para el caso de videos",
+        "Estaba en Quitar"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#falta",
+      "code": "FALTA",
+      "labels": [
+        "Origen",
+        "URL de la fuente original"
+      ],
+      "templates": [
+        "Preservación"
+      ],
+      "predicates": [
+        "FALTA"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#file_details",
+      "code": "file_details",
+      "labels": [
+        "Detalles del archivo digital"
+      ],
+      "templates": [
+        "Tesis"
+      ],
+      "predicates": [
+        "rdam:digitalFileCharacteristic"
+      ],
+      "marc": [
+        "Ignorar"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#file_name",
+      "code": "file_name",
+      "labels": [
+        "Nombre del archivo"
+      ],
+      "templates": [
+        "General (No Progamar)"
+      ],
+      "predicates": [
+        "rdam:fileName"
+      ],
+      "marc": [
+        "Portafolios"
+      ],
+      "notes": [
+        "Uso exclusivo para las importaciones al sistema / A partir de la necesidad de obras en varias partes (por ej., libros colmex o videos mexmedia) se decidió dejar un sólo registro con |505 de contenido y todos los file_name juntos, emulando la práctica en ALMA y el principio de RDA de reunir a una obra con todas sus expresiones y manifestaciones (CEV 17/07/23)"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": true,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#file_type_details",
+      "code": "file_type_details",
+      "labels": [
+        "Detalles de tipo de archivo",
+        "detailsOfFileType"
+      ],
+      "templates": [
+        "General",
+        "Tesis"
+      ],
+      "predicates": [
+        "rdam:detailsOfFileType"
+      ],
+      "marc": [
+        "Ignorar"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#gender_or_form",
+      "code": "gender_or_form",
+      "labels": [
+        "En desuso",
+        "Género/Forma"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaw:formOfWork"
+      ],
+      "marc": [
+        "655",
+        "008/24-27"
+      ],
+      "notes": [
+        "Se observo que el uso de este metadato era incorrecto, primero porque se limito a documentos legales, en segunda por que la sintaxis aprobadad no es correcta. Se entiende que la propuesta surge de parte de Rodrigo Muciño del RDDM"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#geographic_coverage",
+      "code": "geographic_coverage",
+      "labels": [
+        "Cobertura geográfica"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "bf2:geographicCoverage",
+        "rdaw:coverageOfTheContent"
+      ],
+      "marc": [
+        "651 $$a, 6XX$$z",
+        "651 $$a"
+      ],
+      "notes": [],
+      "proposalNotes": [
+        "FOAF.based_near"
+      ],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#guide_to_work",
+      "code": "guide_to_work",
+      "labels": [
+        "Protocolo o guia"
+      ],
+      "templates": [
+        "Bases de datos"
+      ],
+      "predicates": [
+        "rdaw:guideToWork"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [
+        "comprende, objetivo, cuestionarios, protocolos para grupos focales, descripci{on de metodoso, campo de accion, esquemas de codificación"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#handle",
+      "code": "handle",
+      "labels": [
+        "Handle"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "datacite:handle"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [
+        "IRI: http://purl.org/spar/datacite/handle"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": true,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#has_coverage_of_the_content",
+      "code": "has coverage of the content",
+      "labels": [
+        "Colección"
+      ],
+      "templates": [
+        "Analiticas de Revistas COLMEX"
+      ],
+      "predicates": [
+        "rdaw:coverageOfTheContent"
+      ],
+      "marc": [
+        "916 __ $$d revdigcolmex"
+      ],
+      "notes": [
+        "Definir como se definió la colección de tesis"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#has_carrier_type",
+      "code": "has_carrier_type",
+      "labels": [
+        "Tipo de portador"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:hasCarrierType"
+      ],
+      "marc": [
+        "338 - Carrier Type"
+      ],
+      "notes": [
+        "Vocabularios autorizados: https://www.getty.edu/vow/AATFullDisplay?find=&logic=AND&note=&subjectid=300028682 -- https://www.loc.gov/marc/RDAinMARCspa_CarrierTypes.pdf --"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#has_creator",
+      "code": "has_creator",
+      "labels": [
+        "Creador"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdau:hasCreator"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": null,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#has_field_activity_of_agent",
+      "code": "has_field_activity_of_agent",
+      "labels": [
+        "Función"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdau:hasFieldOfActivityofAgent"
+      ],
+      "marc": [
+        "710$$e"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#has_identifier_for_item",
+      "code": "has_identifier_for_item",
+      "labels": [
+        "Número de expediente o caso"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "rdai:hasIdentifierForItem"
+      ],
+      "marc": [
+        "001'"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#has_medium_of_performance_of_musical_content",
+      "code": "has_medium_of_performance_of_musical_content",
+      "labels": [
+        "Medio de interpretación de contenido musical"
+      ],
+      "templates": [
+        "Audio"
+      ],
+      "predicates": [
+        "rdau:hasMediumOfPerformanceOfMusicalContent"
+      ],
+      "marc": [
+        "382 $$a Medium of Performance"
+      ],
+      "notes": [
+        "Relaciona un recurso con un instrumento, voz o conjunto y el número de partes, intérpretes y manos utilizadas, o que se pretende utilizar, para interpretar el contenido musical de un recurso. https://www.rdaregistry.info/Elements/u/#P60537 -- https://www.loc.gov/marc/bibliographic/bd382.html"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": false,
+      "inUse": false
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#has_person_member_of_collective_agent",
+      "code": "has_person_member_of_collective_agent",
+      "labels": [
+        "Sus miembros son:"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:hasPersonMemberOfCollectiveAgent"
+      ],
+      "marc": [
+        "700$$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": false,
+      "inUse": false
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#has_system_of_organization",
+      "code": "has_system_of_organization",
+      "labels": [
+        "Colección"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaw:hasSystemOfOrganizatión"
+      ],
+      "marc": [
+        "No identificado"
+      ],
+      "notes": [
+        "\"Relates a manifestation to a manifestation of a collection work that has a manifestation of another collection work as a discrete component."
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": true,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#has_transformation_by_genre",
+      "code": "has_transformation_by_genre",
+      "labels": [
+        "Transformación al genero o forma"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaw:hasTransformationByGenre"
+      ],
+      "marc": [
+        "655 TERMINO DE INDIZACION - GENERO/FORMA (R)"
+      ],
+      "notes": [
+        "Aplica cuando la obra tiene otra obra asociada con genero o forma diferente- Vocabulario controlado: https://www.loc.gov/aba/publications/FreeLCGFT/freelcgft.html"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#hasorganizercorporatebody",
+      "code": "hasOrganizerCorporateBody",
+      "labels": [
+        "Conferencia / Evento"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaw:hasOrganizerCorporateBody"
+      ],
+      "marc": [
+        "111 - Nombre de la reunión principal de entrada (NR)"
+      ],
+      "notes": [
+        "\"Relaciona una obra con un organismo corporativo que organiza una conferencia, exposición u otro evento que dé origen a una obra.\" Cambie el predicado a la forma que manejamos en vez de usar rdaw:P10551 (RCH)"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "userVisible": true
+      },
+      "multiple": null,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#hierarchical_inferior",
+      "code": "hierarchical_inferior",
+      "labels": [
+        "Instancia subordinada"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "rdaa:hierarchicalInferior"
+      ],
+      "marc": [
+        "110,710$$b"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#hierarchical_superior",
+      "code": "hierarchical_superior",
+      "labels": [
+        "Instancia superior"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "rdaa:hierarchicalSuperior"
+      ],
+      "marc": [
+        "110,710$$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#identifier",
+      "code": "identifier",
+      "labels": [
+        "Identificador",
+        "ID Colmex",
+        "ID Colmex (alma)"
+      ],
+      "templates": [
+        "General",
+        "General - Incluidos por defecto"
+      ],
+      "predicates": [
+        "rdam:identifierForTheManifestation"
+      ],
+      "marc": [
+        "001",
+        "1"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": false,
+      "required": true,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#identifier_of_work",
+      "code": "identifier_of_work",
+      "labels": [
+        "Variante del identificador"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "rdaw:identifierOfWork"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#institution",
+      "code": "institution",
+      "labels": [
+        "Institución"
+      ],
+      "templates": [
+        "Tesis"
+      ],
+      "predicates": [
+        "bf2:grantingInstitution",
+        "BF2.grantingInstitution",
+        "rdaw:grantingInstitutionOrFaculty"
+      ],
+      "marc": [
+        "Ignorar"
+      ],
+      "notes": [
+        "Ante tenia este duplicado: \"rdaw:grantingInstitutionOrFaculty\""
+      ],
+      "proposalNotes": [
+        "http://id.loc.gov/ontologies/bibframe.html#p_grantingInstitution"
+      ],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "thesis": true,
+        "videos": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#interviewee",
+      "code": "interviewee",
+      "labels": [
+        "Entrevistador"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:isIntervieweeAgentOf"
+      ],
+      "marc": [
+        "700 $$e entrevistado"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#interviewer",
+      "code": "interviewer",
+      "labels": [
+        "Entrevistado"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa: isInterviewerAgentOf"
+      ],
+      "marc": [
+        "700 $$e entrevistador"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_composer_person_of_work_of",
+      "code": "is_composer_person_of_work_of",
+      "labels": [
+        "Compositor"
+      ],
+      "templates": [
+        "Audio"
+      ],
+      "predicates": [
+        "rdaa:isComposerPersonOfWorkOf"
+      ],
+      "marc": [
+        "100$$ecompositor"
+      ],
+      "notes": [
+        "Relaciona a una persona con una obra que implica una responsabilidad de una persona por crear una obra musical. https://www.rdaregistry.info/Elements/a/#P50522"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": false,
+      "inUse": false
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_criminal_defendant_corporate_body_of",
+      "code": "is_criminal_defendant_corporate_body_of",
+      "labels": [
+        "Organismo acusado o demandado"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "rdaa:isCriminalDefendantCorporateBodyOf"
+      ],
+      "marc": [
+        "110,710$$eorganismo demandado o acusado"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_criminal_defendant_person_of",
+      "code": "is_criminal_defendant_person_of",
+      "labels": [
+        "Persona acusada o demandada"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "rdda:isCriminalDefendantPersonOf"
+      ],
+      "marc": [
+        "110,710$e persona demandada o acusada"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_dancer_agent_of",
+      "code": "is_dancer_agent_of",
+      "labels": [
+        "Danzante"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdda:isDancerPersonOf"
+      ],
+      "marc": [
+        "700$$edanzante"
+      ],
+      "notes": [
+        "En acuerdo con las necesidades del proyecto de STP, y a solicitud de la investigadora Azalea se decidio usar el termino para vista al usuario como \"danzante\" a diferencia del autorizado y más general \"bailarín\". El acuerdo tomado con Rodrigo Cuéllar es que de ser necesario se cambiara la vista al usuario por \"bailarín\", si en el futuro se requiere. El acuerdo fue tomado el 3 de diciembre del 2024. Entre Guadalupe Vega y Rodrigo Cuéllar."
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_facsimile_of_manifestation_of",
+      "code": "is_facsimile_of_manifestation_of",
+      "labels": [
+        "Facsímil de:"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:isFacsimileOfManifestationOf"
+      ],
+      "marc": [
+        "300$$e"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_finding_aid_for",
+      "code": "is_finding_aid_for",
+      "labels": [
+        "Instrumento de descripción archivística"
+      ],
+      "templates": [
+        "Documentos archivísticos"
+      ],
+      "predicates": [
+        "rdau:isFindingAidFor"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "userVisible": true
+      },
+      "multiple": null,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_instrumentalist_agent_of",
+      "code": "is_instrumentalist_agent_of",
+      "labels": [
+        "Instrumentista"
+      ],
+      "templates": [
+        "Audio"
+      ],
+      "predicates": [
+        "rdaa:isInstrumentalistAgentOf"
+      ],
+      "marc": [
+        "100$$e instrumentista"
+      ],
+      "notes": [
+        "Relaciona un agente con una expresión que incluye una contribución de un agente al tocar un instrumento musical. https://www.rdaregistry.info/Elements/a/#P50079"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": false,
+      "inUse": false
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_lyricist_person_of",
+      "code": "is_lyricist_person_of",
+      "labels": [
+        "Autor de la letra"
+      ],
+      "templates": [
+        "Audio"
+      ],
+      "predicates": [
+        "rdaa:isLyricistPersonOf"
+      ],
+      "marc": [
+        "100$$eautor de la letra / $$e letrista"
+      ],
+      "notes": [
+        "\"Relaciona a una persona con una obra que implica la responsabilidad de una persona por la autoría de las palabras de una canción popular, incluida una canción de un musical\". https://www.rdaregistry.info/Elements/a/#P50533"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": false,
+      "inUse": false
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_part_of",
+      "code": "is_part_of",
+      "labels": [
+        "Es parte de"
+      ],
+      "templates": [
+        "Preservación"
+      ],
+      "predicates": [
+        "dc:isPartOf"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_part_or_work",
+      "code": "is_part_or_work",
+      "labels": [
+        "Sección o suplemento"
+      ],
+      "templates": [
+        "Arquetipo Analíticas Tipo 1"
+      ],
+      "predicates": [
+        "rdaw:hasRelatedWorkOfWork"
+      ],
+      "marc": [
+        "773_0$$t :"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_performer_agent_of",
+      "code": "is_performer_agent_of",
+      "labels": [
+        "Ejecutante"
+      ],
+      "templates": [
+        "Audio"
+      ],
+      "predicates": [
+        "rdaa:isPerformerAgentOf"
+      ],
+      "marc": [
+        "100$$e ejecutante"
+      ],
+      "notes": [
+        "Relaciona a un agente con una expresión que incluye una contribución de un agente al interpretar música, actuar, bailar, hablar, etc. https://www.rdaregistry.info/Elements/a/#P50147"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": false,
+      "inUse": false
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_person_member_of_collective_agent",
+      "code": "is_person_member_of_collective_agent",
+      "labels": [
+        "Es miembro de:"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:isPersonMemberOfCollectiveAgent"
+      ],
+      "marc": [
+        "700$$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": false,
+      "inUse": false
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_singer_agent_of",
+      "code": "is_singer_agent_of",
+      "labels": [
+        "Cantante"
+      ],
+      "templates": [
+        "Audio"
+      ],
+      "predicates": [
+        "rdaa:isSingerAgentOf"
+      ],
+      "marc": [
+        "100$$e cantante"
+      ],
+      "notes": [
+        "Relaciona a un agente con una expresión que incluye una contribución de un agente que usa su voz, con o sin acompañamiento instrumental, para producir música. https://www.rdaregistry.info/Elements/a/#P50084"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": false,
+      "inUse": false
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_subcollection_of",
+      "code": "is_subcollection_of",
+      "labels": [
+        "Subcolección temática"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdau:isSubcollectionOf"
+      ],
+      "marc": [
+        "No identificado"
+      ],
+      "notes": [
+        "\"Relates a work to a system of arranging materials in an archival resource or a collection\""
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": true,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_title_of_item_of",
+      "code": "is_title_of_item_of",
+      "labels": [
+        "Asunto"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "rdan:isTitleOfItemOf"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#is_transformation_by_genre",
+      "code": "is_transformation_by_genre",
+      "labels": [
+        "Genero o forma"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaw:isTransformationByGenre"
+      ],
+      "marc": [
+        "655 TERMINO DE INDIZACION - GENERO/FORMA (R)"
+      ],
+      "notes": [
+        "Aplica cuando la obra es de un genero o forma diferente del original - Vocabulario controlado: https://www.loc.gov/aba/publications/FreeLCGFT/freelcgft.html"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#isbn",
+      "code": "isbn",
+      "labels": [
+        "ISBN"
+      ],
+      "templates": [
+        "General",
+        "General - Incluidos por defecto"
+      ],
+      "predicates": [
+        "bf2:Isbn",
+        "BF2.Isbn"
+      ],
+      "marc": [
+        "020, '022"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "books": true
+      },
+      "multiple": true,
+      "required": false,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#issn",
+      "code": "issn",
+      "labels": [
+        "ISSN"
+      ],
+      "templates": [
+        "Arquetipo Analíticas Tipo 2",
+        "Analiticas de Revistas COLMEX"
+      ],
+      "predicates": [
+        "rdam:issnOfSeries.en"
+      ],
+      "marc": [
+        "024$$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#item_access_restrictions",
+      "code": "item_access_restrictions",
+      "labels": [
+        "Restricción de acceso del ítem"
+      ],
+      "templates": [
+        "General",
+        "Tesis"
+      ],
+      "predicates": [
+        "rdai:restrictionsOnAccessToItem"
+      ],
+      "marc": [
+        "506 $$a",
+        "asociadas a la colección mencionada en 903 [asignar leyenda]"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#item_use_restrictions",
+      "code": "item_use_restrictions",
+      "labels": [
+        "Restricción de uso del ítem"
+      ],
+      "templates": [
+        "General",
+        "Tesis"
+      ],
+      "predicates": [
+        "rdai:restrictionsOnUseOfItem"
+      ],
+      "marc": [
+        "506 $$a",
+        "asociadas a la colección mencionada en 903 [asignar leyenda]"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#keyword",
+      "code": "keyword",
+      "labels": [
+        "Palabra clave"
+      ],
+      "templates": [
+        "General",
+        "General - Incluidos por defecto"
+      ],
+      "predicates": [
+        "schema:keywords",
+        "DC11.relation"
+      ],
+      "marc": [
+        "653 $$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#language",
+      "code": "language",
+      "labels": [
+        "Idioma"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdae:languageOfTheContent"
+      ],
+      "marc": [
+        "041",
+        "41"
+      ],
+      "notes": [
+        "Predicado deprecado"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": true,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#language_of_expression",
+      "code": "language_of_expression",
+      "labels": [
+        "Nota de idioma"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdae:languageOfExpression"
+      ],
+      "marc": [
+        "546"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": false,
+      "inUse": false
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#license",
+      "code": "license",
+      "labels": [],
+      "templates": [
+        "General",
+        "General - Incluidos por defecto"
+      ],
+      "predicates": [
+        "DC.rights"
+      ],
+      "marc": [],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#license_condition",
+      "code": "License Condition",
+      "labels": [
+        "Condiciones de licencia"
+      ],
+      "templates": [
+        "Conacyt (no programar en HYRAX)"
+      ],
+      "predicates": [
+        "dc:rights"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#local_resource_identifier",
+      "code": "local_resource_identifier",
+      "labels": [
+        "Identificador institucional"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "datacite:localResourceIdentifierScheme"
+      ],
+      "marc": [
+        "024'"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": true,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#longitud_and_latitud",
+      "code": "longitud_and_latitud",
+      "labels": [
+        "Coordenadas"
+      ],
+      "templates": [
+        "Mapas"
+      ],
+      "predicates": [
+        "rdam:longitudAndLatitud"
+      ],
+      "marc": [
+        "255$$c"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#manifestation_access_restrictions",
+      "code": "manifestation_access_restrictions",
+      "labels": [
+        "Restricciones de acceso a la manifestación"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:restrictionsOnAccessToManifestation"
+      ],
+      "marc": [
+        "506 $$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#manifestation_use_restrictions",
+      "code": "manifestation_use_restrictions",
+      "labels": [
+        "Restricciones de uso a la manifestación"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:restrictionsOnUseOfManifestation"
+      ],
+      "marc": [
+        "506 $$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#message_digest",
+      "code": "message_Digest",
+      "labels": [
+        "Checksum"
+      ],
+      "templates": [
+        "Preservación"
+      ],
+      "predicates": [
+        "premis:messageDigest"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#mode_of_issuance",
+      "code": "mode_of_issuance",
+      "labels": [
+        "Modo de publicación",
+        "Modo de emisión"
+      ],
+      "templates": [
+        "General",
+        "Analiticas de Revistas COLMEX"
+      ],
+      "predicates": [
+        "rdam:modeOfIssuance"
+      ],
+      "marc": [
+        "Ignorar LDR/07",
+        "916 __ $$a parte de revista"
+      ],
+      "notes": [
+        "Duplicado en Analiticas de Revistas Colmex",
+        "Duplicado en Tesis"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": false,
+      "required": false,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#mode_of_publication",
+      "code": "mode_of_publication",
+      "labels": [
+        "Modo de publicación"
+      ],
+      "templates": [
+        "Tesis"
+      ],
+      "predicates": [
+        "rdam:modeOfIssuance"
+      ],
+      "marc": [
+        "LDR/07"
+      ],
+      "notes": [
+        "Duplicado en Analiticas de Revistas Colmex"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": false,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#narrator",
+      "code": "narrator",
+      "labels": [
+        "Narrador"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:isNarratorAgentOf"
+      ],
+      "marc": [
+        "700$$e narrador"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": null,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#nature_of_content",
+      "code": "nature_of_content",
+      "labels": [
+        "Naturaleza del contenido"
+      ],
+      "templates": [
+        "Bases de datos"
+      ],
+      "predicates": [
+        "rdaw:natureOfContent"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#note_on_statement_of_responsibility",
+      "code": "note_on_statement_of_responsibility",
+      "labels": [
+        "Nota sobre declaración de responsabilidad"
+      ],
+      "templates": [
+        "Videos"
+      ],
+      "predicates": [
+        "rdam:hasNoteOnStatementOfResponsibility"
+      ],
+      "marc": [
+        "511 $$a"
+      ],
+      "notes": [
+        "Relates a manifestation to note on manifestation that provides information on an agent, and their function, who is responsible for a work or its expression that is embodied by a manifestation."
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "videos": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#notes",
+      "code": "notes",
+      "labels": [
+        "Notas"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:noteOnManifestation"
+      ],
+      "marc": [
+        "500"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#number",
+      "code": "number",
+      "labels": [
+        "Número",
+        "\"has numbering within subseries\""
+      ],
+      "templates": [
+        "Arquetipo Analíticas Tipo 2",
+        "Analiticas de Revistas COLMEX"
+      ],
+      "predicates": [
+        "rdam:numberingWithinSubseries"
+      ],
+      "marc": [
+        "773 $$b",
+        "963 __$b"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "books": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#numbering_within_sequence",
+      "code": "numbering_within_sequence",
+      "labels": [
+        "Volumen/número"
+      ],
+      "templates": [
+        "Arquetipo Libros/Capitulos /Videos"
+      ],
+      "predicates": [
+        "rdam: hasNumberingWithinSequence"
+      ],
+      "marc": [
+        "490$$v"
+      ],
+      "notes": [
+        "Se agrego videos al arquetipo debido a necesidades del proyecto TIMX"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "books": true,
+        "videos": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#object_identifier_type",
+      "code": "object_Identifier_Type",
+      "labels": [
+        "Tipo de identificador del objeto digital"
+      ],
+      "templates": [
+        "Preservación"
+      ],
+      "predicates": [
+        "premis:objectIdentifierType"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#object_identifier_value",
+      "code": "object_Identifier_Value",
+      "labels": [
+        "Identificador del objeto digital"
+      ],
+      "templates": [
+        "Preservación"
+      ],
+      "predicates": [
+        "premis:objectIdentifierValue"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#organizer",
+      "code": "organizer",
+      "labels": [
+        "Coordinador/organizador"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:isOrganizerAgentOf"
+      ],
+      "marc": [
+        "700$$ecoordinador $$e organizado"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#organizer_collective_agent",
+      "code": "organizer_collective_agent",
+      "labels": [
+        "Autor congreso o reunión"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:isOrganizerCollectiveAgentOf"
+      ],
+      "marc": [
+        "700 $$e entidad organizadora"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#originalname",
+      "code": "originalName",
+      "labels": [
+        "Nombre original del archivo"
+      ],
+      "templates": [
+        "Preservación"
+      ],
+      "predicates": [
+        "premis:originalName"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#other_related_persons",
+      "code": "Other related persons",
+      "labels": [
+        "Otras personas relacionadas"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:otherPFCWorkOf"
+      ],
+      "marc": [
+        "700$$e = no autor, no director de tesis"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#other__related__persons",
+      "code": "other_ related_ persons",
+      "labels": [
+        "Otras personas relacionadas"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:otherPFCWorkOf"
+      ],
+      "marc": [
+        "700$$e = no autor, no director de tesis"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#other_formats",
+      "code": "other_formats",
+      "labels": [
+        "Otros formatos"
+      ],
+      "templates": [
+        "Tesis"
+      ],
+      "predicates": [
+        "rdam:relatedManifestation"
+      ],
+      "marc": [
+        "500$$aPara disco compacto"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#other_title",
+      "code": "other_title",
+      "labels": [
+        "Otro título"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:otherTitleInformation",
+        "rdam:P30142"
+      ],
+      "marc": [
+        "246",
+        "245$$b"
+      ],
+      "notes": [
+        "N"
+      ],
+      "proposalNotes": [
+        "rdam:otherTitleInformation"
+      ],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "books": true,
+        "videos": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#owner_agent_of",
+      "code": "owner_agent_of",
+      "labels": [
+        "Propietario"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:isOwnerAgentOf"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#pages",
+      "code": "pages",
+      "labels": [
+        "Páginas",
+        "pagination"
+      ],
+      "templates": [
+        "Analiticas de Revistas COLMEX"
+      ],
+      "predicates": [
+        "SCHEMA.pagination",
+        "https://schema.org/pagination"
+      ],
+      "marc": [
+        "963 __$p"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#part",
+      "code": "part",
+      "labels": [
+        "Parte",
+        "\"has alternative numeric and/or alphabetic designation of first issue or part of sequence\""
+      ],
+      "templates": [
+        "Analiticas de Revistas COLMEX"
+      ],
+      "predicates": [
+        "rdam:alternativeNumericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence"
+      ],
+      "marc": [
+        "963 __$c"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#part_of_place",
+      "code": "part_of_place",
+      "labels": [
+        "Ciudad/municipio/localidad"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdac:isPartOfPlace"
+      ],
+      "marc": [
+        "651 $$a, 6XX$$z"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#period",
+      "code": "period",
+      "labels": [
+        "Periodo",
+        "\"has alternative chronological designation of last issue or part of sequence\""
+      ],
+      "templates": [
+        "Analiticas de Revistas COLMEX"
+      ],
+      "predicates": [
+        "rdam:alternativeNumericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence"
+      ],
+      "marc": [
+        "963 __$j"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#period_of_activity_of_corporate_body",
+      "code": "period_of_activity_of_corporate_body",
+      "labels": [
+        "Epoca/Periodo"
+      ],
+      "templates": [
+        "Tesis jurisprudenciales"
+      ],
+      "predicates": [
+        "rdaa:periodOfActivityOfCorporateBody"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#photographer",
+      "code": "photographer",
+      "labels": [
+        "Fotográfo"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:isPhotographerAgentOf"
+      ],
+      "marc": [
+        "700 $$e fotográfo"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#photographer_corporate_body_of_work",
+      "code": "photographer_corporate_body_of_work",
+      "labels": [
+        "Agencia fotográfica"
+      ],
+      "templates": [
+        "Fotografía"
+      ],
+      "predicates": [
+        "rdaa:photographerCorporateBodyOfWork"
+      ],
+      "marc": [
+        "710$$eAgencia fotográfica"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#place_of_publication",
+      "code": "place_of_publication",
+      "labels": [
+        "Lugar de publicación"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:PlaceOfPublication"
+      ],
+      "marc": [
+        "264 o 260 $$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "books": true,
+        "videos": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#preceded_by_work",
+      "code": "preceded_by_work",
+      "labels": [
+        "Precedentes"
+      ],
+      "templates": [
+        "Tesis jurisprudenciales"
+      ],
+      "predicates": [
+        "rdaw:precededByWork"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#preservation_level",
+      "code": "preservation_Level",
+      "labels": [
+        "Estado de la preservación original"
+      ],
+      "templates": [
+        "Preservación"
+      ],
+      "predicates": [
+        "premis:preservationLevel"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#primary_topic",
+      "code": "primary_topic",
+      "labels": [
+        "Materia"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "FOAF:isPrimaryTopicOf"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#production_method",
+      "code": "production_method",
+      "labels": [
+        "Medio de producción"
+      ],
+      "templates": [
+        "Bases de datos"
+      ],
+      "predicates": [
+        "rdam:productionMethod"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [
+        "TEXTO, IMAGEN, AUDIO, VIDEO, DATOS GEOESPACIALES, DATOS TABULATES,"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#project",
+      "code": "project",
+      "labels": [
+        "Proyecto"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "foaf:project"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#provenance",
+      "code": "provenance",
+      "labels": [
+        "Procedencia"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "dc:provenance"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#pub_conacyt",
+      "code": "pub_conacyt",
+      "labels": [],
+      "templates": [
+        "Conacyt"
+      ],
+      "predicates": [
+        "dc11:type",
+        "DC11.type"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [
+        "Campo especial para la cosecha de Conacyt"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#publisher",
+      "code": "publisher",
+      "labels": [
+        "Editorial",
+        "Datos de publicación/producción"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:publicationStatement"
+      ],
+      "marc": [
+        "264 o 260 $$b",
+        "264"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "books": true,
+        "videos": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#related_corporate_body_of_timespan",
+      "code": "related_corporate_body_of_timespan",
+      "labels": [
+        "Organización relacionada"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "rdat: relatedCorporateBodyOfTimespan"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#related_family_timespan",
+      "code": "related_family_timespan",
+      "labels": [
+        "Familia relacionada"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "rdat:relatedFamilyOfTimespan"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#related_object_identifier_type",
+      "code": "related_Object_Identifier_Type",
+      "labels": [
+        "Tipo de identificador"
+      ],
+      "templates": [
+        "Preservación"
+      ],
+      "predicates": [
+        "premis:relatedObjectIdentifierType"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#related_object_identifier_value",
+      "code": "related_Object_Identifier_Value",
+      "labels": [
+        "Identificador de la fuente de digitalización"
+      ],
+      "templates": [
+        "Preservación"
+      ],
+      "predicates": [
+        "premis:relatedObjectIdentifierValue"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#related_person_of",
+      "code": "related_person_of",
+      "labels": [
+        "Persona relacionada o tercero interesado"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "rdat:relatedPersonOf"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#related_place_of_timespan",
+      "code": "related_place_of_timespan",
+      "labels": [
+        "Lugar del hecho"
+      ],
+      "templates": [
+        "Hechos"
+      ],
+      "predicates": [
+        "rdat:relatedPlaceOfTimespan"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#related_url",
+      "code": "related_url",
+      "labels": [
+        "URL"
+      ],
+      "templates": [
+        "General",
+        "General - Incluidos por defecto"
+      ],
+      "predicates": [
+        "rdam:uniformResourceLocator",
+        "RDFS.seeAlso"
+      ],
+      "marc": [
+        "856"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "videos": true
+      },
+      "multiple": true,
+      "required": false,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#related_work_of_work",
+      "code": "related_work_of_work",
+      "labels": [
+        "Documento relacionado"
+      ],
+      "templates": [
+        "General RDDM/ Para Rodrigo Cuéllar"
+      ],
+      "predicates": [
+        "rdaw:RelatedWorkOfWork"
+      ],
+      "marc": [
+        "No identificado"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#researcher_agent_of",
+      "code": "researcher_agent_of",
+      "labels": [
+        "Investigador"
+      ],
+      "templates": [
+        "Bases de datos"
+      ],
+      "predicates": [
+        "rdaa:researcherAgentOf"
+      ],
+      "marc": [
+        "100$$e"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#resource_access_restrictions",
+      "code": "resource_access_restrictions",
+      "labels": [
+        "Restricción de acceso del recurso"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:resourceAccessRestrictions"
+      ],
+      "marc": [
+        "506 $$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#resource_type",
+      "code": "resource_type",
+      "labels": [
+        "Tipo de recurso"
+      ],
+      "templates": [
+        "General/Obligatorio",
+        "General",
+        "General - Incluidos por defecto"
+      ],
+      "predicates": [
+        "rdaw:contentType",
+        "rdaw:formOfWork"
+      ],
+      "marc": [
+        "595 __ $$a"
+      ],
+      "notes": [
+        "Tomado de los vocabularios controlados de Hyrax Manual para la importación de objetos en HYRAX - Calidad V2.docx (CEV)"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": false,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": true,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#resource_use_restrictions",
+      "code": "resource_use_restrictions",
+      "labels": [
+        "Restricciones de uso del recurso"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:restrictionsOnUseOfResource"
+      ],
+      "marc": [
+        "506 $$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#responsibility_statement",
+      "code": "responsibility_statement",
+      "labels": [
+        "Mención de responsabilidad"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:statementOfResponsibilityRelatingToTitleProper"
+      ],
+      "marc": [
+        "245$$c"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#reviewer",
+      "code": "reviewer",
+      "labels": [
+        "Lector/revisor",
+        "Lector/Revisor"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "bf2:Reviewer",
+        "<http://bibfra.me/vocab/relation/reviewer>"
+      ],
+      "marc": [
+        "7XX $$e lector $$e revisor"
+      ],
+      "notes": [
+        "Se podria utilizar este campo tanto para tesis como revistas u otros decoumentos que requieren arbitraje? Si no, podriamos utilizar uno predicado de MARC relators y otro de Bibframe"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "thesis": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#rights_statement",
+      "code": "rights_statement",
+      "labels": [],
+      "templates": [
+        "General",
+        "General - Incluidos por defecto"
+      ],
+      "predicates": [
+        "EDM.rights"
+      ],
+      "marc": [],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#scale",
+      "code": "scale",
+      "labels": [
+        "Escala"
+      ],
+      "templates": [
+        "Mapas"
+      ],
+      "predicates": [
+        "rdae:scale"
+      ],
+      "marc": [
+        "255$$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#source",
+      "code": "source",
+      "labels": [
+        "Fuente"
+      ],
+      "templates": [
+        "General",
+        "General - Incluidos por defecto"
+      ],
+      "predicates": [
+        "dc:source",
+        "DC.source"
+      ],
+      "marc": [
+        "773"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#source_consulted",
+      "code": "source consulted",
+      "labels": [],
+      "templates": [
+        "Analiticas de Revistas COLMEX"
+      ],
+      "predicates": [
+        "rdaz:sourceConsulted.en"
+      ],
+      "marc": [],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#speaker_agent_of",
+      "code": "speaker_agent_of",
+      "labels": [
+        "Conferencista/ponente"
+      ],
+      "templates": [
+        "Tesis jurisprudenciales"
+      ],
+      "predicates": [
+        "rdaa:speakerAgentOf"
+      ],
+      "marc": [
+        "100,700$$eponente$$econferencista"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#subject",
+      "code": "subject",
+      "labels": [
+        "Tema topico",
+        "Tema Topico"
+      ],
+      "templates": [
+        "t",
+        "General"
+      ],
+      "predicates": [
+        "rdaw:subjectRelationship"
+      ],
+      "marc": [
+        "650$$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#subject_conacyt",
+      "code": "subject_conacyt",
+      "labels": [],
+      "templates": [
+        "Conacyt"
+      ],
+      "predicates": [
+        "rdaw:intendedAudience",
+        "RDAW.intendedAudience"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [
+        "Campo especial para la cosecha de Conacyt"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#subject_corporate",
+      "code": "subject_corporate",
+      "labels": [
+        "Tema autor corporativo",
+        "Temas"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaw:subjectCorporateBody"
+      ],
+      "marc": [
+        "6101 $$a$$b$$c$$d$$t",
+        "6101 $$a$$b$$c$$d"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#subject_family",
+      "code": "subject_family",
+      "labels": [
+        "Tema familia"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaw:subjectFamily"
+      ],
+      "marc": [
+        "6003 $$a$$b$$c$$d"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#subject_person",
+      "code": "subject_person",
+      "labels": [
+        "Tema persona"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaw:subjectPerson"
+      ],
+      "marc": [
+        "6000 $$a$$b$$c$$d"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#subject_timespan",
+      "code": "subject_timespan",
+      "labels": [
+        "Tema del hecho criminal"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "rdaw.subjectTimeSpan"
+      ],
+      "marc": [
+        "651$$a$$x$$y"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#subject_uniform_title",
+      "code": "subject_uniform_title",
+      "labels": [
+        "Tema título uniforme"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaw:subjectUniformTitle"
+      ],
+      "marc": [
+        "630$$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "thesis": true,
+        "books": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#subject_work",
+      "code": "subject_work",
+      "labels": [
+        "Tema obra"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaw:subjectWork"
+      ],
+      "marc": [
+        "6000 $$a$$b$$c$$d$$t"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#summary",
+      "code": "Summary",
+      "labels": [
+        "Resumen"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdae:summarizationOfTheContent"
+      ],
+      "marc": [
+        "520"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#summary_of_work",
+      "code": "summary_of_work",
+      "labels": [
+        "Resumen del proyecto"
+      ],
+      "templates": [
+        "Bases de datos"
+      ],
+      "predicates": [
+        "rdaw:summaryOfWork"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#supplementary_content_or_bibliography",
+      "code": "supplementary_content_or_bibliography",
+      "labels": [
+        "Contenido suplementario/Bibliografía"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdae:summarizationOfTheContent"
+      ],
+      "marc": [
+        "504"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#system_requirements",
+      "code": "system_requirements",
+      "labels": [
+        "Requerimientos de sistema"
+      ],
+      "templates": [
+        "General",
+        "Tesis"
+      ],
+      "predicates": [
+        "rdam:equipmentOrSystemRequirement"
+      ],
+      "marc": [
+        "301 $$c"
+      ],
+      "notes": [
+        "Estaba en General"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#table_of_contents",
+      "code": "table_of_contents",
+      "labels": [
+        "Contenido",
+        "Tabla de contenidos"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "bf:tableOfContents",
+        "rdaw:wholePartWorkRelationship"
+      ],
+      "marc": [
+        "505"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "books": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#temporal_coverage",
+      "code": "Temporal coverage",
+      "labels": [
+        "Cobertura Temporal"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "BF2.temporalCoverage",
+        "rdaw:coverageOfTheContent"
+      ],
+      "marc": [
+        "6XX $$y"
+      ],
+      "notes": [
+        "Se usa bibframe porque este concepto esta mezclado con 651 en rdaw:coverageOfTheContent y necesitamos crear divisiones semanticas"
+      ],
+      "proposalNotes": [
+        "http://id.loc.gov/ontologies/bibframe.html#c_Temporal"
+      ],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#temporary_coverage",
+      "code": "temporary_coverage",
+      "labels": [
+        "Cobertura temporal"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "bf2:temporalCoverage"
+      ],
+      "marc": [
+        "6XX $$y"
+      ],
+      "notes": [
+        "Se usa bibframe porque este concepto esta mezclado con 651 en rdaw:coverageOfTheContent y necesitamos crear divisiones semanticas"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#thematic_collection",
+      "code": "thematic_collection",
+      "labels": [
+        "Colección tematica"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "bf2:collection"
+      ],
+      "marc": [
+        "916"
+      ],
+      "notes": [
+        "Predicado deprecado // Lo hemos usado para realizar los agrupamientos por proyectos: a) Movimientos armados -- b) Estudios sobre América Latina y el Caribe -- c) Seminario sobre Violencia y Paz -- d) Zapata vive! -- e) Estudios de género -- f) Cartillas indígenas ILV -- g) RDDM -- h) Libros de El Colegio de México en JStor -- i) Relaciones México-Estados Unidos (CEV)"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": true,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#themes",
+      "code": "Themes",
+      "labels": [
+        "Temas"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaw:subjectCorporateBody"
+      ],
+      "marc": [
+        "6101 $$a$$b$$c$$d"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#timespan_described_in",
+      "code": "timespan_described_in",
+      "labels": [
+        "Descripción de hechos"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "rdat:timespanDescribedIn"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#title",
+      "code": "title",
+      "labels": [
+        "Título"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdam:titleProper"
+      ],
+      "marc": [
+        "245$$a $$b",
+        "245$$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": false,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#title_of_series",
+      "code": "title_of_series",
+      "labels": [
+        "Serie"
+      ],
+      "templates": [
+        "Arquetipo Libros/Capitulos"
+      ],
+      "predicates": [
+        "rdam: hasTitleOfSeries"
+      ],
+      "marc": [
+        "490$$a y $$p"
+      ],
+      "notes": [
+        "Se agrego videos al arquetipo debido a necesidades del proyecto TIMX"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": true,
+        "books": true,
+        "videos": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#translator",
+      "code": "translator",
+      "labels": [
+        "Traductor"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:isTranslatorAgentOf"
+      ],
+      "marc": [
+        "700 $$e traductor"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#type_of_content",
+      "code": "Type of content",
+      "labels": [
+        "Tipo de contenido"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [],
+      "marc": [
+        "336 $$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#type_conacyt",
+      "code": "type_conacyt",
+      "labels": [],
+      "templates": [
+        "Conacyt"
+      ],
+      "predicates": [
+        "dc:type",
+        "DC.type"
+      ],
+      "marc": [
+        "XXX"
+      ],
+      "notes": [
+        "Campo especial para la cosecha de Conacyt"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020"
+      ],
+      "usage": {
+        "facet": false,
+        "userVisible": false
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#type_of_file",
+      "code": "type_of_file",
+      "labels": [
+        "Tipo de archivo"
+      ],
+      "templates": [
+        "General (No Programar)",
+        "Tesis"
+      ],
+      "predicates": [
+        "rdam:fileType"
+      ],
+      "marc": [
+        "Ignorar"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "userVisible": false
+      },
+      "multiple": true,
+      "required": false,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#type_of_illustrations",
+      "code": "type_of_illustrations",
+      "labels": [
+        "Tipo de Ilustraciones"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdae:illustrativeContent"
+      ],
+      "marc": [
+        "008/18-21"
+      ],
+      "notes": [
+        "Segmentar lo valors existentes"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "thesis": true,
+        "books": true,
+        "videos": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#type_of_thesis",
+      "code": "type_of_thesis",
+      "labels": [
+        "Tipo de tesis"
+      ],
+      "templates": [
+        "Tesis"
+      ],
+      "predicates": [
+        "rdaw:dissertationOrThesisInformation"
+      ],
+      "marc": [
+        "502$$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020",
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {
+        "thesis": true
+      },
+      "multiple": false,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#use_restrictions",
+      "code": "use_restrictions",
+      "labels": [
+        "p",
+        "Restricción de uso del recurso"
+      ],
+      "templates": [
+        "Tesis"
+      ],
+      "predicates": [
+        "rdam:restrictionsOnUseOfManifestation"
+      ],
+      "marc": [
+        "506"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#video_characteristic",
+      "code": "video_characteristic",
+      "labels": [
+        "Características del video"
+      ],
+      "templates": [
+        "Videos"
+      ],
+      "predicates": [
+        "rdam:hasVideoCharacteristic"
+      ],
+      "marc": [
+        "347 $$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "videos": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#video_format",
+      "code": "video_format",
+      "labels": [
+        "Formato del video"
+      ],
+      "templates": [
+        "Videos"
+      ],
+      "predicates": [
+        "rdam:hasVideoFormat"
+      ],
+      "marc": [
+        "337 $$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "videos": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#volume",
+      "code": "volume",
+      "labels": [
+        "Volumen"
+      ],
+      "templates": [
+        "Arquetipo Analíticas Tipo 2"
+      ],
+      "predicates": [
+        "rdam:numberingOfSerials"
+      ],
+      "marc": [
+        "773 $$g"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true,
+        "books": true,
+        "colmexJournalArticles": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#volumen",
+      "code": "volumen",
+      "labels": [
+        "Volúmen",
+        "\"has numbering of serials\""
+      ],
+      "templates": [
+        "Analiticas de Revistas COLMEX"
+      ],
+      "predicates": [
+        "rdam:numberingOfSerials"
+      ],
+      "marc": [
+        "963 __$a"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": true
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#witness",
+      "code": "witness",
+      "labels": [
+        "Testigo"
+      ],
+      "templates": [
+        "Arquetipo Documentos Legales"
+      ],
+      "predicates": [
+        "MARCRelators:witness"
+      ],
+      "marc": [
+        "100, 700 $$e Testigo"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#writer_of_suplementary_textual_content",
+      "code": "writer_of_suplementary_textual_content",
+      "labels": [
+        "Prologuista"
+      ],
+      "templates": [
+        "General"
+      ],
+      "predicates": [
+        "rdaa:isWriterOfSuplementaryTextualContent"
+      ],
+      "marc": [
+        "700$$eprologuista"
+      ],
+      "notes": [],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "MAPEO DE METADATOS JULIO 2020"
+      ],
+      "usage": {
+        "facet": true,
+        "userVisible": true
+      },
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    },
+    {
+      "id": "https://biblioteca.colmex.mx/esquemas/metadatos#year",
+      "code": "year",
+      "labels": [
+        "Año",
+        "\"has chronological designation of first issue or part of sequence\""
+      ],
+      "templates": [
+        "Analiticas de Revistas COLMEX"
+      ],
+      "predicates": [
+        "rdam:chronologicalDesignationOfFirstIssueOrPartOfSequence"
+      ],
+      "marc": [
+        "963 __$i"
+      ],
+      "notes": [
+        "Se usa \"Fecha de producción/publicación\" en su lugar"
+      ],
+      "proposalNotes": [],
+      "sourceSheets": [
+        "Mapeos Conjuntos junio 2020",
+        "Propuestas de metadatos"
+      ],
+      "usage": {},
+      "multiple": true,
+      "required": null,
+      "inUse": null
+    }
+  ]
+}

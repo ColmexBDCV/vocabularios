@@ -10,6 +10,10 @@ Deploy the contents of this directory at your web root to expose:
 - `/vocabularios/seaes`
 - `/vocabularios/seaes.ttl`
 - `/vocabularios/seaes.jsonld`
+- `/esquemas`
+- `/esquemas/metadatos`
+- `/esquemas/metadatos.json`
+- `/esquemas/metadatos.jsonld`
 
 The SEAES namespace is intentionally stable and should not be replaced:
 
@@ -65,3 +69,7 @@ See `docs/add-future-vocabularies.md`.
 ## Hyrax integration
 
 This package is intentionally outside Hyrax. Use the URI namespace and controlled value list in Hyrax metadata configuration. See `docs/hyrax-integration-placeholders.md`.
+
+## Metadata schema
+
+The metadata schema is generated from `Plantillas de Metadatos.xlsx` and published as human-readable HTML plus JSON and JSON-LD. The JSON version is designed for field-mapping workflows where an AI system compares CSV headers to known metadata codes, labels, predicates, MARC mappings, templates, and usage notes.

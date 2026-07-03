@@ -121,6 +121,13 @@ h3 {
   font-size: 1.05rem;
 }
 
+.section-copy {
+  max-width: 100%;
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
 .inline-links {
   display: flex;
   flex-wrap: wrap;

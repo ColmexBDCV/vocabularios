@@ -1,0 +1,1282 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Esquema de metadatos</title>
+    <link rel="stylesheet" href="../../assets/vocabularios.css">
+  </head>
+  <body>
+    <main class="page">
+      <a class="site-logo" href="../../vocabularios/" aria-label="Biblioteca Daniel Cosío Villegas">
+        <img src="../../assets/biblioteca-dcv-cm-rojo.png" alt="Biblioteca Daniel Cosío Villegas, abierta a todo público">
+      </a>
+
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+        <span>Usted está aquí:</span>
+        <a href="../../vocabularios/">Catálogo público de vocabularios locales</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Esquema de metadatos</span>
+      </nav>
+
+      <header class="page-header">
+        <h1>Esquema de metadatos</h1>
+        <dl class="metadata">
+          <div>
+            <dt>Namespace</dt>
+            <dd><code>https://biblioteca.colmex.mx/esquemas/metadatos#</code></dd>
+          </div>
+          <div>
+            <dt>Fecha de emisión</dt>
+            <dd>2026-07-03</dd>
+          </div>
+          <div>
+            <dt>Mantenedor</dt>
+            <dd>CID_BIBLIOTECA_COLMEX</dd>
+          </div>
+        </dl>
+        <ul class="inline-links">
+          <li><a href="../metadatos.json">JSON</a></li>
+          <li><a href="../metadatos.jsonld">JSON-LD</a></li>
+        </ul>
+      </header>
+
+      <section class="description-block" aria-labelledby="description">
+        <h2 id="description">Descripción</h2>
+        <p>Este esquema publica los campos de metadatos utilizados en las plantillas de la Biblioteca Daniel Cosío Villegas para apoyar el mapeo de columnas CSV, hojas de cálculo y otros datos externos hacia términos documentados. Incluye códigos Hyrax, etiquetas, predicados, equivalencias MARC, plantillas aplicables y notas de uso.</p>
+      </section>
+
+      <section aria-labelledby="ai-use">
+        <h2 id="ai-use">Uso para mapeo asistido por IA</h2>
+        <p class="section-copy">Un sistema de IA puede comparar encabezados de un CSV contra los códigos, etiquetas, predicados, MARC, plantillas y notas publicados en los archivos JSON y JSON-LD. Cuando exista ambigüedad, debe preferir coincidencias por código exacto o etiqueta y usar las notas de plantilla para resolver el campo más adecuado.</p>
+      </section>
+
+      <section aria-labelledby="fields">
+        <h2 id="fields">Campos publicados</h2>
+        <p class="section-copy">200 campos activos o propuestos. La hoja marcada como “no usar” se conserva fuera del esquema activo.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Etiqueta</th>
+                <th>Predicado</th>
+                <th>Plantillas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>academic_degree</code></td>
+                <td>Grado académico<br>Grado Académico</td>
+                <td>rdaw:academicDegree</td>
+                <td>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>Access Level</code></td>
+                <td>Licencia de uso</td>
+                <td>dc:rights</td>
+                <td>Conacyt (no programar en HYRAX)</td>
+              </tr>
+              <tr>
+                <td><code>access_restrictions</code></td>
+                <td>Restricción de acceso del recurso</td>
+                <td>rdam:restrictionsOnAccessToManifestation</td>
+                <td>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>agent_Name</code></td>
+                <td>Entidad responsable de la digitalización</td>
+                <td>premis:agentName</td>
+                <td>Preservación</td>
+              </tr>
+              <tr>
+                <td><code>alternate_title</code></td>
+                <td>Variante de título<br>Título variante</td>
+                <td>rdam:variantTitle</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>alternative_numeric_and_or_alphabethic_designation</code></td>
+                <td>Númeración o designación alternativa</td>
+                <td>rdam:alternativeNumericAndOrAlphabeticDesignation</td>
+                <td>Arquetipo Analíticas Tipo 1</td>
+              </tr>
+              <tr>
+                <td><code>analysis_of_work</code></td>
+                <td>Análisis</td>
+                <td>rdaw:analysisOfWork</td>
+                <td>Bases de datos</td>
+              </tr>
+              <tr>
+                <td><code>assistant</code></td>
+                <td>Secretario</td>
+                <td>rdaa:assistant</td>
+                <td>Tesis jurisprudenciales</td>
+              </tr>
+              <tr>
+                <td><code>Audience</code></td>
+                <td>Audiencia</td>
+                <td>rdaw:intendedAudience</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>awards</code></td>
+                <td>Premios<br>awards</td>
+                <td>rdae:award</td>
+                <td>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>based_near</code></td>
+                <td>Ubicación geoespacial</td>
+                <td>foaf:basedNear<br>FOAF.based_near<br>BF2.geographicCoverage</td>
+                <td>General<br>General - Incluidos por defecto</td>
+              </tr>
+              <tr>
+                <td><code>beginning</code></td>
+                <td>Inicio del hecho</td>
+                <td>rdat:hasBeginning</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>bibliographic_citation</code></td>
+                <td>Cómo citar<br>Como citar</td>
+                <td>rdam:preferredCitation</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>center</code></td>
+                <td>Centro</td>
+                <td>schema:deparment<br>SCHEMA.deparment<br>rdaw:grantingInstitutionOrFaculty</td>
+                <td>Tesis<br>General</td>
+              </tr>
+              <tr>
+                <td><code>classification</code></td>
+                <td>Clasificación</td>
+                <td>bf2:Classification<br>BF2.Classification</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>collective_agent</code></td>
+                <td>Congreso</td>
+                <td>rdac:collectiveAgent</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>collective_title</code></td>
+                <td>Título colectivo</td>
+                <td>bf2:CollectiveTitle</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>collector_collective_agent</code></td>
+                <td>Repositorio</td>
+                <td>rdai:collectorCollectiveAgent</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>commentator</code></td>
+                <td>Reseñista/comentarista</td>
+                <td>rdda:isCommentatorAgentOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>compiler</code></td>
+                <td>Compilador</td>
+                <td>rdaa:isCompilerAgentFor</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>complainant</code></td>
+                <td>Quejoso (víctima y ofendido)</td>
+                <td>MARCRelators:complainant</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>complemented_by_work</code></td>
+                <td>Documentos complementarios</td>
+                <td>rdaw:complementedByWork</td>
+                <td>Bases de datos</td>
+              </tr>
+              <tr>
+                <td><code>contained_in</code></td>
+                <td>Incluido en:<br>Contenido en</td>
+                <td>rdaw:containedInWork</td>
+                <td>General<br>Analiticas de Revistas COLMEX</td>
+              </tr>
+              <tr>
+                <td><code>content_Location_Type</code></td>
+                <td>Tipo de localización del objeto original</td>
+                <td>premis:contentLocationType</td>
+                <td>Preservación</td>
+              </tr>
+              <tr>
+                <td><code>content_Location_Value</code></td>
+                <td>Localización del objeto digital</td>
+                <td>premis:contentLocationValue</td>
+                <td>Preservación</td>
+              </tr>
+              <tr>
+                <td><code>contestee</code></td>
+                <td>Representante legal, defensor, etc.</td>
+                <td>MARCRelators:contestee</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>contributor</code></td>
+                <td>Colaborador</td>
+                <td>dc11:contributor<br>DC11.contributor</td>
+                <td>General<br>General - Incluidos por defecto</td>
+              </tr>
+              <tr>
+                <td><code>contributor_conacyt</code></td>
+                <td>contributor_conacyt</td>
+                <td>mods:name<br>MODS.name</td>
+                <td>Conacyt</td>
+              </tr>
+              <tr>
+                <td><code>copyright</code></td>
+                <td>Copyright</td>
+                <td>rdam:hasCopyrightDate</td>
+                <td>Arquetipo Libros/Capitulos /Videos</td>
+              </tr>
+              <tr>
+                <td><code>corporate_body</code></td>
+                <td>Autor corporativo</td>
+                <td>rdac:corporateBody</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>creator</code></td>
+                <td>Autor</td>
+                <td>rdaa:authorOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>creator_conacyt</code></td>
+                <td>creator_conacyt</td>
+                <td>mods:namePrincipal<br>MODS.namePrincipal</td>
+                <td>Conacyt</td>
+              </tr>
+              <tr>
+                <td><code>curator_collective_agent_of</code></td>
+                <td>Organismo que selecciona el recurso</td>
+                <td>rdaa:isCuratorCollectiveAgentOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>custodian_agent_of</code></td>
+                <td>Organismo custodio</td>
+                <td>rdaa:isCustodianAgentOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>database</code></td>
+                <td>Base de datos</td>
+                <td>rdaz:sourceConsulted.en</td>
+                <td>Analiticas de Revistas COLMEX</td>
+              </tr>
+              <tr>
+                <td><code>date_created</code></td>
+                <td>Año<br>Fecha de producción/publicación</td>
+                <td>rdam:dateOfPublication</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>date_of_manifestation</code></td>
+                <td>Fecha</td>
+                <td>rdam:dateOfManifestation</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>date_of_presentation_of_the_thesis</code></td>
+                <td>Fecha de presentación de la tesis</td>
+                <td>rdaw:yearDegreeGranted</td>
+                <td>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>degree_program</code></td>
+                <td>Programa de estudios</td>
+                <td>rdaw:grantingInstitutionOrFaculty</td>
+                <td>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>depositor_agent</code></td>
+                <td>Persona depositante</td>
+                <td>rdai:depositoryAgent</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>depository_collective_agent</code></td>
+                <td>Organismo depositante</td>
+                <td>rdai:depositoryCollectiveAgent</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>description</code></td>
+                <td>Resumen</td>
+                <td>rdae:summarizationOfTheContent<br>DC11.description</td>
+                <td>General<br>General - Incluidos por defecto</td>
+              </tr>
+              <tr>
+                <td><code>digital_file_characteristics</code></td>
+                <td>Características del archivo digital</td>
+                <td>rdam:digitalFileCharacteristic</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>digital_representation_of_cartographic_content</code></td>
+                <td>Datos geoespaciales</td>
+                <td>rdam:digitalRepresentationOfCartographicContent</td>
+                <td>Mapas</td>
+              </tr>
+              <tr>
+                <td><code>digital_resource_generation_information</code></td>
+                <td>Información sobre la fuente del archivo digital<br>detailsOfGenerationOfDigitalResource</td>
+                <td>rdam:detailsOfGenerationOfDigitalResource</td>
+                <td>General<br>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>dimensions</code></td>
+                <td>Dimensiones</td>
+                <td>rdam:dimensions</td>
+                <td>General<br>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>dimensions_of_still_image</code></td>
+                <td>Dimensiones de la fotografía</td>
+                <td>rdam:dimensionsOfStillImage</td>
+                <td>Fotografía</td>
+              </tr>
+              <tr>
+                <td><code>director</code></td>
+                <td>Director de tesis<br>Director de Tesis</td>
+                <td>rdaa:degreeSupervisorOf</td>
+                <td>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>doi</code></td>
+                <td>DOI</td>
+                <td>bf2:DOI<br>BF2.Doi</td>
+                <td>General<br>General - Incluidos por defecto</td>
+              </tr>
+              <tr>
+                <td><code>draftsman</code></td>
+                <td>Dibujante</td>
+                <td>rdda:isDraftsmanAgenOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>edition</code></td>
+                <td>Edición</td>
+                <td>rdam:designationOfEdition</td>
+                <td>General<br>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>editor</code></td>
+                <td>Editor</td>
+                <td>rdaa:isEditorPersonOfTextOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>enacting_juridiction_of</code></td>
+                <td>Instancia promulgadora o emisora</td>
+                <td>rdaa:enactingJuridictionOf</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>encoding_format_details</code></td>
+                <td>detailsOfEncodingFormat</td>
+                <td>rdam:detailsOfEncodingFormat</td>
+                <td>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>ending</code></td>
+                <td>Fin del hecho</td>
+                <td>rdat:hasEnding</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>event_Date_Time</code></td>
+                <td>Fecha de la digitalización</td>
+                <td>premis:eventDateTime</td>
+                <td>Preservación</td>
+              </tr>
+              <tr>
+                <td><code>exemplar_of_manifestation</code></td>
+                <td>Ejemplares</td>
+                <td>rdam:exemplarOfManifestation</td>
+                <td>Tesis<br>QUITAR</td>
+              </tr>
+              <tr>
+                <td><code>extension</code></td>
+                <td>Extensión</td>
+                <td>rdam:extent</td>
+                <td>General<br>Tesis<br>QUITAR</td>
+              </tr>
+              <tr>
+                <td><code>FALTA</code></td>
+                <td>Origen<br>URL de la fuente original</td>
+                <td>FALTA</td>
+                <td>Preservación</td>
+              </tr>
+              <tr>
+                <td><code>file_details</code></td>
+                <td>Detalles del archivo digital</td>
+                <td>rdam:digitalFileCharacteristic</td>
+                <td>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>file_name</code></td>
+                <td>Nombre del archivo</td>
+                <td>rdam:fileName</td>
+                <td>General (No Progamar)</td>
+              </tr>
+              <tr>
+                <td><code>file_type_details</code></td>
+                <td>Detalles de tipo de archivo<br>detailsOfFileType</td>
+                <td>rdam:detailsOfFileType</td>
+                <td>General<br>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>gender_or_form</code></td>
+                <td>En desuso<br>Género/Forma</td>
+                <td>rdaw:formOfWork</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>geographic_coverage</code></td>
+                <td>Cobertura geográfica</td>
+                <td>bf2:geographicCoverage<br>rdaw:coverageOfTheContent</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>guide_to_work</code></td>
+                <td>Protocolo o guia</td>
+                <td>rdaw:guideToWork</td>
+                <td>Bases de datos</td>
+              </tr>
+              <tr>
+                <td><code>handle</code></td>
+                <td>Handle</td>
+                <td>datacite:handle</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>has coverage of the content</code></td>
+                <td>Colección</td>
+                <td>rdaw:coverageOfTheContent</td>
+                <td>Analiticas de Revistas COLMEX</td>
+              </tr>
+              <tr>
+                <td><code>has_carrier_type</code></td>
+                <td>Tipo de portador</td>
+                <td>rdam:hasCarrierType</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>has_creator</code></td>
+                <td>Creador</td>
+                <td>rdau:hasCreator</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>has_field_activity_of_agent</code></td>
+                <td>Función</td>
+                <td>rdau:hasFieldOfActivityofAgent</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>has_identifier_for_item</code></td>
+                <td>Número de expediente o caso</td>
+                <td>rdai:hasIdentifierForItem</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>has_medium_of_performance_of_musical_content</code></td>
+                <td>Medio de interpretación de contenido musical</td>
+                <td>rdau:hasMediumOfPerformanceOfMusicalContent</td>
+                <td>Audio</td>
+              </tr>
+              <tr>
+                <td><code>has_person_member_of_collective_agent</code></td>
+                <td>Sus miembros son:</td>
+                <td>rdaa:hasPersonMemberOfCollectiveAgent</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>has_system_of_organization</code></td>
+                <td>Colección</td>
+                <td>rdaw:hasSystemOfOrganizatión</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>has_transformation_by_genre</code></td>
+                <td>Transformación al genero o forma</td>
+                <td>rdaw:hasTransformationByGenre</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>hasOrganizerCorporateBody</code></td>
+                <td>Conferencia / Evento</td>
+                <td>rdaw:hasOrganizerCorporateBody</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>hierarchical_inferior</code></td>
+                <td>Instancia subordinada</td>
+                <td>rdaa:hierarchicalInferior</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>hierarchical_superior</code></td>
+                <td>Instancia superior</td>
+                <td>rdaa:hierarchicalSuperior</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>identifier</code></td>
+                <td>Identificador<br>ID Colmex<br>ID Colmex (alma)</td>
+                <td>rdam:identifierForTheManifestation</td>
+                <td>General<br>General - Incluidos por defecto</td>
+              </tr>
+              <tr>
+                <td><code>identifier_of_work</code></td>
+                <td>Variante del identificador</td>
+                <td>rdaw:identifierOfWork</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>institution</code></td>
+                <td>Institución</td>
+                <td>bf2:grantingInstitution<br>BF2.grantingInstitution<br>rdaw:grantingInstitutionOrFaculty</td>
+                <td>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>interviewee</code></td>
+                <td>Entrevistador</td>
+                <td>rdaa:isIntervieweeAgentOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>interviewer</code></td>
+                <td>Entrevistado</td>
+                <td>rdaa: isInterviewerAgentOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>is_composer_person_of_work_of</code></td>
+                <td>Compositor</td>
+                <td>rdaa:isComposerPersonOfWorkOf</td>
+                <td>Audio</td>
+              </tr>
+              <tr>
+                <td><code>is_criminal_defendant_corporate_body_of</code></td>
+                <td>Organismo acusado o demandado</td>
+                <td>rdaa:isCriminalDefendantCorporateBodyOf</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>is_criminal_defendant_person_of</code></td>
+                <td>Persona acusada o demandada</td>
+                <td>rdda:isCriminalDefendantPersonOf</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>is_dancer_agent_of</code></td>
+                <td>Danzante</td>
+                <td>rdda:isDancerPersonOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>is_facsimile_of_manifestation_of</code></td>
+                <td>Facsímil de:</td>
+                <td>rdam:isFacsimileOfManifestationOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>is_finding_aid_for</code></td>
+                <td>Instrumento de descripción archivística</td>
+                <td>rdau:isFindingAidFor</td>
+                <td>Documentos archivísticos</td>
+              </tr>
+              <tr>
+                <td><code>is_instrumentalist_agent_of</code></td>
+                <td>Instrumentista</td>
+                <td>rdaa:isInstrumentalistAgentOf</td>
+                <td>Audio</td>
+              </tr>
+              <tr>
+                <td><code>is_lyricist_person_of</code></td>
+                <td>Autor de la letra</td>
+                <td>rdaa:isLyricistPersonOf</td>
+                <td>Audio</td>
+              </tr>
+              <tr>
+                <td><code>is_part_of</code></td>
+                <td>Es parte de</td>
+                <td>dc:isPartOf</td>
+                <td>Preservación</td>
+              </tr>
+              <tr>
+                <td><code>is_part_or_work</code></td>
+                <td>Sección o suplemento</td>
+                <td>rdaw:hasRelatedWorkOfWork</td>
+                <td>Arquetipo Analíticas Tipo 1</td>
+              </tr>
+              <tr>
+                <td><code>is_performer_agent_of</code></td>
+                <td>Ejecutante</td>
+                <td>rdaa:isPerformerAgentOf</td>
+                <td>Audio</td>
+              </tr>
+              <tr>
+                <td><code>is_person_member_of_collective_agent</code></td>
+                <td>Es miembro de:</td>
+                <td>rdaa:isPersonMemberOfCollectiveAgent</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>is_singer_agent_of</code></td>
+                <td>Cantante</td>
+                <td>rdaa:isSingerAgentOf</td>
+                <td>Audio</td>
+              </tr>
+              <tr>
+                <td><code>is_subcollection_of</code></td>
+                <td>Subcolección temática</td>
+                <td>rdau:isSubcollectionOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>is_title_of_item_of</code></td>
+                <td>Asunto</td>
+                <td>rdan:isTitleOfItemOf</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>is_transformation_by_genre</code></td>
+                <td>Genero o forma</td>
+                <td>rdaw:isTransformationByGenre</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>isbn</code></td>
+                <td>ISBN</td>
+                <td>bf2:Isbn<br>BF2.Isbn</td>
+                <td>General<br>General - Incluidos por defecto</td>
+              </tr>
+              <tr>
+                <td><code>issn</code></td>
+                <td>ISSN</td>
+                <td>rdam:issnOfSeries.en</td>
+                <td>Arquetipo Analíticas Tipo 2<br>Analiticas de Revistas COLMEX</td>
+              </tr>
+              <tr>
+                <td><code>item_access_restrictions</code></td>
+                <td>Restricción de acceso del ítem</td>
+                <td>rdai:restrictionsOnAccessToItem</td>
+                <td>General<br>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>item_use_restrictions</code></td>
+                <td>Restricción de uso del ítem</td>
+                <td>rdai:restrictionsOnUseOfItem</td>
+                <td>General<br>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>keyword</code></td>
+                <td>Palabra clave</td>
+                <td>schema:keywords<br>DC11.relation</td>
+                <td>General<br>General - Incluidos por defecto</td>
+              </tr>
+              <tr>
+                <td><code>language</code></td>
+                <td>Idioma</td>
+                <td>rdae:languageOfTheContent</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>language_of_expression</code></td>
+                <td>Nota de idioma</td>
+                <td>rdae:languageOfExpression</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>license</code></td>
+                <td>license</td>
+                <td>DC.rights</td>
+                <td>General<br>General - Incluidos por defecto</td>
+              </tr>
+              <tr>
+                <td><code>License Condition</code></td>
+                <td>Condiciones de licencia</td>
+                <td>dc:rights</td>
+                <td>Conacyt (no programar en HYRAX)</td>
+              </tr>
+              <tr>
+                <td><code>local_resource_identifier</code></td>
+                <td>Identificador institucional</td>
+                <td>datacite:localResourceIdentifierScheme</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>longitud_and_latitud</code></td>
+                <td>Coordenadas</td>
+                <td>rdam:longitudAndLatitud</td>
+                <td>Mapas</td>
+              </tr>
+              <tr>
+                <td><code>manifestation_access_restrictions</code></td>
+                <td>Restricciones de acceso a la manifestación</td>
+                <td>rdam:restrictionsOnAccessToManifestation</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>manifestation_use_restrictions</code></td>
+                <td>Restricciones de uso a la manifestación</td>
+                <td>rdam:restrictionsOnUseOfManifestation</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>message_Digest</code></td>
+                <td>Checksum</td>
+                <td>premis:messageDigest</td>
+                <td>Preservación</td>
+              </tr>
+              <tr>
+                <td><code>mode_of_issuance</code></td>
+                <td>Modo de publicación<br>Modo de emisión</td>
+                <td>rdam:modeOfIssuance</td>
+                <td>General<br>Analiticas de Revistas COLMEX</td>
+              </tr>
+              <tr>
+                <td><code>mode_of_publication</code></td>
+                <td>Modo de publicación</td>
+                <td>rdam:modeOfIssuance</td>
+                <td>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>narrator</code></td>
+                <td>Narrador</td>
+                <td>rdaa:isNarratorAgentOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>nature_of_content</code></td>
+                <td>Naturaleza del contenido</td>
+                <td>rdaw:natureOfContent</td>
+                <td>Bases de datos</td>
+              </tr>
+              <tr>
+                <td><code>note_on_statement_of_responsibility</code></td>
+                <td>Nota sobre declaración de responsabilidad</td>
+                <td>rdam:hasNoteOnStatementOfResponsibility</td>
+                <td>Videos</td>
+              </tr>
+              <tr>
+                <td><code>notes</code></td>
+                <td>Notas</td>
+                <td>rdam:noteOnManifestation</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>number</code></td>
+                <td>Número<br>&quot;has numbering within subseries&quot;</td>
+                <td>rdam:numberingWithinSubseries</td>
+                <td>Arquetipo Analíticas Tipo 2<br>Analiticas de Revistas COLMEX</td>
+              </tr>
+              <tr>
+                <td><code>numbering_within_sequence</code></td>
+                <td>Volumen/número</td>
+                <td>rdam: hasNumberingWithinSequence</td>
+                <td>Arquetipo Libros/Capitulos /Videos</td>
+              </tr>
+              <tr>
+                <td><code>object_Identifier_Type</code></td>
+                <td>Tipo de identificador del objeto digital</td>
+                <td>premis:objectIdentifierType</td>
+                <td>Preservación</td>
+              </tr>
+              <tr>
+                <td><code>object_Identifier_Value</code></td>
+                <td>Identificador del objeto digital</td>
+                <td>premis:objectIdentifierValue</td>
+                <td>Preservación</td>
+              </tr>
+              <tr>
+                <td><code>organizer</code></td>
+                <td>Coordinador/organizador</td>
+                <td>rdaa:isOrganizerAgentOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>organizer_collective_agent</code></td>
+                <td>Autor congreso o reunión</td>
+                <td>rdaa:isOrganizerCollectiveAgentOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>originalName</code></td>
+                <td>Nombre original del archivo</td>
+                <td>premis:originalName</td>
+                <td>Preservación</td>
+              </tr>
+              <tr>
+                <td><code>Other related persons</code></td>
+                <td>Otras personas relacionadas</td>
+                <td>rdaa:otherPFCWorkOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>other_ related_ persons</code></td>
+                <td>Otras personas relacionadas</td>
+                <td>rdaa:otherPFCWorkOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>other_formats</code></td>
+                <td>Otros formatos</td>
+                <td>rdam:relatedManifestation</td>
+                <td>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>other_title</code></td>
+                <td>Otro título</td>
+                <td>rdam:otherTitleInformation<br>rdam:P30142</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>owner_agent_of</code></td>
+                <td>Propietario</td>
+                <td>rdaa:isOwnerAgentOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>pages</code></td>
+                <td>Páginas<br>pagination</td>
+                <td>SCHEMA.pagination<br>https://schema.org/pagination</td>
+                <td>Analiticas de Revistas COLMEX</td>
+              </tr>
+              <tr>
+                <td><code>part</code></td>
+                <td>Parte<br>&quot;has alternative numeric and/or alphabetic designation of first issue or part of sequence&quot;</td>
+                <td>rdam:alternativeNumericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence</td>
+                <td>Analiticas de Revistas COLMEX</td>
+              </tr>
+              <tr>
+                <td><code>part_of_place</code></td>
+                <td>Ciudad/municipio/localidad</td>
+                <td>rdac:isPartOfPlace</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>period</code></td>
+                <td>Periodo<br>&quot;has alternative chronological designation of last issue or part of sequence&quot;</td>
+                <td>rdam:alternativeNumericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence</td>
+                <td>Analiticas de Revistas COLMEX</td>
+              </tr>
+              <tr>
+                <td><code>period_of_activity_of_corporate_body</code></td>
+                <td>Epoca/Periodo</td>
+                <td>rdaa:periodOfActivityOfCorporateBody</td>
+                <td>Tesis jurisprudenciales</td>
+              </tr>
+              <tr>
+                <td><code>photographer</code></td>
+                <td>Fotográfo</td>
+                <td>rdaa:isPhotographerAgentOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>photographer_corporate_body_of_work</code></td>
+                <td>Agencia fotográfica</td>
+                <td>rdaa:photographerCorporateBodyOfWork</td>
+                <td>Fotografía</td>
+              </tr>
+              <tr>
+                <td><code>place_of_publication</code></td>
+                <td>Lugar de publicación</td>
+                <td>rdam:PlaceOfPublication</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>preceded_by_work</code></td>
+                <td>Precedentes</td>
+                <td>rdaw:precededByWork</td>
+                <td>Tesis jurisprudenciales</td>
+              </tr>
+              <tr>
+                <td><code>preservation_Level</code></td>
+                <td>Estado de la preservación original</td>
+                <td>premis:preservationLevel</td>
+                <td>Preservación</td>
+              </tr>
+              <tr>
+                <td><code>primary_topic</code></td>
+                <td>Materia</td>
+                <td>FOAF:isPrimaryTopicOf</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>production_method</code></td>
+                <td>Medio de producción</td>
+                <td>rdam:productionMethod</td>
+                <td>Bases de datos</td>
+              </tr>
+              <tr>
+                <td><code>project</code></td>
+                <td>Proyecto</td>
+                <td>foaf:project</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>provenance</code></td>
+                <td>Procedencia</td>
+                <td>dc:provenance</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>pub_conacyt</code></td>
+                <td>pub_conacyt</td>
+                <td>dc11:type<br>DC11.type</td>
+                <td>Conacyt</td>
+              </tr>
+              <tr>
+                <td><code>publisher</code></td>
+                <td>Editorial<br>Datos de publicación/producción</td>
+                <td>rdam:publicationStatement</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>related_corporate_body_of_timespan</code></td>
+                <td>Organización relacionada</td>
+                <td>rdat: relatedCorporateBodyOfTimespan</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>related_family_timespan</code></td>
+                <td>Familia relacionada</td>
+                <td>rdat:relatedFamilyOfTimespan</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>related_Object_Identifier_Type</code></td>
+                <td>Tipo de identificador</td>
+                <td>premis:relatedObjectIdentifierType</td>
+                <td>Preservación</td>
+              </tr>
+              <tr>
+                <td><code>related_Object_Identifier_Value</code></td>
+                <td>Identificador de la fuente de digitalización</td>
+                <td>premis:relatedObjectIdentifierValue</td>
+                <td>Preservación</td>
+              </tr>
+              <tr>
+                <td><code>related_person_of</code></td>
+                <td>Persona relacionada o tercero interesado</td>
+                <td>rdat:relatedPersonOf</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>related_place_of_timespan</code></td>
+                <td>Lugar del hecho</td>
+                <td>rdat:relatedPlaceOfTimespan</td>
+                <td>Hechos</td>
+              </tr>
+              <tr>
+                <td><code>related_url</code></td>
+                <td>URL</td>
+                <td>rdam:uniformResourceLocator<br>RDFS.seeAlso</td>
+                <td>General<br>General - Incluidos por defecto</td>
+              </tr>
+              <tr>
+                <td><code>related_work_of_work</code></td>
+                <td>Documento relacionado</td>
+                <td>rdaw:RelatedWorkOfWork</td>
+                <td>General RDDM/ Para Rodrigo Cuéllar</td>
+              </tr>
+              <tr>
+                <td><code>researcher_agent_of</code></td>
+                <td>Investigador</td>
+                <td>rdaa:researcherAgentOf</td>
+                <td>Bases de datos</td>
+              </tr>
+              <tr>
+                <td><code>resource_access_restrictions</code></td>
+                <td>Restricción de acceso del recurso</td>
+                <td>rdam:resourceAccessRestrictions</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>resource_type</code></td>
+                <td>Tipo de recurso</td>
+                <td>rdaw:contentType<br>rdaw:formOfWork</td>
+                <td>General/Obligatorio<br>General<br>General - Incluidos por defecto</td>
+              </tr>
+              <tr>
+                <td><code>resource_use_restrictions</code></td>
+                <td>Restricciones de uso del recurso</td>
+                <td>rdam:restrictionsOnUseOfResource</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>responsibility_statement</code></td>
+                <td>Mención de responsabilidad</td>
+                <td>rdam:statementOfResponsibilityRelatingToTitleProper</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>reviewer</code></td>
+                <td>Lector/revisor<br>Lector/Revisor</td>
+                <td>bf2:Reviewer<br>&lt;http://bibfra.me/vocab/relation/reviewer&gt;</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>rights_statement</code></td>
+                <td>rights_statement</td>
+                <td>EDM.rights</td>
+                <td>General<br>General - Incluidos por defecto</td>
+              </tr>
+              <tr>
+                <td><code>scale</code></td>
+                <td>Escala</td>
+                <td>rdae:scale</td>
+                <td>Mapas</td>
+              </tr>
+              <tr>
+                <td><code>source</code></td>
+                <td>Fuente</td>
+                <td>dc:source<br>DC.source</td>
+                <td>General<br>General - Incluidos por defecto</td>
+              </tr>
+              <tr>
+                <td><code>source consulted</code></td>
+                <td>source consulted</td>
+                <td>rdaz:sourceConsulted.en</td>
+                <td>Analiticas de Revistas COLMEX</td>
+              </tr>
+              <tr>
+                <td><code>speaker_agent_of</code></td>
+                <td>Conferencista/ponente</td>
+                <td>rdaa:speakerAgentOf</td>
+                <td>Tesis jurisprudenciales</td>
+              </tr>
+              <tr>
+                <td><code>subject</code></td>
+                <td>Tema topico<br>Tema Topico</td>
+                <td>rdaw:subjectRelationship</td>
+                <td>t<br>General</td>
+              </tr>
+              <tr>
+                <td><code>subject_conacyt</code></td>
+                <td>subject_conacyt</td>
+                <td>rdaw:intendedAudience<br>RDAW.intendedAudience</td>
+                <td>Conacyt</td>
+              </tr>
+              <tr>
+                <td><code>subject_corporate</code></td>
+                <td>Tema autor corporativo<br>Temas</td>
+                <td>rdaw:subjectCorporateBody</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>subject_family</code></td>
+                <td>Tema familia</td>
+                <td>rdaw:subjectFamily</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>subject_person</code></td>
+                <td>Tema persona</td>
+                <td>rdaw:subjectPerson</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>subject_timespan</code></td>
+                <td>Tema del hecho criminal</td>
+                <td>rdaw.subjectTimeSpan</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>subject_uniform_title</code></td>
+                <td>Tema título uniforme</td>
+                <td>rdaw:subjectUniformTitle</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>subject_work</code></td>
+                <td>Tema obra</td>
+                <td>rdaw:subjectWork</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>Summary</code></td>
+                <td>Resumen</td>
+                <td>rdae:summarizationOfTheContent</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>summary_of_work</code></td>
+                <td>Resumen del proyecto</td>
+                <td>rdaw:summaryOfWork</td>
+                <td>Bases de datos</td>
+              </tr>
+              <tr>
+                <td><code>supplementary_content_or_bibliography</code></td>
+                <td>Contenido suplementario/Bibliografía</td>
+                <td>rdae:summarizationOfTheContent</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>system_requirements</code></td>
+                <td>Requerimientos de sistema</td>
+                <td>rdam:equipmentOrSystemRequirement</td>
+                <td>General<br>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>table_of_contents</code></td>
+                <td>Contenido<br>Tabla de contenidos</td>
+                <td>bf:tableOfContents<br>rdaw:wholePartWorkRelationship</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>Temporal coverage</code></td>
+                <td>Cobertura Temporal</td>
+                <td>BF2.temporalCoverage<br>rdaw:coverageOfTheContent</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>temporary_coverage</code></td>
+                <td>Cobertura temporal</td>
+                <td>bf2:temporalCoverage</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>thematic_collection</code></td>
+                <td>Colección tematica</td>
+                <td>bf2:collection</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>Themes</code></td>
+                <td>Temas</td>
+                <td>rdaw:subjectCorporateBody</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>timespan_described_in</code></td>
+                <td>Descripción de hechos</td>
+                <td>rdat:timespanDescribedIn</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>title</code></td>
+                <td>Título</td>
+                <td>rdam:titleProper</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>title_of_series</code></td>
+                <td>Serie</td>
+                <td>rdam: hasTitleOfSeries</td>
+                <td>Arquetipo Libros/Capitulos</td>
+              </tr>
+              <tr>
+                <td><code>translator</code></td>
+                <td>Traductor</td>
+                <td>rdaa:isTranslatorAgentOf</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>Type of content</code></td>
+                <td>Tipo de contenido</td>
+                <td></td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>type_conacyt</code></td>
+                <td>type_conacyt</td>
+                <td>dc:type<br>DC.type</td>
+                <td>Conacyt</td>
+              </tr>
+              <tr>
+                <td><code>type_of_file</code></td>
+                <td>Tipo de archivo</td>
+                <td>rdam:fileType</td>
+                <td>General (No Programar)<br>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>type_of_illustrations</code></td>
+                <td>Tipo de Ilustraciones</td>
+                <td>rdae:illustrativeContent</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>type_of_thesis</code></td>
+                <td>Tipo de tesis</td>
+                <td>rdaw:dissertationOrThesisInformation</td>
+                <td>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>use_restrictions</code></td>
+                <td>p<br>Restricción de uso del recurso</td>
+                <td>rdam:restrictionsOnUseOfManifestation</td>
+                <td>Tesis</td>
+              </tr>
+              <tr>
+                <td><code>video_characteristic</code></td>
+                <td>Características del video</td>
+                <td>rdam:hasVideoCharacteristic</td>
+                <td>Videos</td>
+              </tr>
+              <tr>
+                <td><code>video_format</code></td>
+                <td>Formato del video</td>
+                <td>rdam:hasVideoFormat</td>
+                <td>Videos</td>
+              </tr>
+              <tr>
+                <td><code>volume</code></td>
+                <td>Volumen</td>
+                <td>rdam:numberingOfSerials</td>
+                <td>Arquetipo Analíticas Tipo 2</td>
+              </tr>
+              <tr>
+                <td><code>volumen</code></td>
+                <td>Volúmen<br>&quot;has numbering of serials&quot;</td>
+                <td>rdam:numberingOfSerials</td>
+                <td>Analiticas de Revistas COLMEX</td>
+              </tr>
+              <tr>
+                <td><code>witness</code></td>
+                <td>Testigo</td>
+                <td>MARCRelators:witness</td>
+                <td>Arquetipo Documentos Legales</td>
+              </tr>
+              <tr>
+                <td><code>writer_of_suplementary_textual_content</code></td>
+                <td>Prologuista</td>
+                <td>rdaa:isWriterOfSuplementaryTextualContent</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td><code>year</code></td>
+                <td>Año<br>&quot;has chronological designation of first issue or part of sequence&quot;</td>
+                <td>rdam:chronologicalDesignationOfFirstIssueOrPartOfSequence</td>
+                <td>Analiticas de Revistas COLMEX</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="license-block" aria-labelledby="license">
+        <img src="../../assets/cc0-1-0-deed.png" alt="CC0 1.0 Deed, CC0 1.0 Universal">
+        <div>
+          <h2 id="license">Licencia</h2>
+          <p>Este esquema se publica bajo CC0 1.0 Universal. La institución renuncia, en la medida permitida por la ley, a los derechos de autor y derechos conexos sobre las definiciones, etiquetas y archivos de este esquema, con el fin de facilitar su reutilización, interoperabilidad y preservación.</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
