@@ -2,9 +2,11 @@
   const table = document.querySelector("[data-schema-table]");
   if (!table) return;
 
-  const rows = Array.from(table.querySelectorAll("tbody tr"));
+  const tbody = table.querySelector("tbody");
+  const rows = Array.from(tbody.querySelectorAll("tr"));
   const searchInput = document.querySelector("[data-table-search]");
   const templateFilter = document.querySelector("[data-template-filter]");
+  const templateSort = document.querySelector("[data-template-sort]");
   const pageSizeSelect = document.querySelector("[data-page-size]");
   const summary = document.querySelector("[data-table-summary]");
   const currentPageEl = document.querySelector("[data-page-current]");
@@ -24,12 +26,24 @@
   function filteredRows() {
     const query = normalized(searchInput && searchInput.value);
     const template = templateFilter ? templateFilter.value : "";
-    return rows.filter((row) => {
+    const sortDirection = templateSort ? templateSort.value : "";
+    const result = rows.filter((row) => {
       const matchesQuery = !query || normalized(row.dataset.search).includes(query);
       const rowTemplates = row.dataset.templates || "";
       const matchesTemplate = !template || rowTemplates.split("||").includes(template);
       return matchesQuery && matchesTemplate;
     });
+
+    if (sortDirection) {
+      result.sort((a, b) => {
+        const aTemplate = normalized((a.dataset.templates || "").split("||")[0]);
+        const bTemplate = normalized((b.dataset.templates || "").split("||")[0]);
+        const comparison = aTemplate.localeCompare(bTemplate, "es", { sensitivity: "base" });
+        return sortDirection === "desc" ? -comparison : comparison;
+      });
+    }
+
+    return result;
   }
 
   function render() {
@@ -40,10 +54,14 @@
 
     const start = size === Infinity ? 0 : (currentPage - 1) * size;
     const end = size === Infinity ? visible.length : start + size;
-    const pageRows = new Set(visible.slice(start, end));
+    const pageRows = visible.slice(start, end);
+    const pageRowSet = new Set(pageRows);
 
     rows.forEach((row) => {
-      row.hidden = !pageRows.has(row);
+      row.hidden = !pageRowSet.has(row);
+    });
+    pageRows.forEach((row) => {
+      tbody.appendChild(row);
     });
 
     if (summary) {
@@ -64,6 +82,7 @@
 
   if (searchInput) searchInput.addEventListener("input", resetAndRender);
   if (templateFilter) templateFilter.addEventListener("change", resetAndRender);
+  if (templateSort) templateSort.addEventListener("change", resetAndRender);
   if (pageSizeSelect) pageSizeSelect.addEventListener("change", resetAndRender);
   if (prevButton) {
     prevButton.addEventListener("click", () => {
