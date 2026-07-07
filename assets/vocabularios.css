@@ -203,10 +203,11 @@ tbody tr:last-child td {
 
 .table-controls {
   display: grid;
-  grid-template-columns: max-content minmax(220px, 1fr) minmax(220px, 280px);
+  grid-template-columns: max-content minmax(220px, 280px);
   gap: 16px;
   align-items: end;
   margin: 20px 0 16px;
+  justify-content: space-between;
 }
 
 .table-controls label {
@@ -263,6 +264,31 @@ tbody tr:last-child td {
 .schema-table th:nth-child(4),
 .schema-table td:nth-child(4) {
   width: 340px;
+}
+
+.schema-table th:nth-child(6),
+.schema-table td:nth-child(6) {
+  width: 280px;
+}
+
+.th-filter {
+  display: grid;
+  gap: 8px;
+}
+
+.th-filter span {
+  font-weight: 700;
+}
+
+.th-filter select {
+  width: 100%;
+  min-height: 34px;
+  border: 1px solid #c8d0d8;
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
 }
 
 .uri-cell a {

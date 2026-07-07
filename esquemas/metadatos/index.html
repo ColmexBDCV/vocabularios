@@ -68,9 +68,24 @@
             entradas
           </label>
           <label>
-            Plantilla
-            <select data-template-filter>
-              <option value="">Todas</option>
+            Buscar
+            <input type="search" data-table-search>
+          </label>
+        </div>
+        <div class="table-wrap">
+          <table class="schema-table" data-schema-table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Código</th>
+                <th>Etiqueta</th>
+                <th>URI</th>
+                <th>Predicado</th>
+                <th>
+                  <div class="th-filter">
+                    <span>Plantillas</span>
+                    <select data-template-filter aria-label="Filtrar por plantilla">
+                      <option value="">Todas</option>
               <option value="Analiticas de Revistas COLMEX">Analiticas de Revistas COLMEX</option>
               <option value="Arquetipo Analíticas Tipo 1">Arquetipo Analíticas Tipo 1</option>
               <option value="Arquetipo Analíticas Tipo 2">Arquetipo Analíticas Tipo 2</option>
@@ -97,31 +112,14 @@
               <option value="Tesis jurisprudenciales">Tesis jurisprudenciales</option>
               <option value="Videos">Videos</option>
               <option value="t">t</option>
-            </select>
-          </label>
-          <label>
-            Ordenar plantilla
-            <select data-template-sort>
-              <option value="">Orden original</option>
-              <option value="asc">A-Z</option>
-              <option value="desc">Z-A</option>
-            </select>
-          </label>
-          <label>
-            Buscar
-            <input type="search" data-table-search>
-          </label>
-        </div>
-        <div class="table-wrap">
-          <table class="schema-table" data-schema-table>
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Código</th>
-                <th>Etiqueta</th>
-                <th>URI</th>
-                <th>Predicado</th>
-                <th>Plantillas</th>
+                    </select>
+                    <select data-template-sort aria-label="Ordenar por plantilla">
+                      <option value="">Original</option>
+                      <option value="asc">A-Z</option>
+                      <option value="desc">Z-A</option>
+                    </select>
+                  </div>
+                </th>
               </tr>
             </thead>
             <tbody>
