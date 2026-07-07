@@ -77,53 +77,15 @@
             <thead>
               <tr>
                 <th>#</th>
-                <th>Código</th>
-                <th>Etiqueta</th>
-                <th>URI</th>
-                <th>Predicado</th>
-                <th>
-                  <div class="th-filter">
-                    <span>Plantillas</span>
-                    <select data-template-filter aria-label="Filtrar por plantilla">
-                      <option value="">Todas</option>
-              <option value="Analiticas de Revistas COLMEX">Analiticas de Revistas COLMEX</option>
-              <option value="Arquetipo Analíticas Tipo 1">Arquetipo Analíticas Tipo 1</option>
-              <option value="Arquetipo Analíticas Tipo 2">Arquetipo Analíticas Tipo 2</option>
-              <option value="Arquetipo Documentos Legales">Arquetipo Documentos Legales</option>
-              <option value="Arquetipo Libros/Capitulos">Arquetipo Libros/Capitulos</option>
-              <option value="Arquetipo Libros/Capitulos /Videos">Arquetipo Libros/Capitulos /Videos</option>
-              <option value="Audio">Audio</option>
-              <option value="Bases de datos">Bases de datos</option>
-              <option value="Conacyt">Conacyt</option>
-              <option value="Conacyt (no programar en HYRAX)">Conacyt (no programar en HYRAX)</option>
-              <option value="Documentos archivísticos">Documentos archivísticos</option>
-              <option value="Fotografía">Fotografía</option>
-              <option value="General">General</option>
-              <option value="General (No Progamar)">General (No Progamar)</option>
-              <option value="General (No Programar)">General (No Programar)</option>
-              <option value="General - Incluidos por defecto">General - Incluidos por defecto</option>
-              <option value="General RDDM/ Para Rodrigo Cuéllar">General RDDM/ Para Rodrigo Cuéllar</option>
-              <option value="General/Obligatorio">General/Obligatorio</option>
-              <option value="Hechos">Hechos</option>
-              <option value="Mapas">Mapas</option>
-              <option value="Preservación">Preservación</option>
-              <option value="QUITAR">QUITAR</option>
-              <option value="Tesis">Tesis</option>
-              <option value="Tesis jurisprudenciales">Tesis jurisprudenciales</option>
-              <option value="Videos">Videos</option>
-              <option value="t">t</option>
-                    </select>
-                    <select data-template-sort aria-label="Ordenar por plantilla">
-                      <option value="">Original</option>
-                      <option value="asc">A-Z</option>
-                      <option value="desc">Z-A</option>
-                    </select>
-                  </div>
-                </th>
+                <th><button type="button" class="sort-button" data-sort-column="code">Código <span aria-hidden="true">↕</span></button></th>
+                <th><button type="button" class="sort-button" data-sort-column="label">Etiqueta <span aria-hidden="true">↕</span></button></th>
+                <th><button type="button" class="sort-button" data-sort-column="uri">URI <span aria-hidden="true">↕</span></button></th>
+                <th><button type="button" class="sort-button" data-sort-column="predicate">Predicado <span aria-hidden="true">↕</span></button></th>
+                <th><button type="button" class="sort-button" data-sort-column="template">Plantillas <span aria-hidden="true">↕</span></button></th>
               </tr>
             </thead>
             <tbody>
-              <tr id="academic_degree" data-search="academic_degree Grado académico Grado Académico rdaw:academicDegree http://rdaregistry.info/Elements/w/academicDegree Tesis" data-templates="Tesis">
+              <tr id="academic_degree" data-search="academic_degree Grado académico Grado Académico rdaw:academicDegree http://rdaregistry.info/Elements/w/academicDegree Tesis" data-templates="Tesis" data-code="academic_degree" data-label="Grado académico" data-uri="http://rdaregistry.info/Elements/w/academicDegree" data-predicate="rdaw:academicDegree" data-template="Tesis">
                 <td><a href="#academic_degree">#</a></td>
                 <td><code>academic_degree</code></td>
                 <td>Grado académico<br>Grado Académico</td>
@@ -131,7 +93,7 @@
                 <td>rdaw:academicDegree</td>
                 <td>Tesis</td>
               </tr>
-              <tr id="access_level" data-search="Access Level Licencia de uso dc:rights http://purl.org/dc/terms/rights Conacyt (no programar en HYRAX)" data-templates="Conacyt (no programar en HYRAX)">
+              <tr id="access_level" data-search="Access Level Licencia de uso dc:rights http://purl.org/dc/terms/rights Conacyt (no programar en HYRAX)" data-templates="Conacyt (no programar en HYRAX)" data-code="Access Level" data-label="Licencia de uso" data-uri="http://purl.org/dc/terms/rights" data-predicate="dc:rights" data-template="Conacyt (no programar en HYRAX)">
                 <td><a href="#access_level">#</a></td>
                 <td><code>Access Level</code></td>
                 <td>Licencia de uso</td>
@@ -139,7 +101,7 @@
                 <td>dc:rights</td>
                 <td>Conacyt (no programar en HYRAX)</td>
               </tr>
-              <tr id="access_restrictions" data-search="access_restrictions Restricción de acceso del recurso rdam:restrictionsOnAccessToManifestation http://rdaregistry.info/Elements/m/restrictionsOnAccessToManifestation Tesis" data-templates="Tesis">
+              <tr id="access_restrictions" data-search="access_restrictions Restricción de acceso del recurso rdam:restrictionsOnAccessToManifestation http://rdaregistry.info/Elements/m/restrictionsOnAccessToManifestation Tesis" data-templates="Tesis" data-code="access_restrictions" data-label="Restricción de acceso del recurso" data-uri="http://rdaregistry.info/Elements/m/restrictionsOnAccessToManifestation" data-predicate="rdam:restrictionsOnAccessToManifestation" data-template="Tesis">
                 <td><a href="#access_restrictions">#</a></td>
                 <td><code>access_restrictions</code></td>
                 <td>Restricción de acceso del recurso</td>
@@ -147,7 +109,7 @@
                 <td>rdam:restrictionsOnAccessToManifestation</td>
                 <td>Tesis</td>
               </tr>
-              <tr id="agent_name" data-search="agent_Name Entidad responsable de la digitalización premis:agentName  Preservación" data-templates="Preservación">
+              <tr id="agent_name" data-search="agent_Name Entidad responsable de la digitalización premis:agentName  Preservación" data-templates="Preservación" data-code="agent_Name" data-label="Entidad responsable de la digitalización" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#agent_name" data-predicate="premis:agentName" data-template="Preservación">
                 <td><a href="#agent_name">#</a></td>
                 <td><code>agent_Name</code></td>
                 <td>Entidad responsable de la digitalización</td>
@@ -155,7 +117,7 @@
                 <td>premis:agentName</td>
                 <td>Preservación</td>
               </tr>
-              <tr id="alternate_title" data-search="alternate_title Variante de título Título variante rdam:variantTitle http://rdaregistry.info/Elements/m/variantTitle General" data-templates="General">
+              <tr id="alternate_title" data-search="alternate_title Variante de título Título variante rdam:variantTitle http://rdaregistry.info/Elements/m/variantTitle General" data-templates="General" data-code="alternate_title" data-label="Variante de título" data-uri="http://rdaregistry.info/Elements/m/variantTitle" data-predicate="rdam:variantTitle" data-template="General">
                 <td><a href="#alternate_title">#</a></td>
                 <td><code>alternate_title</code></td>
                 <td>Variante de título<br>Título variante</td>
@@ -163,7 +125,7 @@
                 <td>rdam:variantTitle</td>
                 <td>General</td>
               </tr>
-              <tr id="alternative_numeric_and_or_alphabethic_designation" data-search="alternative_numeric_and_or_alphabethic_designation Númeración o designación alternativa rdam:alternativeNumericAndOrAlphabeticDesignation http://rdaregistry.info/Elements/m/alternativeNumericAndOrAlphabeticDesignation Arquetipo Analíticas Tipo 1" data-templates="Arquetipo Analíticas Tipo 1">
+              <tr id="alternative_numeric_and_or_alphabethic_designation" data-search="alternative_numeric_and_or_alphabethic_designation Númeración o designación alternativa rdam:alternativeNumericAndOrAlphabeticDesignation http://rdaregistry.info/Elements/m/alternativeNumericAndOrAlphabeticDesignation Arquetipo Analíticas Tipo 1" data-templates="Arquetipo Analíticas Tipo 1" data-code="alternative_numeric_and_or_alphabethic_designation" data-label="Númeración o designación alternativa" data-uri="http://rdaregistry.info/Elements/m/alternativeNumericAndOrAlphabeticDesignation" data-predicate="rdam:alternativeNumericAndOrAlphabeticDesignation" data-template="Arquetipo Analíticas Tipo 1">
                 <td><a href="#alternative_numeric_and_or_alphabethic_designation">#</a></td>
                 <td><code>alternative_numeric_and_or_alphabethic_designation</code></td>
                 <td>Númeración o designación alternativa</td>
@@ -171,7 +133,7 @@
                 <td>rdam:alternativeNumericAndOrAlphabeticDesignation</td>
                 <td>Arquetipo Analíticas Tipo 1</td>
               </tr>
-              <tr id="analysis_of_work" data-search="analysis_of_work Análisis rdaw:analysisOfWork http://rdaregistry.info/Elements/w/analysisOfWork Bases de datos" data-templates="Bases de datos">
+              <tr id="analysis_of_work" data-search="analysis_of_work Análisis rdaw:analysisOfWork http://rdaregistry.info/Elements/w/analysisOfWork Bases de datos" data-templates="Bases de datos" data-code="analysis_of_work" data-label="Análisis" data-uri="http://rdaregistry.info/Elements/w/analysisOfWork" data-predicate="rdaw:analysisOfWork" data-template="Bases de datos">
                 <td><a href="#analysis_of_work">#</a></td>
                 <td><code>analysis_of_work</code></td>
                 <td>Análisis</td>
@@ -179,7 +141,7 @@
                 <td>rdaw:analysisOfWork</td>
                 <td>Bases de datos</td>
               </tr>
-              <tr id="assistant" data-search="assistant Secretario rdaa:assistant http://rdaregistry.info/Elements/a/assistant Tesis jurisprudenciales" data-templates="Tesis jurisprudenciales">
+              <tr id="assistant" data-search="assistant Secretario rdaa:assistant http://rdaregistry.info/Elements/a/assistant Tesis jurisprudenciales" data-templates="Tesis jurisprudenciales" data-code="assistant" data-label="Secretario" data-uri="http://rdaregistry.info/Elements/a/assistant" data-predicate="rdaa:assistant" data-template="Tesis jurisprudenciales">
                 <td><a href="#assistant">#</a></td>
                 <td><code>assistant</code></td>
                 <td>Secretario</td>
@@ -187,7 +149,7 @@
                 <td>rdaa:assistant</td>
                 <td>Tesis jurisprudenciales</td>
               </tr>
-              <tr id="audience" data-search="Audience Audiencia rdaw:intendedAudience http://rdaregistry.info/Elements/w/intendedAudience General" data-templates="General">
+              <tr id="audience" data-search="Audience Audiencia rdaw:intendedAudience http://rdaregistry.info/Elements/w/intendedAudience General" data-templates="General" data-code="Audience" data-label="Audiencia" data-uri="http://rdaregistry.info/Elements/w/intendedAudience" data-predicate="rdaw:intendedAudience" data-template="General">
                 <td><a href="#audience">#</a></td>
                 <td><code>Audience</code></td>
                 <td>Audiencia</td>
@@ -195,7 +157,7 @@
                 <td>rdaw:intendedAudience</td>
                 <td>General</td>
               </tr>
-              <tr id="awards" data-search="awards Premios awards rdae:award  Tesis" data-templates="Tesis">
+              <tr id="awards" data-search="awards Premios awards rdae:award  Tesis" data-templates="Tesis" data-code="awards" data-label="Premios" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#awards" data-predicate="rdae:award" data-template="Tesis">
                 <td><a href="#awards">#</a></td>
                 <td><code>awards</code></td>
                 <td>Premios<br>awards</td>
@@ -203,7 +165,7 @@
                 <td>rdae:award</td>
                 <td>Tesis</td>
               </tr>
-              <tr id="based_near" data-search="based_near Ubicación geoespacial foaf:basedNear FOAF.based_near BF2.geographicCoverage  General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto">
+              <tr id="based_near" data-search="based_near Ubicación geoespacial foaf:basedNear FOAF.based_near BF2.geographicCoverage  General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto" data-code="based_near" data-label="Ubicación geoespacial" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#based_near" data-predicate="foaf:basedNear" data-template="General">
                 <td><a href="#based_near">#</a></td>
                 <td><code>based_near</code></td>
                 <td>Ubicación geoespacial</td>
@@ -211,7 +173,7 @@
                 <td>foaf:basedNear<br>FOAF.based_near</td>
                 <td>General<br>General - Incluidos por defecto</td>
               </tr>
-              <tr id="beginning" data-search="beginning Inicio del hecho rdat:hasBeginning  General" data-templates="General">
+              <tr id="beginning" data-search="beginning Inicio del hecho rdat:hasBeginning  General" data-templates="General" data-code="beginning" data-label="Inicio del hecho" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#beginning" data-predicate="rdat:hasBeginning" data-template="General">
                 <td><a href="#beginning">#</a></td>
                 <td><code>beginning</code></td>
                 <td>Inicio del hecho</td>
@@ -219,7 +181,7 @@
                 <td>rdat:hasBeginning</td>
                 <td>General</td>
               </tr>
-              <tr id="bibliographic_citation" data-search="bibliographic_citation Cómo citar Como citar rdam:preferredCitation http://rdaregistry.info/Elements/m/preferredCitation General" data-templates="General">
+              <tr id="bibliographic_citation" data-search="bibliographic_citation Cómo citar Como citar rdam:preferredCitation http://rdaregistry.info/Elements/m/preferredCitation General" data-templates="General" data-code="bibliographic_citation" data-label="Cómo citar" data-uri="http://rdaregistry.info/Elements/m/preferredCitation" data-predicate="rdam:preferredCitation" data-template="General">
                 <td><a href="#bibliographic_citation">#</a></td>
                 <td><code>bibliographic_citation</code></td>
                 <td>Cómo citar<br>Como citar</td>
@@ -227,7 +189,7 @@
                 <td>rdam:preferredCitation</td>
                 <td>General</td>
               </tr>
-              <tr id="center" data-search="center Centro schema:deparment SCHEMA.deparment rdaw:grantingInstitutionOrFaculty https://schema.org/deparment http://rdaregistry.info/Elements/w/grantingInstitutionOrFaculty Tesis General" data-templates="Tesis||General">
+              <tr id="center" data-search="center Centro schema:deparment SCHEMA.deparment rdaw:grantingInstitutionOrFaculty https://schema.org/deparment http://rdaregistry.info/Elements/w/grantingInstitutionOrFaculty Tesis General" data-templates="Tesis||General" data-code="center" data-label="Centro" data-uri="https://schema.org/deparment" data-predicate="schema:deparment" data-template="Tesis">
                 <td><a href="#center">#</a></td>
                 <td><code>center</code></td>
                 <td>Centro</td>
@@ -235,7 +197,7 @@
                 <td>schema:deparment<br>SCHEMA.deparment</td>
                 <td>Tesis<br>General</td>
               </tr>
-              <tr id="classification" data-search="classification Clasificación bf2:Classification BF2.Classification http://id.loc.gov/ontologies/bibframe/Classification General" data-templates="General">
+              <tr id="classification" data-search="classification Clasificación bf2:Classification BF2.Classification http://id.loc.gov/ontologies/bibframe/Classification General" data-templates="General" data-code="classification" data-label="Clasificación" data-uri="http://id.loc.gov/ontologies/bibframe/Classification" data-predicate="bf2:Classification" data-template="General">
                 <td><a href="#classification">#</a></td>
                 <td><code>classification</code></td>
                 <td>Clasificación</td>
@@ -243,7 +205,7 @@
                 <td>bf2:Classification<br>BF2.Classification</td>
                 <td>General</td>
               </tr>
-              <tr id="collective_agent" data-search="collective_agent Congreso rdac:collectiveAgent  General" data-templates="General">
+              <tr id="collective_agent" data-search="collective_agent Congreso rdac:collectiveAgent  General" data-templates="General" data-code="collective_agent" data-label="Congreso" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#collective_agent" data-predicate="rdac:collectiveAgent" data-template="General">
                 <td><a href="#collective_agent">#</a></td>
                 <td><code>collective_agent</code></td>
                 <td>Congreso</td>
@@ -251,7 +213,7 @@
                 <td>rdac:collectiveAgent</td>
                 <td>General</td>
               </tr>
-              <tr id="collective_title" data-search="collective_title Título colectivo bf2:CollectiveTitle http://id.loc.gov/ontologies/bibframe/CollectiveTitle General" data-templates="General">
+              <tr id="collective_title" data-search="collective_title Título colectivo bf2:CollectiveTitle http://id.loc.gov/ontologies/bibframe/CollectiveTitle General" data-templates="General" data-code="collective_title" data-label="Título colectivo" data-uri="http://id.loc.gov/ontologies/bibframe/CollectiveTitle" data-predicate="bf2:CollectiveTitle" data-template="General">
                 <td><a href="#collective_title">#</a></td>
                 <td><code>collective_title</code></td>
                 <td>Título colectivo</td>
@@ -259,7 +221,7 @@
                 <td>bf2:CollectiveTitle</td>
                 <td>General</td>
               </tr>
-              <tr id="collector_collective_agent" data-search="collector_collective_agent Repositorio rdai:collectorCollectiveAgent http://rdaregistry.info/Elements/i/collectorCollectiveAgent General" data-templates="General">
+              <tr id="collector_collective_agent" data-search="collector_collective_agent Repositorio rdai:collectorCollectiveAgent http://rdaregistry.info/Elements/i/collectorCollectiveAgent General" data-templates="General" data-code="collector_collective_agent" data-label="Repositorio" data-uri="http://rdaregistry.info/Elements/i/collectorCollectiveAgent" data-predicate="rdai:collectorCollectiveAgent" data-template="General">
                 <td><a href="#collector_collective_agent">#</a></td>
                 <td><code>collector_collective_agent</code></td>
                 <td>Repositorio</td>
@@ -267,7 +229,7 @@
                 <td>rdai:collectorCollectiveAgent</td>
                 <td>General</td>
               </tr>
-              <tr id="commentator" data-search="commentator Reseñista/comentarista rdda:isCommentatorAgentOf  General" data-templates="General">
+              <tr id="commentator" data-search="commentator Reseñista/comentarista rdda:isCommentatorAgentOf  General" data-templates="General" data-code="commentator" data-label="Reseñista/comentarista" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#commentator" data-predicate="rdda:isCommentatorAgentOf" data-template="General">
                 <td><a href="#commentator">#</a></td>
                 <td><code>commentator</code></td>
                 <td>Reseñista/comentarista</td>
@@ -275,7 +237,7 @@
                 <td>rdda:isCommentatorAgentOf</td>
                 <td>General</td>
               </tr>
-              <tr id="compiler" data-search="compiler Compilador rdaa:isCompilerAgentFor http://rdaregistry.info/Elements/a/isCompilerAgentFor General" data-templates="General">
+              <tr id="compiler" data-search="compiler Compilador rdaa:isCompilerAgentFor http://rdaregistry.info/Elements/a/isCompilerAgentFor General" data-templates="General" data-code="compiler" data-label="Compilador" data-uri="http://rdaregistry.info/Elements/a/isCompilerAgentFor" data-predicate="rdaa:isCompilerAgentFor" data-template="General">
                 <td><a href="#compiler">#</a></td>
                 <td><code>compiler</code></td>
                 <td>Compilador</td>
@@ -283,7 +245,7 @@
                 <td>rdaa:isCompilerAgentFor</td>
                 <td>General</td>
               </tr>
-              <tr id="complainant" data-search="complainant Quejoso (víctima y ofendido) MARCRelators:complainant  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="complainant" data-search="complainant Quejoso (víctima y ofendido) MARCRelators:complainant  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="complainant" data-label="Quejoso (víctima y ofendido)" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#complainant" data-predicate="MARCRelators:complainant" data-template="Arquetipo Documentos Legales">
                 <td><a href="#complainant">#</a></td>
                 <td><code>complainant</code></td>
                 <td>Quejoso (víctima y ofendido)</td>
@@ -291,7 +253,7 @@
                 <td>MARCRelators:complainant</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="complemented_by_work" data-search="complemented_by_work Documentos complementarios rdaw:complementedByWork http://rdaregistry.info/Elements/w/complementedByWork Bases de datos" data-templates="Bases de datos">
+              <tr id="complemented_by_work" data-search="complemented_by_work Documentos complementarios rdaw:complementedByWork http://rdaregistry.info/Elements/w/complementedByWork Bases de datos" data-templates="Bases de datos" data-code="complemented_by_work" data-label="Documentos complementarios" data-uri="http://rdaregistry.info/Elements/w/complementedByWork" data-predicate="rdaw:complementedByWork" data-template="Bases de datos">
                 <td><a href="#complemented_by_work">#</a></td>
                 <td><code>complemented_by_work</code></td>
                 <td>Documentos complementarios</td>
@@ -299,7 +261,7 @@
                 <td>rdaw:complementedByWork</td>
                 <td>Bases de datos</td>
               </tr>
-              <tr id="contained_in" data-search="contained_in Incluido en: Contenido en rdaw:containedInWork http://rdaregistry.info/Elements/w/containedInWork General Analiticas de Revistas COLMEX" data-templates="General||Analiticas de Revistas COLMEX">
+              <tr id="contained_in" data-search="contained_in Incluido en: Contenido en rdaw:containedInWork http://rdaregistry.info/Elements/w/containedInWork General Analiticas de Revistas COLMEX" data-templates="General||Analiticas de Revistas COLMEX" data-code="contained_in" data-label="Incluido en:" data-uri="http://rdaregistry.info/Elements/w/containedInWork" data-predicate="rdaw:containedInWork" data-template="General">
                 <td><a href="#contained_in">#</a></td>
                 <td><code>contained_in</code></td>
                 <td>Incluido en:<br>Contenido en</td>
@@ -307,7 +269,7 @@
                 <td>rdaw:containedInWork</td>
                 <td>General<br>Analiticas de Revistas COLMEX</td>
               </tr>
-              <tr id="content_location_type" data-search="content_Location_Type Tipo de localización del objeto original premis:contentLocationType  Preservación" data-templates="Preservación">
+              <tr id="content_location_type" data-search="content_Location_Type Tipo de localización del objeto original premis:contentLocationType  Preservación" data-templates="Preservación" data-code="content_Location_Type" data-label="Tipo de localización del objeto original" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#content_location_type" data-predicate="premis:contentLocationType" data-template="Preservación">
                 <td><a href="#content_location_type">#</a></td>
                 <td><code>content_Location_Type</code></td>
                 <td>Tipo de localización del objeto original</td>
@@ -315,7 +277,7 @@
                 <td>premis:contentLocationType</td>
                 <td>Preservación</td>
               </tr>
-              <tr id="content_location_value" data-search="content_Location_Value Localización del objeto digital premis:contentLocationValue  Preservación" data-templates="Preservación">
+              <tr id="content_location_value" data-search="content_Location_Value Localización del objeto digital premis:contentLocationValue  Preservación" data-templates="Preservación" data-code="content_Location_Value" data-label="Localización del objeto digital" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#content_location_value" data-predicate="premis:contentLocationValue" data-template="Preservación">
                 <td><a href="#content_location_value">#</a></td>
                 <td><code>content_Location_Value</code></td>
                 <td>Localización del objeto digital</td>
@@ -323,7 +285,7 @@
                 <td>premis:contentLocationValue</td>
                 <td>Preservación</td>
               </tr>
-              <tr id="contestee" data-search="contestee Representante legal, defensor, etc. MARCRelators:contestee  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="contestee" data-search="contestee Representante legal, defensor, etc. MARCRelators:contestee  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="contestee" data-label="Representante legal, defensor, etc." data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#contestee" data-predicate="MARCRelators:contestee" data-template="Arquetipo Documentos Legales">
                 <td><a href="#contestee">#</a></td>
                 <td><code>contestee</code></td>
                 <td>Representante legal, defensor, etc.</td>
@@ -331,7 +293,7 @@
                 <td>MARCRelators:contestee</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="contributor" data-search="contributor Colaborador dc11:contributor DC11.contributor  General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto">
+              <tr id="contributor" data-search="contributor Colaborador dc11:contributor DC11.contributor  General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto" data-code="contributor" data-label="Colaborador" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#contributor" data-predicate="dc11:contributor" data-template="General">
                 <td><a href="#contributor">#</a></td>
                 <td><code>contributor</code></td>
                 <td>Colaborador</td>
@@ -339,7 +301,7 @@
                 <td>dc11:contributor<br>DC11.contributor</td>
                 <td>General<br>General - Incluidos por defecto</td>
               </tr>
-              <tr id="contributor_conacyt" data-search="contributor_conacyt  mods:name MODS.name  Conacyt" data-templates="Conacyt">
+              <tr id="contributor_conacyt" data-search="contributor_conacyt  mods:name MODS.name  Conacyt" data-templates="Conacyt" data-code="contributor_conacyt" data-label="contributor_conacyt" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#contributor_conacyt" data-predicate="mods:name" data-template="Conacyt">
                 <td><a href="#contributor_conacyt">#</a></td>
                 <td><code>contributor_conacyt</code></td>
                 <td>contributor_conacyt</td>
@@ -347,7 +309,7 @@
                 <td>mods:name<br>MODS.name</td>
                 <td>Conacyt</td>
               </tr>
-              <tr id="copyright" data-search="copyright Copyright rdam:hasCopyrightDate http://rdaregistry.info/Elements/m/hasCopyrightDate Arquetipo Libros/Capitulos /Videos" data-templates="Arquetipo Libros/Capitulos /Videos">
+              <tr id="copyright" data-search="copyright Copyright rdam:hasCopyrightDate http://rdaregistry.info/Elements/m/hasCopyrightDate Arquetipo Libros/Capitulos /Videos" data-templates="Arquetipo Libros/Capitulos /Videos" data-code="copyright" data-label="Copyright" data-uri="http://rdaregistry.info/Elements/m/hasCopyrightDate" data-predicate="rdam:hasCopyrightDate" data-template="Arquetipo Libros/Capitulos /Videos">
                 <td><a href="#copyright">#</a></td>
                 <td><code>copyright</code></td>
                 <td>Copyright</td>
@@ -355,7 +317,7 @@
                 <td>rdam:hasCopyrightDate</td>
                 <td>Arquetipo Libros/Capitulos /Videos</td>
               </tr>
-              <tr id="corporate_body" data-search="corporate_body Autor corporativo rdac:corporateBody  General" data-templates="General">
+              <tr id="corporate_body" data-search="corporate_body Autor corporativo rdac:corporateBody  General" data-templates="General" data-code="corporate_body" data-label="Autor corporativo" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#corporate_body" data-predicate="rdac:corporateBody" data-template="General">
                 <td><a href="#corporate_body">#</a></td>
                 <td><code>corporate_body</code></td>
                 <td>Autor corporativo</td>
@@ -363,7 +325,7 @@
                 <td>rdac:corporateBody</td>
                 <td>General</td>
               </tr>
-              <tr id="creator" data-search="creator Autor rdaa:authorOf http://rdaregistry.info/Elements/a/authorOf General" data-templates="General">
+              <tr id="creator" data-search="creator Autor rdaa:authorOf http://rdaregistry.info/Elements/a/authorOf General" data-templates="General" data-code="creator" data-label="Autor" data-uri="http://rdaregistry.info/Elements/a/authorOf" data-predicate="rdaa:authorOf" data-template="General">
                 <td><a href="#creator">#</a></td>
                 <td><code>creator</code></td>
                 <td>Autor</td>
@@ -371,7 +333,7 @@
                 <td>rdaa:authorOf</td>
                 <td>General</td>
               </tr>
-              <tr id="creator_conacyt" data-search="creator_conacyt  mods:namePrincipal MODS.namePrincipal  Conacyt" data-templates="Conacyt">
+              <tr id="creator_conacyt" data-search="creator_conacyt  mods:namePrincipal MODS.namePrincipal  Conacyt" data-templates="Conacyt" data-code="creator_conacyt" data-label="creator_conacyt" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#creator_conacyt" data-predicate="mods:namePrincipal" data-template="Conacyt">
                 <td><a href="#creator_conacyt">#</a></td>
                 <td><code>creator_conacyt</code></td>
                 <td>creator_conacyt</td>
@@ -379,7 +341,7 @@
                 <td>mods:namePrincipal<br>MODS.namePrincipal</td>
                 <td>Conacyt</td>
               </tr>
-              <tr id="curator_collective_agent_of" data-search="curator_collective_agent_of Organismo que selecciona el recurso rdaa:isCuratorCollectiveAgentOf http://rdaregistry.info/Elements/a/isCuratorCollectiveAgentOf General" data-templates="General">
+              <tr id="curator_collective_agent_of" data-search="curator_collective_agent_of Organismo que selecciona el recurso rdaa:isCuratorCollectiveAgentOf http://rdaregistry.info/Elements/a/isCuratorCollectiveAgentOf General" data-templates="General" data-code="curator_collective_agent_of" data-label="Organismo que selecciona el recurso" data-uri="http://rdaregistry.info/Elements/a/isCuratorCollectiveAgentOf" data-predicate="rdaa:isCuratorCollectiveAgentOf" data-template="General">
                 <td><a href="#curator_collective_agent_of">#</a></td>
                 <td><code>curator_collective_agent_of</code></td>
                 <td>Organismo que selecciona el recurso</td>
@@ -387,7 +349,7 @@
                 <td>rdaa:isCuratorCollectiveAgentOf</td>
                 <td>General</td>
               </tr>
-              <tr id="custodian_agent_of" data-search="custodian_agent_of Organismo custodio rdaa:isCustodianAgentOf http://rdaregistry.info/Elements/a/isCustodianAgentOf General" data-templates="General">
+              <tr id="custodian_agent_of" data-search="custodian_agent_of Organismo custodio rdaa:isCustodianAgentOf http://rdaregistry.info/Elements/a/isCustodianAgentOf General" data-templates="General" data-code="custodian_agent_of" data-label="Organismo custodio" data-uri="http://rdaregistry.info/Elements/a/isCustodianAgentOf" data-predicate="rdaa:isCustodianAgentOf" data-template="General">
                 <td><a href="#custodian_agent_of">#</a></td>
                 <td><code>custodian_agent_of</code></td>
                 <td>Organismo custodio</td>
@@ -395,7 +357,7 @@
                 <td>rdaa:isCustodianAgentOf</td>
                 <td>General</td>
               </tr>
-              <tr id="database" data-search="database Base de datos rdaz:sourceConsulted.en http://rdaregistry.info/Elements/z/sourceConsulted.en Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX">
+              <tr id="database" data-search="database Base de datos rdaz:sourceConsulted.en http://rdaregistry.info/Elements/z/sourceConsulted.en Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX" data-code="database" data-label="Base de datos" data-uri="http://rdaregistry.info/Elements/z/sourceConsulted.en" data-predicate="rdaz:sourceConsulted.en" data-template="Analiticas de Revistas COLMEX">
                 <td><a href="#database">#</a></td>
                 <td><code>database</code></td>
                 <td>Base de datos</td>
@@ -403,7 +365,7 @@
                 <td>rdaz:sourceConsulted.en</td>
                 <td>Analiticas de Revistas COLMEX</td>
               </tr>
-              <tr id="date_created" data-search="date_created Año Fecha de producción/publicación rdam:dateOfPublication http://rdaregistry.info/Elements/m/dateOfPublication General" data-templates="General">
+              <tr id="date_created" data-search="date_created Año Fecha de producción/publicación rdam:dateOfPublication http://rdaregistry.info/Elements/m/dateOfPublication General" data-templates="General" data-code="date_created" data-label="Año" data-uri="http://rdaregistry.info/Elements/m/dateOfPublication" data-predicate="rdam:dateOfPublication" data-template="General">
                 <td><a href="#date_created">#</a></td>
                 <td><code>date_created</code></td>
                 <td>Año<br>Fecha de producción/publicación</td>
@@ -411,7 +373,7 @@
                 <td>rdam:dateOfPublication</td>
                 <td>General</td>
               </tr>
-              <tr id="date_of_manifestation" data-search="date_of_manifestation Fecha rdam:dateOfManifestation http://rdaregistry.info/Elements/m/dateOfManifestation General" data-templates="General">
+              <tr id="date_of_manifestation" data-search="date_of_manifestation Fecha rdam:dateOfManifestation http://rdaregistry.info/Elements/m/dateOfManifestation General" data-templates="General" data-code="date_of_manifestation" data-label="Fecha" data-uri="http://rdaregistry.info/Elements/m/dateOfManifestation" data-predicate="rdam:dateOfManifestation" data-template="General">
                 <td><a href="#date_of_manifestation">#</a></td>
                 <td><code>date_of_manifestation</code></td>
                 <td>Fecha</td>
@@ -419,7 +381,7 @@
                 <td>rdam:dateOfManifestation</td>
                 <td>General</td>
               </tr>
-              <tr id="date_of_presentation_of_the_thesis" data-search="date_of_presentation_of_the_thesis Fecha de presentación de la tesis rdaw:yearDegreeGranted http://rdaregistry.info/Elements/w/yearDegreeGranted Tesis" data-templates="Tesis">
+              <tr id="date_of_presentation_of_the_thesis" data-search="date_of_presentation_of_the_thesis Fecha de presentación de la tesis rdaw:yearDegreeGranted http://rdaregistry.info/Elements/w/yearDegreeGranted Tesis" data-templates="Tesis" data-code="date_of_presentation_of_the_thesis" data-label="Fecha de presentación de la tesis" data-uri="http://rdaregistry.info/Elements/w/yearDegreeGranted" data-predicate="rdaw:yearDegreeGranted" data-template="Tesis">
                 <td><a href="#date_of_presentation_of_the_thesis">#</a></td>
                 <td><code>date_of_presentation_of_the_thesis</code></td>
                 <td>Fecha de presentación de la tesis</td>
@@ -427,7 +389,7 @@
                 <td>rdaw:yearDegreeGranted</td>
                 <td>Tesis</td>
               </tr>
-              <tr id="degree_program" data-search="degree_program Programa de estudios rdaw:grantingInstitutionOrFaculty http://rdaregistry.info/Elements/w/grantingInstitutionOrFaculty Tesis" data-templates="Tesis">
+              <tr id="degree_program" data-search="degree_program Programa de estudios rdaw:grantingInstitutionOrFaculty http://rdaregistry.info/Elements/w/grantingInstitutionOrFaculty Tesis" data-templates="Tesis" data-code="degree_program" data-label="Programa de estudios" data-uri="http://rdaregistry.info/Elements/w/grantingInstitutionOrFaculty" data-predicate="rdaw:grantingInstitutionOrFaculty" data-template="Tesis">
                 <td><a href="#degree_program">#</a></td>
                 <td><code>degree_program</code></td>
                 <td>Programa de estudios</td>
@@ -435,7 +397,7 @@
                 <td>rdaw:grantingInstitutionOrFaculty</td>
                 <td>Tesis</td>
               </tr>
-              <tr id="depositor_agent" data-search="depositor_agent Persona depositante rdai:depositoryAgent http://rdaregistry.info/Elements/i/depositoryAgent General" data-templates="General">
+              <tr id="depositor_agent" data-search="depositor_agent Persona depositante rdai:depositoryAgent http://rdaregistry.info/Elements/i/depositoryAgent General" data-templates="General" data-code="depositor_agent" data-label="Persona depositante" data-uri="http://rdaregistry.info/Elements/i/depositoryAgent" data-predicate="rdai:depositoryAgent" data-template="General">
                 <td><a href="#depositor_agent">#</a></td>
                 <td><code>depositor_agent</code></td>
                 <td>Persona depositante</td>
@@ -443,7 +405,7 @@
                 <td>rdai:depositoryAgent</td>
                 <td>General</td>
               </tr>
-              <tr id="depository_collective_agent" data-search="depository_collective_agent Organismo depositante rdai:depositoryCollectiveAgent http://rdaregistry.info/Elements/i/depositoryCollectiveAgent General" data-templates="General">
+              <tr id="depository_collective_agent" data-search="depository_collective_agent Organismo depositante rdai:depositoryCollectiveAgent http://rdaregistry.info/Elements/i/depositoryCollectiveAgent General" data-templates="General" data-code="depository_collective_agent" data-label="Organismo depositante" data-uri="http://rdaregistry.info/Elements/i/depositoryCollectiveAgent" data-predicate="rdai:depositoryCollectiveAgent" data-template="General">
                 <td><a href="#depository_collective_agent">#</a></td>
                 <td><code>depository_collective_agent</code></td>
                 <td>Organismo depositante</td>
@@ -451,7 +413,7 @@
                 <td>rdai:depositoryCollectiveAgent</td>
                 <td>General</td>
               </tr>
-              <tr id="description" data-search="description Resumen rdae:summarizationOfTheContent DC11.description  General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto">
+              <tr id="description" data-search="description Resumen rdae:summarizationOfTheContent DC11.description  General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto" data-code="description" data-label="Resumen" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#description" data-predicate="rdae:summarizationOfTheContent" data-template="General">
                 <td><a href="#description">#</a></td>
                 <td><code>description</code></td>
                 <td>Resumen</td>
@@ -459,7 +421,7 @@
                 <td>rdae:summarizationOfTheContent<br>DC11.description</td>
                 <td>General<br>General - Incluidos por defecto</td>
               </tr>
-              <tr id="digital_file_characteristics" data-search="digital_file_characteristics Características del archivo digital rdam:digitalFileCharacteristic http://rdaregistry.info/Elements/m/digitalFileCharacteristic General" data-templates="General">
+              <tr id="digital_file_characteristics" data-search="digital_file_characteristics Características del archivo digital rdam:digitalFileCharacteristic http://rdaregistry.info/Elements/m/digitalFileCharacteristic General" data-templates="General" data-code="digital_file_characteristics" data-label="Características del archivo digital" data-uri="http://rdaregistry.info/Elements/m/digitalFileCharacteristic" data-predicate="rdam:digitalFileCharacteristic" data-template="General">
                 <td><a href="#digital_file_characteristics">#</a></td>
                 <td><code>digital_file_characteristics</code></td>
                 <td>Características del archivo digital</td>
@@ -467,7 +429,7 @@
                 <td>rdam:digitalFileCharacteristic</td>
                 <td>General</td>
               </tr>
-              <tr id="digital_representation_of_cartographic_content" data-search="digital_representation_of_cartographic_content Datos geoespaciales rdam:digitalRepresentationOfCartographicContent http://rdaregistry.info/Elements/m/digitalRepresentationOfCartographicContent Mapas" data-templates="Mapas">
+              <tr id="digital_representation_of_cartographic_content" data-search="digital_representation_of_cartographic_content Datos geoespaciales rdam:digitalRepresentationOfCartographicContent http://rdaregistry.info/Elements/m/digitalRepresentationOfCartographicContent Mapas" data-templates="Mapas" data-code="digital_representation_of_cartographic_content" data-label="Datos geoespaciales" data-uri="http://rdaregistry.info/Elements/m/digitalRepresentationOfCartographicContent" data-predicate="rdam:digitalRepresentationOfCartographicContent" data-template="Mapas">
                 <td><a href="#digital_representation_of_cartographic_content">#</a></td>
                 <td><code>digital_representation_of_cartographic_content</code></td>
                 <td>Datos geoespaciales</td>
@@ -475,7 +437,7 @@
                 <td>rdam:digitalRepresentationOfCartographicContent</td>
                 <td>Mapas</td>
               </tr>
-              <tr id="digital_resource_generation_information" data-search="digital_resource_generation_information Información sobre la fuente del archivo digital detailsOfGenerationOfDigitalResource rdam:detailsOfGenerationOfDigitalResource http://rdaregistry.info/Elements/m/detailsOfGenerationOfDigitalResource General Tesis" data-templates="General||Tesis">
+              <tr id="digital_resource_generation_information" data-search="digital_resource_generation_information Información sobre la fuente del archivo digital detailsOfGenerationOfDigitalResource rdam:detailsOfGenerationOfDigitalResource http://rdaregistry.info/Elements/m/detailsOfGenerationOfDigitalResource General Tesis" data-templates="General||Tesis" data-code="digital_resource_generation_information" data-label="Información sobre la fuente del archivo digital" data-uri="http://rdaregistry.info/Elements/m/detailsOfGenerationOfDigitalResource" data-predicate="rdam:detailsOfGenerationOfDigitalResource" data-template="General">
                 <td><a href="#digital_resource_generation_information">#</a></td>
                 <td><code>digital_resource_generation_information</code></td>
                 <td>Información sobre la fuente del archivo digital<br>detailsOfGenerationOfDigitalResource</td>
@@ -483,7 +445,7 @@
                 <td>rdam:detailsOfGenerationOfDigitalResource</td>
                 <td>General<br>Tesis</td>
               </tr>
-              <tr id="dimensions" data-search="dimensions Dimensiones rdam:dimensions http://rdaregistry.info/Elements/m/dimensions General Tesis" data-templates="General||Tesis">
+              <tr id="dimensions" data-search="dimensions Dimensiones rdam:dimensions http://rdaregistry.info/Elements/m/dimensions General Tesis" data-templates="General||Tesis" data-code="dimensions" data-label="Dimensiones" data-uri="http://rdaregistry.info/Elements/m/dimensions" data-predicate="rdam:dimensions" data-template="General">
                 <td><a href="#dimensions">#</a></td>
                 <td><code>dimensions</code></td>
                 <td>Dimensiones</td>
@@ -491,7 +453,7 @@
                 <td>rdam:dimensions</td>
                 <td>General<br>Tesis</td>
               </tr>
-              <tr id="dimensions_of_still_image" data-search="dimensions_of_still_image Dimensiones de la fotografía rdam:dimensionsOfStillImage http://rdaregistry.info/Elements/m/dimensionsOfStillImage Fotografía" data-templates="Fotografía">
+              <tr id="dimensions_of_still_image" data-search="dimensions_of_still_image Dimensiones de la fotografía rdam:dimensionsOfStillImage http://rdaregistry.info/Elements/m/dimensionsOfStillImage Fotografía" data-templates="Fotografía" data-code="dimensions_of_still_image" data-label="Dimensiones de la fotografía" data-uri="http://rdaregistry.info/Elements/m/dimensionsOfStillImage" data-predicate="rdam:dimensionsOfStillImage" data-template="Fotografía">
                 <td><a href="#dimensions_of_still_image">#</a></td>
                 <td><code>dimensions_of_still_image</code></td>
                 <td>Dimensiones de la fotografía</td>
@@ -499,7 +461,7 @@
                 <td>rdam:dimensionsOfStillImage</td>
                 <td>Fotografía</td>
               </tr>
-              <tr id="director" data-search="director Director de tesis Director de Tesis rdaa:degreeSupervisorOf http://rdaregistry.info/Elements/a/degreeSupervisorOf Tesis" data-templates="Tesis">
+              <tr id="director" data-search="director Director de tesis Director de Tesis rdaa:degreeSupervisorOf http://rdaregistry.info/Elements/a/degreeSupervisorOf Tesis" data-templates="Tesis" data-code="director" data-label="Director de tesis" data-uri="http://rdaregistry.info/Elements/a/degreeSupervisorOf" data-predicate="rdaa:degreeSupervisorOf" data-template="Tesis">
                 <td><a href="#director">#</a></td>
                 <td><code>director</code></td>
                 <td>Director de tesis<br>Director de Tesis</td>
@@ -507,7 +469,7 @@
                 <td>rdaa:degreeSupervisorOf</td>
                 <td>Tesis</td>
               </tr>
-              <tr id="doi" data-search="doi DOI bf2:DOI BF2.Doi http://id.loc.gov/ontologies/bibframe/DOI General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto">
+              <tr id="doi" data-search="doi DOI bf2:DOI BF2.Doi http://id.loc.gov/ontologies/bibframe/DOI General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto" data-code="doi" data-label="DOI" data-uri="http://id.loc.gov/ontologies/bibframe/DOI" data-predicate="bf2:DOI" data-template="General">
                 <td><a href="#doi">#</a></td>
                 <td><code>doi</code></td>
                 <td>DOI</td>
@@ -515,7 +477,7 @@
                 <td>bf2:DOI<br>BF2.Doi</td>
                 <td>General<br>General - Incluidos por defecto</td>
               </tr>
-              <tr id="draftsman" data-search="draftsman Dibujante rdda:isDraftsmanAgenOf  General" data-templates="General">
+              <tr id="draftsman" data-search="draftsman Dibujante rdda:isDraftsmanAgenOf  General" data-templates="General" data-code="draftsman" data-label="Dibujante" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#draftsman" data-predicate="rdda:isDraftsmanAgenOf" data-template="General">
                 <td><a href="#draftsman">#</a></td>
                 <td><code>draftsman</code></td>
                 <td>Dibujante</td>
@@ -523,7 +485,7 @@
                 <td>rdda:isDraftsmanAgenOf</td>
                 <td>General</td>
               </tr>
-              <tr id="edition" data-search="edition Edición rdam:designationOfEdition http://rdaregistry.info/Elements/m/designationOfEdition General Tesis" data-templates="General||Tesis">
+              <tr id="edition" data-search="edition Edición rdam:designationOfEdition http://rdaregistry.info/Elements/m/designationOfEdition General Tesis" data-templates="General||Tesis" data-code="edition" data-label="Edición" data-uri="http://rdaregistry.info/Elements/m/designationOfEdition" data-predicate="rdam:designationOfEdition" data-template="General">
                 <td><a href="#edition">#</a></td>
                 <td><code>edition</code></td>
                 <td>Edición</td>
@@ -531,7 +493,7 @@
                 <td>rdam:designationOfEdition</td>
                 <td>General<br>Tesis</td>
               </tr>
-              <tr id="editor" data-search="editor Editor rdaa:isEditorPersonOfTextOf http://rdaregistry.info/Elements/a/isEditorPersonOfTextOf General" data-templates="General">
+              <tr id="editor" data-search="editor Editor rdaa:isEditorPersonOfTextOf http://rdaregistry.info/Elements/a/isEditorPersonOfTextOf General" data-templates="General" data-code="editor" data-label="Editor" data-uri="http://rdaregistry.info/Elements/a/isEditorPersonOfTextOf" data-predicate="rdaa:isEditorPersonOfTextOf" data-template="General">
                 <td><a href="#editor">#</a></td>
                 <td><code>editor</code></td>
                 <td>Editor</td>
@@ -539,7 +501,7 @@
                 <td>rdaa:isEditorPersonOfTextOf</td>
                 <td>General</td>
               </tr>
-              <tr id="enacting_juridiction_of" data-search="enacting_juridiction_of Instancia promulgadora o emisora rdaa:enactingJuridictionOf http://rdaregistry.info/Elements/a/enactingJuridictionOf Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="enacting_juridiction_of" data-search="enacting_juridiction_of Instancia promulgadora o emisora rdaa:enactingJuridictionOf http://rdaregistry.info/Elements/a/enactingJuridictionOf Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="enacting_juridiction_of" data-label="Instancia promulgadora o emisora" data-uri="http://rdaregistry.info/Elements/a/enactingJuridictionOf" data-predicate="rdaa:enactingJuridictionOf" data-template="Arquetipo Documentos Legales">
                 <td><a href="#enacting_juridiction_of">#</a></td>
                 <td><code>enacting_juridiction_of</code></td>
                 <td>Instancia promulgadora o emisora</td>
@@ -547,7 +509,7 @@
                 <td>rdaa:enactingJuridictionOf</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="encoding_format_details" data-search="encoding_format_details detailsOfEncodingFormat rdam:detailsOfEncodingFormat http://rdaregistry.info/Elements/m/detailsOfEncodingFormat Tesis" data-templates="Tesis">
+              <tr id="encoding_format_details" data-search="encoding_format_details detailsOfEncodingFormat rdam:detailsOfEncodingFormat http://rdaregistry.info/Elements/m/detailsOfEncodingFormat Tesis" data-templates="Tesis" data-code="encoding_format_details" data-label="detailsOfEncodingFormat" data-uri="http://rdaregistry.info/Elements/m/detailsOfEncodingFormat" data-predicate="rdam:detailsOfEncodingFormat" data-template="Tesis">
                 <td><a href="#encoding_format_details">#</a></td>
                 <td><code>encoding_format_details</code></td>
                 <td>detailsOfEncodingFormat</td>
@@ -555,7 +517,7 @@
                 <td>rdam:detailsOfEncodingFormat</td>
                 <td>Tesis</td>
               </tr>
-              <tr id="ending" data-search="ending Fin del hecho rdat:hasEnding  General" data-templates="General">
+              <tr id="ending" data-search="ending Fin del hecho rdat:hasEnding  General" data-templates="General" data-code="ending" data-label="Fin del hecho" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#ending" data-predicate="rdat:hasEnding" data-template="General">
                 <td><a href="#ending">#</a></td>
                 <td><code>ending</code></td>
                 <td>Fin del hecho</td>
@@ -563,7 +525,7 @@
                 <td>rdat:hasEnding</td>
                 <td>General</td>
               </tr>
-              <tr id="event_date_time" data-search="event_Date_Time Fecha de la digitalización premis:eventDateTime  Preservación" data-templates="Preservación">
+              <tr id="event_date_time" data-search="event_Date_Time Fecha de la digitalización premis:eventDateTime  Preservación" data-templates="Preservación" data-code="event_Date_Time" data-label="Fecha de la digitalización" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#event_date_time" data-predicate="premis:eventDateTime" data-template="Preservación">
                 <td><a href="#event_date_time">#</a></td>
                 <td><code>event_Date_Time</code></td>
                 <td>Fecha de la digitalización</td>
@@ -571,7 +533,7 @@
                 <td>premis:eventDateTime</td>
                 <td>Preservación</td>
               </tr>
-              <tr id="exemplar_of_manifestation" data-search="exemplar_of_manifestation Ejemplares rdam:exemplarOfManifestation http://rdaregistry.info/Elements/m/exemplarOfManifestation Tesis QUITAR" data-templates="Tesis||QUITAR">
+              <tr id="exemplar_of_manifestation" data-search="exemplar_of_manifestation Ejemplares rdam:exemplarOfManifestation http://rdaregistry.info/Elements/m/exemplarOfManifestation Tesis QUITAR" data-templates="Tesis||QUITAR" data-code="exemplar_of_manifestation" data-label="Ejemplares" data-uri="http://rdaregistry.info/Elements/m/exemplarOfManifestation" data-predicate="rdam:exemplarOfManifestation" data-template="Tesis">
                 <td><a href="#exemplar_of_manifestation">#</a></td>
                 <td><code>exemplar_of_manifestation</code></td>
                 <td>Ejemplares</td>
@@ -579,7 +541,7 @@
                 <td>rdam:exemplarOfManifestation</td>
                 <td>Tesis<br>QUITAR</td>
               </tr>
-              <tr id="extension" data-search="extension Extensión rdam:extent http://rdaregistry.info/Elements/m/extent General Tesis QUITAR" data-templates="General||Tesis||QUITAR">
+              <tr id="extension" data-search="extension Extensión rdam:extent http://rdaregistry.info/Elements/m/extent General Tesis QUITAR" data-templates="General||Tesis||QUITAR" data-code="extension" data-label="Extensión" data-uri="http://rdaregistry.info/Elements/m/extent" data-predicate="rdam:extent" data-template="General">
                 <td><a href="#extension">#</a></td>
                 <td><code>extension</code></td>
                 <td>Extensión</td>
@@ -587,7 +549,7 @@
                 <td>rdam:extent</td>
                 <td>General<br>Tesis<br>QUITAR</td>
               </tr>
-              <tr id="falta" data-search="FALTA Origen URL de la fuente original FALTA  Preservación" data-templates="Preservación">
+              <tr id="falta" data-search="FALTA Origen URL de la fuente original FALTA  Preservación" data-templates="Preservación" data-code="FALTA" data-label="Origen" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#falta" data-predicate="FALTA" data-template="Preservación">
                 <td><a href="#falta">#</a></td>
                 <td><code>FALTA</code></td>
                 <td>Origen<br>URL de la fuente original</td>
@@ -595,7 +557,7 @@
                 <td>FALTA</td>
                 <td>Preservación</td>
               </tr>
-              <tr id="file_details" data-search="file_details Detalles del archivo digital rdam:digitalFileCharacteristic http://rdaregistry.info/Elements/m/digitalFileCharacteristic Tesis" data-templates="Tesis">
+              <tr id="file_details" data-search="file_details Detalles del archivo digital rdam:digitalFileCharacteristic http://rdaregistry.info/Elements/m/digitalFileCharacteristic Tesis" data-templates="Tesis" data-code="file_details" data-label="Detalles del archivo digital" data-uri="http://rdaregistry.info/Elements/m/digitalFileCharacteristic" data-predicate="rdam:digitalFileCharacteristic" data-template="Tesis">
                 <td><a href="#file_details">#</a></td>
                 <td><code>file_details</code></td>
                 <td>Detalles del archivo digital</td>
@@ -603,7 +565,7 @@
                 <td>rdam:digitalFileCharacteristic</td>
                 <td>Tesis</td>
               </tr>
-              <tr id="file_name" data-search="file_name Nombre del archivo rdam:fileName http://rdaregistry.info/Elements/m/fileName General (No Progamar)" data-templates="General (No Progamar)">
+              <tr id="file_name" data-search="file_name Nombre del archivo rdam:fileName http://rdaregistry.info/Elements/m/fileName General (No Progamar)" data-templates="General (No Progamar)" data-code="file_name" data-label="Nombre del archivo" data-uri="http://rdaregistry.info/Elements/m/fileName" data-predicate="rdam:fileName" data-template="General (No Progamar)">
                 <td><a href="#file_name">#</a></td>
                 <td><code>file_name</code></td>
                 <td>Nombre del archivo</td>
@@ -611,7 +573,7 @@
                 <td>rdam:fileName</td>
                 <td>General (No Progamar)</td>
               </tr>
-              <tr id="file_type_details" data-search="file_type_details Detalles de tipo de archivo detailsOfFileType rdam:detailsOfFileType http://rdaregistry.info/Elements/m/detailsOfFileType General Tesis" data-templates="General||Tesis">
+              <tr id="file_type_details" data-search="file_type_details Detalles de tipo de archivo detailsOfFileType rdam:detailsOfFileType http://rdaregistry.info/Elements/m/detailsOfFileType General Tesis" data-templates="General||Tesis" data-code="file_type_details" data-label="Detalles de tipo de archivo" data-uri="http://rdaregistry.info/Elements/m/detailsOfFileType" data-predicate="rdam:detailsOfFileType" data-template="General">
                 <td><a href="#file_type_details">#</a></td>
                 <td><code>file_type_details</code></td>
                 <td>Detalles de tipo de archivo<br>detailsOfFileType</td>
@@ -619,7 +581,7 @@
                 <td>rdam:detailsOfFileType</td>
                 <td>General<br>Tesis</td>
               </tr>
-              <tr id="gender_or_form" data-search="gender_or_form En desuso Género/Forma rdaw:formOfWork http://rdaregistry.info/Elements/w/formOfWork General" data-templates="General">
+              <tr id="gender_or_form" data-search="gender_or_form En desuso Género/Forma rdaw:formOfWork http://rdaregistry.info/Elements/w/formOfWork General" data-templates="General" data-code="gender_or_form" data-label="En desuso" data-uri="http://rdaregistry.info/Elements/w/formOfWork" data-predicate="rdaw:formOfWork" data-template="General">
                 <td><a href="#gender_or_form">#</a></td>
                 <td><code>gender_or_form</code></td>
                 <td>En desuso<br>Género/Forma</td>
@@ -627,7 +589,7 @@
                 <td>rdaw:formOfWork</td>
                 <td>General</td>
               </tr>
-              <tr id="geographic_coverage" data-search="geographic_coverage Cobertura geográfica bf2:geographicCoverage rdaw:coverageOfTheContent http://id.loc.gov/ontologies/bibframe/geographicCoverage http://rdaregistry.info/Elements/w/coverageOfTheContent General" data-templates="General">
+              <tr id="geographic_coverage" data-search="geographic_coverage Cobertura geográfica bf2:geographicCoverage rdaw:coverageOfTheContent http://id.loc.gov/ontologies/bibframe/geographicCoverage http://rdaregistry.info/Elements/w/coverageOfTheContent General" data-templates="General" data-code="geographic_coverage" data-label="Cobertura geográfica" data-uri="http://id.loc.gov/ontologies/bibframe/geographicCoverage" data-predicate="bf2:geographicCoverage" data-template="General">
                 <td><a href="#geographic_coverage">#</a></td>
                 <td><code>geographic_coverage</code></td>
                 <td>Cobertura geográfica</td>
@@ -635,7 +597,7 @@
                 <td>bf2:geographicCoverage<br>rdaw:coverageOfTheContent</td>
                 <td>General</td>
               </tr>
-              <tr id="guide_to_work" data-search="guide_to_work Protocolo o guia rdaw:guideToWork http://rdaregistry.info/Elements/w/guideToWork Bases de datos" data-templates="Bases de datos">
+              <tr id="guide_to_work" data-search="guide_to_work Protocolo o guia rdaw:guideToWork http://rdaregistry.info/Elements/w/guideToWork Bases de datos" data-templates="Bases de datos" data-code="guide_to_work" data-label="Protocolo o guia" data-uri="http://rdaregistry.info/Elements/w/guideToWork" data-predicate="rdaw:guideToWork" data-template="Bases de datos">
                 <td><a href="#guide_to_work">#</a></td>
                 <td><code>guide_to_work</code></td>
                 <td>Protocolo o guia</td>
@@ -643,7 +605,7 @@
                 <td>rdaw:guideToWork</td>
                 <td>Bases de datos</td>
               </tr>
-              <tr id="handle" data-search="handle Handle datacite:handle http://purl.org/spar/datacite/handle General" data-templates="General">
+              <tr id="handle" data-search="handle Handle datacite:handle http://purl.org/spar/datacite/handle General" data-templates="General" data-code="handle" data-label="Handle" data-uri="http://purl.org/spar/datacite/handle" data-predicate="datacite:handle" data-template="General">
                 <td><a href="#handle">#</a></td>
                 <td><code>handle</code></td>
                 <td>Handle</td>
@@ -651,7 +613,7 @@
                 <td>datacite:handle</td>
                 <td>General</td>
               </tr>
-              <tr id="has_coverage_of_the_content" data-search="has coverage of the content Colección rdaw:coverageOfTheContent http://rdaregistry.info/Elements/w/coverageOfTheContent Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX">
+              <tr id="has_coverage_of_the_content" data-search="has coverage of the content Colección rdaw:coverageOfTheContent http://rdaregistry.info/Elements/w/coverageOfTheContent Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX" data-code="has coverage of the content" data-label="Colección" data-uri="http://rdaregistry.info/Elements/w/coverageOfTheContent" data-predicate="rdaw:coverageOfTheContent" data-template="Analiticas de Revistas COLMEX">
                 <td><a href="#has_coverage_of_the_content">#</a></td>
                 <td><code>has coverage of the content</code></td>
                 <td>Colección</td>
@@ -659,7 +621,7 @@
                 <td>rdaw:coverageOfTheContent</td>
                 <td>Analiticas de Revistas COLMEX</td>
               </tr>
-              <tr id="has_carrier_type" data-search="has_carrier_type Tipo de portador rdam:hasCarrierType http://rdaregistry.info/Elements/m/hasCarrierType General" data-templates="General">
+              <tr id="has_carrier_type" data-search="has_carrier_type Tipo de portador rdam:hasCarrierType http://rdaregistry.info/Elements/m/hasCarrierType General" data-templates="General" data-code="has_carrier_type" data-label="Tipo de portador" data-uri="http://rdaregistry.info/Elements/m/hasCarrierType" data-predicate="rdam:hasCarrierType" data-template="General">
                 <td><a href="#has_carrier_type">#</a></td>
                 <td><code>has_carrier_type</code></td>
                 <td>Tipo de portador</td>
@@ -667,7 +629,7 @@
                 <td>rdam:hasCarrierType</td>
                 <td>General</td>
               </tr>
-              <tr id="has_creator" data-search="has_creator Creador rdau:hasCreator http://rdaregistry.info/Elements/u/hasCreator General" data-templates="General">
+              <tr id="has_creator" data-search="has_creator Creador rdau:hasCreator http://rdaregistry.info/Elements/u/hasCreator General" data-templates="General" data-code="has_creator" data-label="Creador" data-uri="http://rdaregistry.info/Elements/u/hasCreator" data-predicate="rdau:hasCreator" data-template="General">
                 <td><a href="#has_creator">#</a></td>
                 <td><code>has_creator</code></td>
                 <td>Creador</td>
@@ -675,7 +637,7 @@
                 <td>rdau:hasCreator</td>
                 <td>General</td>
               </tr>
-              <tr id="has_field_activity_of_agent" data-search="has_field_activity_of_agent Función rdau:hasFieldOfActivityofAgent http://rdaregistry.info/Elements/u/hasFieldOfActivityofAgent General" data-templates="General">
+              <tr id="has_field_activity_of_agent" data-search="has_field_activity_of_agent Función rdau:hasFieldOfActivityofAgent http://rdaregistry.info/Elements/u/hasFieldOfActivityofAgent General" data-templates="General" data-code="has_field_activity_of_agent" data-label="Función" data-uri="http://rdaregistry.info/Elements/u/hasFieldOfActivityofAgent" data-predicate="rdau:hasFieldOfActivityofAgent" data-template="General">
                 <td><a href="#has_field_activity_of_agent">#</a></td>
                 <td><code>has_field_activity_of_agent</code></td>
                 <td>Función</td>
@@ -683,7 +645,7 @@
                 <td>rdau:hasFieldOfActivityofAgent</td>
                 <td>General</td>
               </tr>
-              <tr id="has_identifier_for_item" data-search="has_identifier_for_item Número de expediente o caso rdai:hasIdentifierForItem http://rdaregistry.info/Elements/i/hasIdentifierForItem Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="has_identifier_for_item" data-search="has_identifier_for_item Número de expediente o caso rdai:hasIdentifierForItem http://rdaregistry.info/Elements/i/hasIdentifierForItem Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="has_identifier_for_item" data-label="Número de expediente o caso" data-uri="http://rdaregistry.info/Elements/i/hasIdentifierForItem" data-predicate="rdai:hasIdentifierForItem" data-template="Arquetipo Documentos Legales">
                 <td><a href="#has_identifier_for_item">#</a></td>
                 <td><code>has_identifier_for_item</code></td>
                 <td>Número de expediente o caso</td>
@@ -691,7 +653,7 @@
                 <td>rdai:hasIdentifierForItem</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="has_medium_of_performance_of_musical_content" data-search="has_medium_of_performance_of_musical_content Medio de interpretación de contenido musical rdau:hasMediumOfPerformanceOfMusicalContent http://rdaregistry.info/Elements/u/hasMediumOfPerformanceOfMusicalContent Audio" data-templates="Audio">
+              <tr id="has_medium_of_performance_of_musical_content" data-search="has_medium_of_performance_of_musical_content Medio de interpretación de contenido musical rdau:hasMediumOfPerformanceOfMusicalContent http://rdaregistry.info/Elements/u/hasMediumOfPerformanceOfMusicalContent Audio" data-templates="Audio" data-code="has_medium_of_performance_of_musical_content" data-label="Medio de interpretación de contenido musical" data-uri="http://rdaregistry.info/Elements/u/hasMediumOfPerformanceOfMusicalContent" data-predicate="rdau:hasMediumOfPerformanceOfMusicalContent" data-template="Audio">
                 <td><a href="#has_medium_of_performance_of_musical_content">#</a></td>
                 <td><code>has_medium_of_performance_of_musical_content</code></td>
                 <td>Medio de interpretación de contenido musical</td>
@@ -699,7 +661,7 @@
                 <td>rdau:hasMediumOfPerformanceOfMusicalContent</td>
                 <td>Audio</td>
               </tr>
-              <tr id="has_person_member_of_collective_agent" data-search="has_person_member_of_collective_agent Sus miembros son: rdaa:hasPersonMemberOfCollectiveAgent http://rdaregistry.info/Elements/a/hasPersonMemberOfCollectiveAgent General" data-templates="General">
+              <tr id="has_person_member_of_collective_agent" data-search="has_person_member_of_collective_agent Sus miembros son: rdaa:hasPersonMemberOfCollectiveAgent http://rdaregistry.info/Elements/a/hasPersonMemberOfCollectiveAgent General" data-templates="General" data-code="has_person_member_of_collective_agent" data-label="Sus miembros son:" data-uri="http://rdaregistry.info/Elements/a/hasPersonMemberOfCollectiveAgent" data-predicate="rdaa:hasPersonMemberOfCollectiveAgent" data-template="General">
                 <td><a href="#has_person_member_of_collective_agent">#</a></td>
                 <td><code>has_person_member_of_collective_agent</code></td>
                 <td>Sus miembros son:</td>
@@ -707,7 +669,7 @@
                 <td>rdaa:hasPersonMemberOfCollectiveAgent</td>
                 <td>General</td>
               </tr>
-              <tr id="has_system_of_organization" data-search="has_system_of_organization Colección rdaw:hasSystemOfOrganizatión http://rdaregistry.info/Elements/w/hasSystemOfOrganizatión General" data-templates="General">
+              <tr id="has_system_of_organization" data-search="has_system_of_organization Colección rdaw:hasSystemOfOrganizatión http://rdaregistry.info/Elements/w/hasSystemOfOrganizatión General" data-templates="General" data-code="has_system_of_organization" data-label="Colección" data-uri="http://rdaregistry.info/Elements/w/hasSystemOfOrganizatión" data-predicate="rdaw:hasSystemOfOrganizatión" data-template="General">
                 <td><a href="#has_system_of_organization">#</a></td>
                 <td><code>has_system_of_organization</code></td>
                 <td>Colección</td>
@@ -715,7 +677,7 @@
                 <td>rdaw:hasSystemOfOrganizatión</td>
                 <td>General</td>
               </tr>
-              <tr id="has_transformation_by_genre" data-search="has_transformation_by_genre Transformación al genero o forma rdaw:hasTransformationByGenre http://rdaregistry.info/Elements/w/hasTransformationByGenre General" data-templates="General">
+              <tr id="has_transformation_by_genre" data-search="has_transformation_by_genre Transformación al genero o forma rdaw:hasTransformationByGenre http://rdaregistry.info/Elements/w/hasTransformationByGenre General" data-templates="General" data-code="has_transformation_by_genre" data-label="Transformación al genero o forma" data-uri="http://rdaregistry.info/Elements/w/hasTransformationByGenre" data-predicate="rdaw:hasTransformationByGenre" data-template="General">
                 <td><a href="#has_transformation_by_genre">#</a></td>
                 <td><code>has_transformation_by_genre</code></td>
                 <td>Transformación al genero o forma</td>
@@ -723,7 +685,7 @@
                 <td>rdaw:hasTransformationByGenre</td>
                 <td>General</td>
               </tr>
-              <tr id="hasorganizercorporatebody" data-search="hasOrganizerCorporateBody Conferencia / Evento rdaw:hasOrganizerCorporateBody http://rdaregistry.info/Elements/w/hasOrganizerCorporateBody General" data-templates="General">
+              <tr id="hasorganizercorporatebody" data-search="hasOrganizerCorporateBody Conferencia / Evento rdaw:hasOrganizerCorporateBody http://rdaregistry.info/Elements/w/hasOrganizerCorporateBody General" data-templates="General" data-code="hasOrganizerCorporateBody" data-label="Conferencia / Evento" data-uri="http://rdaregistry.info/Elements/w/hasOrganizerCorporateBody" data-predicate="rdaw:hasOrganizerCorporateBody" data-template="General">
                 <td><a href="#hasorganizercorporatebody">#</a></td>
                 <td><code>hasOrganizerCorporateBody</code></td>
                 <td>Conferencia / Evento</td>
@@ -731,7 +693,7 @@
                 <td>rdaw:hasOrganizerCorporateBody</td>
                 <td>General</td>
               </tr>
-              <tr id="hierarchical_inferior" data-search="hierarchical_inferior Instancia subordinada rdaa:hierarchicalInferior http://rdaregistry.info/Elements/a/hierarchicalInferior Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="hierarchical_inferior" data-search="hierarchical_inferior Instancia subordinada rdaa:hierarchicalInferior http://rdaregistry.info/Elements/a/hierarchicalInferior Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="hierarchical_inferior" data-label="Instancia subordinada" data-uri="http://rdaregistry.info/Elements/a/hierarchicalInferior" data-predicate="rdaa:hierarchicalInferior" data-template="Arquetipo Documentos Legales">
                 <td><a href="#hierarchical_inferior">#</a></td>
                 <td><code>hierarchical_inferior</code></td>
                 <td>Instancia subordinada</td>
@@ -739,7 +701,7 @@
                 <td>rdaa:hierarchicalInferior</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="hierarchical_superior" data-search="hierarchical_superior Instancia superior rdaa:hierarchicalSuperior http://rdaregistry.info/Elements/a/hierarchicalSuperior Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="hierarchical_superior" data-search="hierarchical_superior Instancia superior rdaa:hierarchicalSuperior http://rdaregistry.info/Elements/a/hierarchicalSuperior Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="hierarchical_superior" data-label="Instancia superior" data-uri="http://rdaregistry.info/Elements/a/hierarchicalSuperior" data-predicate="rdaa:hierarchicalSuperior" data-template="Arquetipo Documentos Legales">
                 <td><a href="#hierarchical_superior">#</a></td>
                 <td><code>hierarchical_superior</code></td>
                 <td>Instancia superior</td>
@@ -747,7 +709,7 @@
                 <td>rdaa:hierarchicalSuperior</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="identifier" data-search="identifier Identificador ID Colmex ID Colmex (alma) rdam:identifierForTheManifestation http://rdaregistry.info/Elements/m/identifierForTheManifestation General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto">
+              <tr id="identifier" data-search="identifier Identificador ID Colmex ID Colmex (alma) rdam:identifierForTheManifestation http://rdaregistry.info/Elements/m/identifierForTheManifestation General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto" data-code="identifier" data-label="Identificador" data-uri="http://rdaregistry.info/Elements/m/identifierForTheManifestation" data-predicate="rdam:identifierForTheManifestation" data-template="General">
                 <td><a href="#identifier">#</a></td>
                 <td><code>identifier</code></td>
                 <td>Identificador<br>ID Colmex</td>
@@ -755,7 +717,7 @@
                 <td>rdam:identifierForTheManifestation</td>
                 <td>General<br>General - Incluidos por defecto</td>
               </tr>
-              <tr id="identifier_of_work" data-search="identifier_of_work Variante del identificador rdaw:identifierOfWork http://rdaregistry.info/Elements/w/identifierOfWork Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="identifier_of_work" data-search="identifier_of_work Variante del identificador rdaw:identifierOfWork http://rdaregistry.info/Elements/w/identifierOfWork Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="identifier_of_work" data-label="Variante del identificador" data-uri="http://rdaregistry.info/Elements/w/identifierOfWork" data-predicate="rdaw:identifierOfWork" data-template="Arquetipo Documentos Legales">
                 <td><a href="#identifier_of_work">#</a></td>
                 <td><code>identifier_of_work</code></td>
                 <td>Variante del identificador</td>
@@ -763,7 +725,7 @@
                 <td>rdaw:identifierOfWork</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="institution" data-search="institution Institución bf2:grantingInstitution BF2.grantingInstitution rdaw:grantingInstitutionOrFaculty http://id.loc.gov/ontologies/bibframe/grantingInstitution http://rdaregistry.info/Elements/w/grantingInstitutionOrFaculty Tesis" data-templates="Tesis">
+              <tr id="institution" data-search="institution Institución bf2:grantingInstitution BF2.grantingInstitution rdaw:grantingInstitutionOrFaculty http://id.loc.gov/ontologies/bibframe/grantingInstitution http://rdaregistry.info/Elements/w/grantingInstitutionOrFaculty Tesis" data-templates="Tesis" data-code="institution" data-label="Institución" data-uri="http://id.loc.gov/ontologies/bibframe/grantingInstitution" data-predicate="bf2:grantingInstitution" data-template="Tesis">
                 <td><a href="#institution">#</a></td>
                 <td><code>institution</code></td>
                 <td>Institución</td>
@@ -771,7 +733,7 @@
                 <td>bf2:grantingInstitution<br>BF2.grantingInstitution</td>
                 <td>Tesis</td>
               </tr>
-              <tr id="interviewee" data-search="interviewee Entrevistador rdaa:isIntervieweeAgentOf http://rdaregistry.info/Elements/a/isIntervieweeAgentOf General" data-templates="General">
+              <tr id="interviewee" data-search="interviewee Entrevistador rdaa:isIntervieweeAgentOf http://rdaregistry.info/Elements/a/isIntervieweeAgentOf General" data-templates="General" data-code="interviewee" data-label="Entrevistador" data-uri="http://rdaregistry.info/Elements/a/isIntervieweeAgentOf" data-predicate="rdaa:isIntervieweeAgentOf" data-template="General">
                 <td><a href="#interviewee">#</a></td>
                 <td><code>interviewee</code></td>
                 <td>Entrevistador</td>
@@ -779,7 +741,7 @@
                 <td>rdaa:isIntervieweeAgentOf</td>
                 <td>General</td>
               </tr>
-              <tr id="interviewer" data-search="interviewer Entrevistado rdaa: isInterviewerAgentOf http://rdaregistry.info/Elements/a/isInterviewerAgentOf General" data-templates="General">
+              <tr id="interviewer" data-search="interviewer Entrevistado rdaa: isInterviewerAgentOf http://rdaregistry.info/Elements/a/isInterviewerAgentOf General" data-templates="General" data-code="interviewer" data-label="Entrevistado" data-uri="http://rdaregistry.info/Elements/a/isInterviewerAgentOf" data-predicate="rdaa: isInterviewerAgentOf" data-template="General">
                 <td><a href="#interviewer">#</a></td>
                 <td><code>interviewer</code></td>
                 <td>Entrevistado</td>
@@ -787,7 +749,7 @@
                 <td>rdaa: isInterviewerAgentOf</td>
                 <td>General</td>
               </tr>
-              <tr id="is_composer_person_of_work_of" data-search="is_composer_person_of_work_of Compositor rdaa:isComposerPersonOfWorkOf http://rdaregistry.info/Elements/a/isComposerPersonOfWorkOf Audio" data-templates="Audio">
+              <tr id="is_composer_person_of_work_of" data-search="is_composer_person_of_work_of Compositor rdaa:isComposerPersonOfWorkOf http://rdaregistry.info/Elements/a/isComposerPersonOfWorkOf Audio" data-templates="Audio" data-code="is_composer_person_of_work_of" data-label="Compositor" data-uri="http://rdaregistry.info/Elements/a/isComposerPersonOfWorkOf" data-predicate="rdaa:isComposerPersonOfWorkOf" data-template="Audio">
                 <td><a href="#is_composer_person_of_work_of">#</a></td>
                 <td><code>is_composer_person_of_work_of</code></td>
                 <td>Compositor</td>
@@ -795,7 +757,7 @@
                 <td>rdaa:isComposerPersonOfWorkOf</td>
                 <td>Audio</td>
               </tr>
-              <tr id="is_criminal_defendant_corporate_body_of" data-search="is_criminal_defendant_corporate_body_of Organismo acusado o demandado rdaa:isCriminalDefendantCorporateBodyOf http://rdaregistry.info/Elements/a/isCriminalDefendantCorporateBodyOf Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="is_criminal_defendant_corporate_body_of" data-search="is_criminal_defendant_corporate_body_of Organismo acusado o demandado rdaa:isCriminalDefendantCorporateBodyOf http://rdaregistry.info/Elements/a/isCriminalDefendantCorporateBodyOf Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="is_criminal_defendant_corporate_body_of" data-label="Organismo acusado o demandado" data-uri="http://rdaregistry.info/Elements/a/isCriminalDefendantCorporateBodyOf" data-predicate="rdaa:isCriminalDefendantCorporateBodyOf" data-template="Arquetipo Documentos Legales">
                 <td><a href="#is_criminal_defendant_corporate_body_of">#</a></td>
                 <td><code>is_criminal_defendant_corporate_body_of</code></td>
                 <td>Organismo acusado o demandado</td>
@@ -803,7 +765,7 @@
                 <td>rdaa:isCriminalDefendantCorporateBodyOf</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="is_criminal_defendant_person_of" data-search="is_criminal_defendant_person_of Persona acusada o demandada rdda:isCriminalDefendantPersonOf  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="is_criminal_defendant_person_of" data-search="is_criminal_defendant_person_of Persona acusada o demandada rdda:isCriminalDefendantPersonOf  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="is_criminal_defendant_person_of" data-label="Persona acusada o demandada" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#is_criminal_defendant_person_of" data-predicate="rdda:isCriminalDefendantPersonOf" data-template="Arquetipo Documentos Legales">
                 <td><a href="#is_criminal_defendant_person_of">#</a></td>
                 <td><code>is_criminal_defendant_person_of</code></td>
                 <td>Persona acusada o demandada</td>
@@ -811,7 +773,7 @@
                 <td>rdda:isCriminalDefendantPersonOf</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="is_dancer_agent_of" data-search="is_dancer_agent_of Danzante rdda:isDancerPersonOf  General" data-templates="General">
+              <tr id="is_dancer_agent_of" data-search="is_dancer_agent_of Danzante rdda:isDancerPersonOf  General" data-templates="General" data-code="is_dancer_agent_of" data-label="Danzante" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#is_dancer_agent_of" data-predicate="rdda:isDancerPersonOf" data-template="General">
                 <td><a href="#is_dancer_agent_of">#</a></td>
                 <td><code>is_dancer_agent_of</code></td>
                 <td>Danzante</td>
@@ -819,7 +781,7 @@
                 <td>rdda:isDancerPersonOf</td>
                 <td>General</td>
               </tr>
-              <tr id="is_facsimile_of_manifestation_of" data-search="is_facsimile_of_manifestation_of Facsímil de: rdam:isFacsimileOfManifestationOf http://rdaregistry.info/Elements/m/isFacsimileOfManifestationOf General" data-templates="General">
+              <tr id="is_facsimile_of_manifestation_of" data-search="is_facsimile_of_manifestation_of Facsímil de: rdam:isFacsimileOfManifestationOf http://rdaregistry.info/Elements/m/isFacsimileOfManifestationOf General" data-templates="General" data-code="is_facsimile_of_manifestation_of" data-label="Facsímil de:" data-uri="http://rdaregistry.info/Elements/m/isFacsimileOfManifestationOf" data-predicate="rdam:isFacsimileOfManifestationOf" data-template="General">
                 <td><a href="#is_facsimile_of_manifestation_of">#</a></td>
                 <td><code>is_facsimile_of_manifestation_of</code></td>
                 <td>Facsímil de:</td>
@@ -827,7 +789,7 @@
                 <td>rdam:isFacsimileOfManifestationOf</td>
                 <td>General</td>
               </tr>
-              <tr id="is_finding_aid_for" data-search="is_finding_aid_for Instrumento de descripción archivística rdau:isFindingAidFor http://rdaregistry.info/Elements/u/isFindingAidFor Documentos archivísticos" data-templates="Documentos archivísticos">
+              <tr id="is_finding_aid_for" data-search="is_finding_aid_for Instrumento de descripción archivística rdau:isFindingAidFor http://rdaregistry.info/Elements/u/isFindingAidFor Documentos archivísticos" data-templates="Documentos archivísticos" data-code="is_finding_aid_for" data-label="Instrumento de descripción archivística" data-uri="http://rdaregistry.info/Elements/u/isFindingAidFor" data-predicate="rdau:isFindingAidFor" data-template="Documentos archivísticos">
                 <td><a href="#is_finding_aid_for">#</a></td>
                 <td><code>is_finding_aid_for</code></td>
                 <td>Instrumento de descripción archivística</td>
@@ -835,7 +797,7 @@
                 <td>rdau:isFindingAidFor</td>
                 <td>Documentos archivísticos</td>
               </tr>
-              <tr id="is_instrumentalist_agent_of" data-search="is_instrumentalist_agent_of Instrumentista rdaa:isInstrumentalistAgentOf http://rdaregistry.info/Elements/a/isInstrumentalistAgentOf Audio" data-templates="Audio">
+              <tr id="is_instrumentalist_agent_of" data-search="is_instrumentalist_agent_of Instrumentista rdaa:isInstrumentalistAgentOf http://rdaregistry.info/Elements/a/isInstrumentalistAgentOf Audio" data-templates="Audio" data-code="is_instrumentalist_agent_of" data-label="Instrumentista" data-uri="http://rdaregistry.info/Elements/a/isInstrumentalistAgentOf" data-predicate="rdaa:isInstrumentalistAgentOf" data-template="Audio">
                 <td><a href="#is_instrumentalist_agent_of">#</a></td>
                 <td><code>is_instrumentalist_agent_of</code></td>
                 <td>Instrumentista</td>
@@ -843,7 +805,7 @@
                 <td>rdaa:isInstrumentalistAgentOf</td>
                 <td>Audio</td>
               </tr>
-              <tr id="is_lyricist_person_of" data-search="is_lyricist_person_of Autor de la letra rdaa:isLyricistPersonOf http://rdaregistry.info/Elements/a/isLyricistPersonOf Audio" data-templates="Audio">
+              <tr id="is_lyricist_person_of" data-search="is_lyricist_person_of Autor de la letra rdaa:isLyricistPersonOf http://rdaregistry.info/Elements/a/isLyricistPersonOf Audio" data-templates="Audio" data-code="is_lyricist_person_of" data-label="Autor de la letra" data-uri="http://rdaregistry.info/Elements/a/isLyricistPersonOf" data-predicate="rdaa:isLyricistPersonOf" data-template="Audio">
                 <td><a href="#is_lyricist_person_of">#</a></td>
                 <td><code>is_lyricist_person_of</code></td>
                 <td>Autor de la letra</td>
@@ -851,7 +813,7 @@
                 <td>rdaa:isLyricistPersonOf</td>
                 <td>Audio</td>
               </tr>
-              <tr id="is_part_of" data-search="is_part_of Es parte de dc:isPartOf http://purl.org/dc/terms/isPartOf Preservación" data-templates="Preservación">
+              <tr id="is_part_of" data-search="is_part_of Es parte de dc:isPartOf http://purl.org/dc/terms/isPartOf Preservación" data-templates="Preservación" data-code="is_part_of" data-label="Es parte de" data-uri="http://purl.org/dc/terms/isPartOf" data-predicate="dc:isPartOf" data-template="Preservación">
                 <td><a href="#is_part_of">#</a></td>
                 <td><code>is_part_of</code></td>
                 <td>Es parte de</td>
@@ -859,7 +821,7 @@
                 <td>dc:isPartOf</td>
                 <td>Preservación</td>
               </tr>
-              <tr id="is_part_or_work" data-search="is_part_or_work Sección o suplemento rdaw:hasRelatedWorkOfWork http://rdaregistry.info/Elements/w/hasRelatedWorkOfWork Arquetipo Analíticas Tipo 1" data-templates="Arquetipo Analíticas Tipo 1">
+              <tr id="is_part_or_work" data-search="is_part_or_work Sección o suplemento rdaw:hasRelatedWorkOfWork http://rdaregistry.info/Elements/w/hasRelatedWorkOfWork Arquetipo Analíticas Tipo 1" data-templates="Arquetipo Analíticas Tipo 1" data-code="is_part_or_work" data-label="Sección o suplemento" data-uri="http://rdaregistry.info/Elements/w/hasRelatedWorkOfWork" data-predicate="rdaw:hasRelatedWorkOfWork" data-template="Arquetipo Analíticas Tipo 1">
                 <td><a href="#is_part_or_work">#</a></td>
                 <td><code>is_part_or_work</code></td>
                 <td>Sección o suplemento</td>
@@ -867,7 +829,7 @@
                 <td>rdaw:hasRelatedWorkOfWork</td>
                 <td>Arquetipo Analíticas Tipo 1</td>
               </tr>
-              <tr id="is_performer_agent_of" data-search="is_performer_agent_of Ejecutante rdaa:isPerformerAgentOf http://rdaregistry.info/Elements/a/isPerformerAgentOf Audio" data-templates="Audio">
+              <tr id="is_performer_agent_of" data-search="is_performer_agent_of Ejecutante rdaa:isPerformerAgentOf http://rdaregistry.info/Elements/a/isPerformerAgentOf Audio" data-templates="Audio" data-code="is_performer_agent_of" data-label="Ejecutante" data-uri="http://rdaregistry.info/Elements/a/isPerformerAgentOf" data-predicate="rdaa:isPerformerAgentOf" data-template="Audio">
                 <td><a href="#is_performer_agent_of">#</a></td>
                 <td><code>is_performer_agent_of</code></td>
                 <td>Ejecutante</td>
@@ -875,7 +837,7 @@
                 <td>rdaa:isPerformerAgentOf</td>
                 <td>Audio</td>
               </tr>
-              <tr id="is_person_member_of_collective_agent" data-search="is_person_member_of_collective_agent Es miembro de: rdaa:isPersonMemberOfCollectiveAgent http://rdaregistry.info/Elements/a/isPersonMemberOfCollectiveAgent General" data-templates="General">
+              <tr id="is_person_member_of_collective_agent" data-search="is_person_member_of_collective_agent Es miembro de: rdaa:isPersonMemberOfCollectiveAgent http://rdaregistry.info/Elements/a/isPersonMemberOfCollectiveAgent General" data-templates="General" data-code="is_person_member_of_collective_agent" data-label="Es miembro de:" data-uri="http://rdaregistry.info/Elements/a/isPersonMemberOfCollectiveAgent" data-predicate="rdaa:isPersonMemberOfCollectiveAgent" data-template="General">
                 <td><a href="#is_person_member_of_collective_agent">#</a></td>
                 <td><code>is_person_member_of_collective_agent</code></td>
                 <td>Es miembro de:</td>
@@ -883,7 +845,7 @@
                 <td>rdaa:isPersonMemberOfCollectiveAgent</td>
                 <td>General</td>
               </tr>
-              <tr id="is_singer_agent_of" data-search="is_singer_agent_of Cantante rdaa:isSingerAgentOf http://rdaregistry.info/Elements/a/isSingerAgentOf Audio" data-templates="Audio">
+              <tr id="is_singer_agent_of" data-search="is_singer_agent_of Cantante rdaa:isSingerAgentOf http://rdaregistry.info/Elements/a/isSingerAgentOf Audio" data-templates="Audio" data-code="is_singer_agent_of" data-label="Cantante" data-uri="http://rdaregistry.info/Elements/a/isSingerAgentOf" data-predicate="rdaa:isSingerAgentOf" data-template="Audio">
                 <td><a href="#is_singer_agent_of">#</a></td>
                 <td><code>is_singer_agent_of</code></td>
                 <td>Cantante</td>
@@ -891,7 +853,7 @@
                 <td>rdaa:isSingerAgentOf</td>
                 <td>Audio</td>
               </tr>
-              <tr id="is_subcollection_of" data-search="is_subcollection_of Subcolección temática rdau:isSubcollectionOf http://rdaregistry.info/Elements/u/isSubcollectionOf General" data-templates="General">
+              <tr id="is_subcollection_of" data-search="is_subcollection_of Subcolección temática rdau:isSubcollectionOf http://rdaregistry.info/Elements/u/isSubcollectionOf General" data-templates="General" data-code="is_subcollection_of" data-label="Subcolección temática" data-uri="http://rdaregistry.info/Elements/u/isSubcollectionOf" data-predicate="rdau:isSubcollectionOf" data-template="General">
                 <td><a href="#is_subcollection_of">#</a></td>
                 <td><code>is_subcollection_of</code></td>
                 <td>Subcolección temática</td>
@@ -899,7 +861,7 @@
                 <td>rdau:isSubcollectionOf</td>
                 <td>General</td>
               </tr>
-              <tr id="is_title_of_item_of" data-search="is_title_of_item_of Asunto rdan:isTitleOfItemOf  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="is_title_of_item_of" data-search="is_title_of_item_of Asunto rdan:isTitleOfItemOf  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="is_title_of_item_of" data-label="Asunto" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#is_title_of_item_of" data-predicate="rdan:isTitleOfItemOf" data-template="Arquetipo Documentos Legales">
                 <td><a href="#is_title_of_item_of">#</a></td>
                 <td><code>is_title_of_item_of</code></td>
                 <td>Asunto</td>
@@ -907,7 +869,7 @@
                 <td>rdan:isTitleOfItemOf</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="is_transformation_by_genre" data-search="is_transformation_by_genre Genero o forma rdaw:isTransformationByGenre http://rdaregistry.info/Elements/w/isTransformationByGenre General" data-templates="General">
+              <tr id="is_transformation_by_genre" data-search="is_transformation_by_genre Genero o forma rdaw:isTransformationByGenre http://rdaregistry.info/Elements/w/isTransformationByGenre General" data-templates="General" data-code="is_transformation_by_genre" data-label="Genero o forma" data-uri="http://rdaregistry.info/Elements/w/isTransformationByGenre" data-predicate="rdaw:isTransformationByGenre" data-template="General">
                 <td><a href="#is_transformation_by_genre">#</a></td>
                 <td><code>is_transformation_by_genre</code></td>
                 <td>Genero o forma</td>
@@ -915,7 +877,7 @@
                 <td>rdaw:isTransformationByGenre</td>
                 <td>General</td>
               </tr>
-              <tr id="isbn" data-search="isbn ISBN bf2:Isbn BF2.Isbn http://id.loc.gov/ontologies/bibframe/Isbn General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto">
+              <tr id="isbn" data-search="isbn ISBN bf2:Isbn BF2.Isbn http://id.loc.gov/ontologies/bibframe/Isbn General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto" data-code="isbn" data-label="ISBN" data-uri="http://id.loc.gov/ontologies/bibframe/Isbn" data-predicate="bf2:Isbn" data-template="General">
                 <td><a href="#isbn">#</a></td>
                 <td><code>isbn</code></td>
                 <td>ISBN</td>
@@ -923,7 +885,7 @@
                 <td>bf2:Isbn<br>BF2.Isbn</td>
                 <td>General<br>General - Incluidos por defecto</td>
               </tr>
-              <tr id="issn" data-search="issn ISSN rdam:issnOfSeries.en http://rdaregistry.info/Elements/m/issnOfSeries.en Arquetipo Analíticas Tipo 2 Analiticas de Revistas COLMEX" data-templates="Arquetipo Analíticas Tipo 2||Analiticas de Revistas COLMEX">
+              <tr id="issn" data-search="issn ISSN rdam:issnOfSeries.en http://rdaregistry.info/Elements/m/issnOfSeries.en Arquetipo Analíticas Tipo 2 Analiticas de Revistas COLMEX" data-templates="Arquetipo Analíticas Tipo 2||Analiticas de Revistas COLMEX" data-code="issn" data-label="ISSN" data-uri="http://rdaregistry.info/Elements/m/issnOfSeries.en" data-predicate="rdam:issnOfSeries.en" data-template="Arquetipo Analíticas Tipo 2">
                 <td><a href="#issn">#</a></td>
                 <td><code>issn</code></td>
                 <td>ISSN</td>
@@ -931,7 +893,7 @@
                 <td>rdam:issnOfSeries.en</td>
                 <td>Arquetipo Analíticas Tipo 2<br>Analiticas de Revistas COLMEX</td>
               </tr>
-              <tr id="item_access_restrictions" data-search="item_access_restrictions Restricción de acceso del ítem rdai:restrictionsOnAccessToItem http://rdaregistry.info/Elements/i/restrictionsOnAccessToItem General Tesis" data-templates="General||Tesis">
+              <tr id="item_access_restrictions" data-search="item_access_restrictions Restricción de acceso del ítem rdai:restrictionsOnAccessToItem http://rdaregistry.info/Elements/i/restrictionsOnAccessToItem General Tesis" data-templates="General||Tesis" data-code="item_access_restrictions" data-label="Restricción de acceso del ítem" data-uri="http://rdaregistry.info/Elements/i/restrictionsOnAccessToItem" data-predicate="rdai:restrictionsOnAccessToItem" data-template="General">
                 <td><a href="#item_access_restrictions">#</a></td>
                 <td><code>item_access_restrictions</code></td>
                 <td>Restricción de acceso del ítem</td>
@@ -939,7 +901,7 @@
                 <td>rdai:restrictionsOnAccessToItem</td>
                 <td>General<br>Tesis</td>
               </tr>
-              <tr id="item_use_restrictions" data-search="item_use_restrictions Restricción de uso del ítem rdai:restrictionsOnUseOfItem http://rdaregistry.info/Elements/i/restrictionsOnUseOfItem General Tesis" data-templates="General||Tesis">
+              <tr id="item_use_restrictions" data-search="item_use_restrictions Restricción de uso del ítem rdai:restrictionsOnUseOfItem http://rdaregistry.info/Elements/i/restrictionsOnUseOfItem General Tesis" data-templates="General||Tesis" data-code="item_use_restrictions" data-label="Restricción de uso del ítem" data-uri="http://rdaregistry.info/Elements/i/restrictionsOnUseOfItem" data-predicate="rdai:restrictionsOnUseOfItem" data-template="General">
                 <td><a href="#item_use_restrictions">#</a></td>
                 <td><code>item_use_restrictions</code></td>
                 <td>Restricción de uso del ítem</td>
@@ -947,7 +909,7 @@
                 <td>rdai:restrictionsOnUseOfItem</td>
                 <td>General<br>Tesis</td>
               </tr>
-              <tr id="keyword" data-search="keyword Palabra clave schema:keywords DC11.relation https://schema.org/keywords General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto">
+              <tr id="keyword" data-search="keyword Palabra clave schema:keywords DC11.relation https://schema.org/keywords General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto" data-code="keyword" data-label="Palabra clave" data-uri="https://schema.org/keywords" data-predicate="schema:keywords" data-template="General">
                 <td><a href="#keyword">#</a></td>
                 <td><code>keyword</code></td>
                 <td>Palabra clave</td>
@@ -955,7 +917,7 @@
                 <td>schema:keywords<br>DC11.relation</td>
                 <td>General<br>General - Incluidos por defecto</td>
               </tr>
-              <tr id="language" data-search="language Idioma rdae:languageOfTheContent  General" data-templates="General">
+              <tr id="language" data-search="language Idioma rdae:languageOfTheContent  General" data-templates="General" data-code="language" data-label="Idioma" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#language" data-predicate="rdae:languageOfTheContent" data-template="General">
                 <td><a href="#language">#</a></td>
                 <td><code>language</code></td>
                 <td>Idioma</td>
@@ -963,7 +925,7 @@
                 <td>rdae:languageOfTheContent</td>
                 <td>General</td>
               </tr>
-              <tr id="language_of_expression" data-search="language_of_expression Nota de idioma rdae:languageOfExpression  General" data-templates="General">
+              <tr id="language_of_expression" data-search="language_of_expression Nota de idioma rdae:languageOfExpression  General" data-templates="General" data-code="language_of_expression" data-label="Nota de idioma" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#language_of_expression" data-predicate="rdae:languageOfExpression" data-template="General">
                 <td><a href="#language_of_expression">#</a></td>
                 <td><code>language_of_expression</code></td>
                 <td>Nota de idioma</td>
@@ -971,7 +933,7 @@
                 <td>rdae:languageOfExpression</td>
                 <td>General</td>
               </tr>
-              <tr id="license" data-search="license  DC.rights  General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto">
+              <tr id="license" data-search="license  DC.rights  General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto" data-code="license" data-label="license" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#license" data-predicate="DC.rights" data-template="General">
                 <td><a href="#license">#</a></td>
                 <td><code>license</code></td>
                 <td>license</td>
@@ -979,7 +941,7 @@
                 <td>DC.rights</td>
                 <td>General<br>General - Incluidos por defecto</td>
               </tr>
-              <tr id="license_condition" data-search="License Condition Condiciones de licencia dc:rights http://purl.org/dc/terms/rights Conacyt (no programar en HYRAX)" data-templates="Conacyt (no programar en HYRAX)">
+              <tr id="license_condition" data-search="License Condition Condiciones de licencia dc:rights http://purl.org/dc/terms/rights Conacyt (no programar en HYRAX)" data-templates="Conacyt (no programar en HYRAX)" data-code="License Condition" data-label="Condiciones de licencia" data-uri="http://purl.org/dc/terms/rights" data-predicate="dc:rights" data-template="Conacyt (no programar en HYRAX)">
                 <td><a href="#license_condition">#</a></td>
                 <td><code>License Condition</code></td>
                 <td>Condiciones de licencia</td>
@@ -987,7 +949,7 @@
                 <td>dc:rights</td>
                 <td>Conacyt (no programar en HYRAX)</td>
               </tr>
-              <tr id="local_resource_identifier" data-search="local_resource_identifier Identificador institucional datacite:localResourceIdentifierScheme http://purl.org/spar/datacite/localResourceIdentifierScheme General" data-templates="General">
+              <tr id="local_resource_identifier" data-search="local_resource_identifier Identificador institucional datacite:localResourceIdentifierScheme http://purl.org/spar/datacite/localResourceIdentifierScheme General" data-templates="General" data-code="local_resource_identifier" data-label="Identificador institucional" data-uri="http://purl.org/spar/datacite/localResourceIdentifierScheme" data-predicate="datacite:localResourceIdentifierScheme" data-template="General">
                 <td><a href="#local_resource_identifier">#</a></td>
                 <td><code>local_resource_identifier</code></td>
                 <td>Identificador institucional</td>
@@ -995,7 +957,7 @@
                 <td>datacite:localResourceIdentifierScheme</td>
                 <td>General</td>
               </tr>
-              <tr id="longitud_and_latitud" data-search="longitud_and_latitud Coordenadas rdam:longitudAndLatitud http://rdaregistry.info/Elements/m/longitudAndLatitud Mapas" data-templates="Mapas">
+              <tr id="longitud_and_latitud" data-search="longitud_and_latitud Coordenadas rdam:longitudAndLatitud http://rdaregistry.info/Elements/m/longitudAndLatitud Mapas" data-templates="Mapas" data-code="longitud_and_latitud" data-label="Coordenadas" data-uri="http://rdaregistry.info/Elements/m/longitudAndLatitud" data-predicate="rdam:longitudAndLatitud" data-template="Mapas">
                 <td><a href="#longitud_and_latitud">#</a></td>
                 <td><code>longitud_and_latitud</code></td>
                 <td>Coordenadas</td>
@@ -1003,7 +965,7 @@
                 <td>rdam:longitudAndLatitud</td>
                 <td>Mapas</td>
               </tr>
-              <tr id="manifestation_access_restrictions" data-search="manifestation_access_restrictions Restricciones de acceso a la manifestación rdam:restrictionsOnAccessToManifestation http://rdaregistry.info/Elements/m/restrictionsOnAccessToManifestation General" data-templates="General">
+              <tr id="manifestation_access_restrictions" data-search="manifestation_access_restrictions Restricciones de acceso a la manifestación rdam:restrictionsOnAccessToManifestation http://rdaregistry.info/Elements/m/restrictionsOnAccessToManifestation General" data-templates="General" data-code="manifestation_access_restrictions" data-label="Restricciones de acceso a la manifestación" data-uri="http://rdaregistry.info/Elements/m/restrictionsOnAccessToManifestation" data-predicate="rdam:restrictionsOnAccessToManifestation" data-template="General">
                 <td><a href="#manifestation_access_restrictions">#</a></td>
                 <td><code>manifestation_access_restrictions</code></td>
                 <td>Restricciones de acceso a la manifestación</td>
@@ -1011,7 +973,7 @@
                 <td>rdam:restrictionsOnAccessToManifestation</td>
                 <td>General</td>
               </tr>
-              <tr id="manifestation_use_restrictions" data-search="manifestation_use_restrictions Restricciones de uso a la manifestación rdam:restrictionsOnUseOfManifestation http://rdaregistry.info/Elements/m/restrictionsOnUseOfManifestation General" data-templates="General">
+              <tr id="manifestation_use_restrictions" data-search="manifestation_use_restrictions Restricciones de uso a la manifestación rdam:restrictionsOnUseOfManifestation http://rdaregistry.info/Elements/m/restrictionsOnUseOfManifestation General" data-templates="General" data-code="manifestation_use_restrictions" data-label="Restricciones de uso a la manifestación" data-uri="http://rdaregistry.info/Elements/m/restrictionsOnUseOfManifestation" data-predicate="rdam:restrictionsOnUseOfManifestation" data-template="General">
                 <td><a href="#manifestation_use_restrictions">#</a></td>
                 <td><code>manifestation_use_restrictions</code></td>
                 <td>Restricciones de uso a la manifestación</td>
@@ -1019,7 +981,7 @@
                 <td>rdam:restrictionsOnUseOfManifestation</td>
                 <td>General</td>
               </tr>
-              <tr id="message_digest" data-search="message_Digest Checksum premis:messageDigest  Preservación" data-templates="Preservación">
+              <tr id="message_digest" data-search="message_Digest Checksum premis:messageDigest  Preservación" data-templates="Preservación" data-code="message_Digest" data-label="Checksum" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#message_digest" data-predicate="premis:messageDigest" data-template="Preservación">
                 <td><a href="#message_digest">#</a></td>
                 <td><code>message_Digest</code></td>
                 <td>Checksum</td>
@@ -1027,7 +989,7 @@
                 <td>premis:messageDigest</td>
                 <td>Preservación</td>
               </tr>
-              <tr id="mode_of_issuance" data-search="mode_of_issuance Modo de publicación Modo de emisión rdam:modeOfIssuance http://rdaregistry.info/Elements/m/modeOfIssuance General Analiticas de Revistas COLMEX" data-templates="General||Analiticas de Revistas COLMEX">
+              <tr id="mode_of_issuance" data-search="mode_of_issuance Modo de publicación Modo de emisión rdam:modeOfIssuance http://rdaregistry.info/Elements/m/modeOfIssuance General Analiticas de Revistas COLMEX" data-templates="General||Analiticas de Revistas COLMEX" data-code="mode_of_issuance" data-label="Modo de publicación" data-uri="http://rdaregistry.info/Elements/m/modeOfIssuance" data-predicate="rdam:modeOfIssuance" data-template="General">
                 <td><a href="#mode_of_issuance">#</a></td>
                 <td><code>mode_of_issuance</code></td>
                 <td>Modo de publicación<br>Modo de emisión</td>
@@ -1035,7 +997,7 @@
                 <td>rdam:modeOfIssuance</td>
                 <td>General<br>Analiticas de Revistas COLMEX</td>
               </tr>
-              <tr id="mode_of_publication" data-search="mode_of_publication Modo de publicación rdam:modeOfIssuance http://rdaregistry.info/Elements/m/modeOfIssuance Tesis" data-templates="Tesis">
+              <tr id="mode_of_publication" data-search="mode_of_publication Modo de publicación rdam:modeOfIssuance http://rdaregistry.info/Elements/m/modeOfIssuance Tesis" data-templates="Tesis" data-code="mode_of_publication" data-label="Modo de publicación" data-uri="http://rdaregistry.info/Elements/m/modeOfIssuance" data-predicate="rdam:modeOfIssuance" data-template="Tesis">
                 <td><a href="#mode_of_publication">#</a></td>
                 <td><code>mode_of_publication</code></td>
                 <td>Modo de publicación</td>
@@ -1043,7 +1005,7 @@
                 <td>rdam:modeOfIssuance</td>
                 <td>Tesis</td>
               </tr>
-              <tr id="narrator" data-search="narrator Narrador rdaa:isNarratorAgentOf http://rdaregistry.info/Elements/a/isNarratorAgentOf General" data-templates="General">
+              <tr id="narrator" data-search="narrator Narrador rdaa:isNarratorAgentOf http://rdaregistry.info/Elements/a/isNarratorAgentOf General" data-templates="General" data-code="narrator" data-label="Narrador" data-uri="http://rdaregistry.info/Elements/a/isNarratorAgentOf" data-predicate="rdaa:isNarratorAgentOf" data-template="General">
                 <td><a href="#narrator">#</a></td>
                 <td><code>narrator</code></td>
                 <td>Narrador</td>
@@ -1051,7 +1013,7 @@
                 <td>rdaa:isNarratorAgentOf</td>
                 <td>General</td>
               </tr>
-              <tr id="nature_of_content" data-search="nature_of_content Naturaleza del contenido rdaw:natureOfContent http://rdaregistry.info/Elements/w/natureOfContent Bases de datos" data-templates="Bases de datos">
+              <tr id="nature_of_content" data-search="nature_of_content Naturaleza del contenido rdaw:natureOfContent http://rdaregistry.info/Elements/w/natureOfContent Bases de datos" data-templates="Bases de datos" data-code="nature_of_content" data-label="Naturaleza del contenido" data-uri="http://rdaregistry.info/Elements/w/natureOfContent" data-predicate="rdaw:natureOfContent" data-template="Bases de datos">
                 <td><a href="#nature_of_content">#</a></td>
                 <td><code>nature_of_content</code></td>
                 <td>Naturaleza del contenido</td>
@@ -1059,7 +1021,7 @@
                 <td>rdaw:natureOfContent</td>
                 <td>Bases de datos</td>
               </tr>
-              <tr id="note_on_statement_of_responsibility" data-search="note_on_statement_of_responsibility Nota sobre declaración de responsabilidad rdam:hasNoteOnStatementOfResponsibility http://rdaregistry.info/Elements/m/hasNoteOnStatementOfResponsibility Videos" data-templates="Videos">
+              <tr id="note_on_statement_of_responsibility" data-search="note_on_statement_of_responsibility Nota sobre declaración de responsabilidad rdam:hasNoteOnStatementOfResponsibility http://rdaregistry.info/Elements/m/hasNoteOnStatementOfResponsibility Videos" data-templates="Videos" data-code="note_on_statement_of_responsibility" data-label="Nota sobre declaración de responsabilidad" data-uri="http://rdaregistry.info/Elements/m/hasNoteOnStatementOfResponsibility" data-predicate="rdam:hasNoteOnStatementOfResponsibility" data-template="Videos">
                 <td><a href="#note_on_statement_of_responsibility">#</a></td>
                 <td><code>note_on_statement_of_responsibility</code></td>
                 <td>Nota sobre declaración de responsabilidad</td>
@@ -1067,7 +1029,7 @@
                 <td>rdam:hasNoteOnStatementOfResponsibility</td>
                 <td>Videos</td>
               </tr>
-              <tr id="notes" data-search="notes Notas rdam:noteOnManifestation http://rdaregistry.info/Elements/m/noteOnManifestation General" data-templates="General">
+              <tr id="notes" data-search="notes Notas rdam:noteOnManifestation http://rdaregistry.info/Elements/m/noteOnManifestation General" data-templates="General" data-code="notes" data-label="Notas" data-uri="http://rdaregistry.info/Elements/m/noteOnManifestation" data-predicate="rdam:noteOnManifestation" data-template="General">
                 <td><a href="#notes">#</a></td>
                 <td><code>notes</code></td>
                 <td>Notas</td>
@@ -1075,7 +1037,7 @@
                 <td>rdam:noteOnManifestation</td>
                 <td>General</td>
               </tr>
-              <tr id="number" data-search="number Número &quot;has numbering within subseries&quot; rdam:numberingWithinSubseries http://rdaregistry.info/Elements/m/numberingWithinSubseries Arquetipo Analíticas Tipo 2 Analiticas de Revistas COLMEX" data-templates="Arquetipo Analíticas Tipo 2||Analiticas de Revistas COLMEX">
+              <tr id="number" data-search="number Número &quot;has numbering within subseries&quot; rdam:numberingWithinSubseries http://rdaregistry.info/Elements/m/numberingWithinSubseries Arquetipo Analíticas Tipo 2 Analiticas de Revistas COLMEX" data-templates="Arquetipo Analíticas Tipo 2||Analiticas de Revistas COLMEX" data-code="number" data-label="Número" data-uri="http://rdaregistry.info/Elements/m/numberingWithinSubseries" data-predicate="rdam:numberingWithinSubseries" data-template="Arquetipo Analíticas Tipo 2">
                 <td><a href="#number">#</a></td>
                 <td><code>number</code></td>
                 <td>Número<br>&quot;has numbering within subseries&quot;</td>
@@ -1083,7 +1045,7 @@
                 <td>rdam:numberingWithinSubseries</td>
                 <td>Arquetipo Analíticas Tipo 2<br>Analiticas de Revistas COLMEX</td>
               </tr>
-              <tr id="numbering_within_sequence" data-search="numbering_within_sequence Volumen/número rdam: hasNumberingWithinSequence http://rdaregistry.info/Elements/m/hasNumberingWithinSequence Arquetipo Libros/Capitulos /Videos" data-templates="Arquetipo Libros/Capitulos /Videos">
+              <tr id="numbering_within_sequence" data-search="numbering_within_sequence Volumen/número rdam: hasNumberingWithinSequence http://rdaregistry.info/Elements/m/hasNumberingWithinSequence Arquetipo Libros/Capitulos /Videos" data-templates="Arquetipo Libros/Capitulos /Videos" data-code="numbering_within_sequence" data-label="Volumen/número" data-uri="http://rdaregistry.info/Elements/m/hasNumberingWithinSequence" data-predicate="rdam: hasNumberingWithinSequence" data-template="Arquetipo Libros/Capitulos /Videos">
                 <td><a href="#numbering_within_sequence">#</a></td>
                 <td><code>numbering_within_sequence</code></td>
                 <td>Volumen/número</td>
@@ -1091,7 +1053,7 @@
                 <td>rdam: hasNumberingWithinSequence</td>
                 <td>Arquetipo Libros/Capitulos /Videos</td>
               </tr>
-              <tr id="object_identifier_type" data-search="object_Identifier_Type Tipo de identificador del objeto digital premis:objectIdentifierType  Preservación" data-templates="Preservación">
+              <tr id="object_identifier_type" data-search="object_Identifier_Type Tipo de identificador del objeto digital premis:objectIdentifierType  Preservación" data-templates="Preservación" data-code="object_Identifier_Type" data-label="Tipo de identificador del objeto digital" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#object_identifier_type" data-predicate="premis:objectIdentifierType" data-template="Preservación">
                 <td><a href="#object_identifier_type">#</a></td>
                 <td><code>object_Identifier_Type</code></td>
                 <td>Tipo de identificador del objeto digital</td>
@@ -1099,7 +1061,7 @@
                 <td>premis:objectIdentifierType</td>
                 <td>Preservación</td>
               </tr>
-              <tr id="object_identifier_value" data-search="object_Identifier_Value Identificador del objeto digital premis:objectIdentifierValue  Preservación" data-templates="Preservación">
+              <tr id="object_identifier_value" data-search="object_Identifier_Value Identificador del objeto digital premis:objectIdentifierValue  Preservación" data-templates="Preservación" data-code="object_Identifier_Value" data-label="Identificador del objeto digital" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#object_identifier_value" data-predicate="premis:objectIdentifierValue" data-template="Preservación">
                 <td><a href="#object_identifier_value">#</a></td>
                 <td><code>object_Identifier_Value</code></td>
                 <td>Identificador del objeto digital</td>
@@ -1107,7 +1069,7 @@
                 <td>premis:objectIdentifierValue</td>
                 <td>Preservación</td>
               </tr>
-              <tr id="organizer" data-search="organizer Coordinador/organizador rdaa:isOrganizerAgentOf http://rdaregistry.info/Elements/a/isOrganizerAgentOf General" data-templates="General">
+              <tr id="organizer" data-search="organizer Coordinador/organizador rdaa:isOrganizerAgentOf http://rdaregistry.info/Elements/a/isOrganizerAgentOf General" data-templates="General" data-code="organizer" data-label="Coordinador/organizador" data-uri="http://rdaregistry.info/Elements/a/isOrganizerAgentOf" data-predicate="rdaa:isOrganizerAgentOf" data-template="General">
                 <td><a href="#organizer">#</a></td>
                 <td><code>organizer</code></td>
                 <td>Coordinador/organizador</td>
@@ -1115,7 +1077,7 @@
                 <td>rdaa:isOrganizerAgentOf</td>
                 <td>General</td>
               </tr>
-              <tr id="organizer_collective_agent" data-search="organizer_collective_agent Autor congreso o reunión rdaa:isOrganizerCollectiveAgentOf http://rdaregistry.info/Elements/a/isOrganizerCollectiveAgentOf General" data-templates="General">
+              <tr id="organizer_collective_agent" data-search="organizer_collective_agent Autor congreso o reunión rdaa:isOrganizerCollectiveAgentOf http://rdaregistry.info/Elements/a/isOrganizerCollectiveAgentOf General" data-templates="General" data-code="organizer_collective_agent" data-label="Autor congreso o reunión" data-uri="http://rdaregistry.info/Elements/a/isOrganizerCollectiveAgentOf" data-predicate="rdaa:isOrganizerCollectiveAgentOf" data-template="General">
                 <td><a href="#organizer_collective_agent">#</a></td>
                 <td><code>organizer_collective_agent</code></td>
                 <td>Autor congreso o reunión</td>
@@ -1123,7 +1085,7 @@
                 <td>rdaa:isOrganizerCollectiveAgentOf</td>
                 <td>General</td>
               </tr>
-              <tr id="originalname" data-search="originalName Nombre original del archivo premis:originalName  Preservación" data-templates="Preservación">
+              <tr id="originalname" data-search="originalName Nombre original del archivo premis:originalName  Preservación" data-templates="Preservación" data-code="originalName" data-label="Nombre original del archivo" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#originalname" data-predicate="premis:originalName" data-template="Preservación">
                 <td><a href="#originalname">#</a></td>
                 <td><code>originalName</code></td>
                 <td>Nombre original del archivo</td>
@@ -1131,7 +1093,7 @@
                 <td>premis:originalName</td>
                 <td>Preservación</td>
               </tr>
-              <tr id="other_related_persons" data-search="Other related persons Otras personas relacionadas rdaa:otherPFCWorkOf http://rdaregistry.info/Elements/a/otherPFCWorkOf General" data-templates="General">
+              <tr id="other_related_persons" data-search="Other related persons Otras personas relacionadas rdaa:otherPFCWorkOf http://rdaregistry.info/Elements/a/otherPFCWorkOf General" data-templates="General" data-code="Other related persons" data-label="Otras personas relacionadas" data-uri="http://rdaregistry.info/Elements/a/otherPFCWorkOf" data-predicate="rdaa:otherPFCWorkOf" data-template="General">
                 <td><a href="#other_related_persons">#</a></td>
                 <td><code>Other related persons</code></td>
                 <td>Otras personas relacionadas</td>
@@ -1139,7 +1101,7 @@
                 <td>rdaa:otherPFCWorkOf</td>
                 <td>General</td>
               </tr>
-              <tr id="other__related__persons" data-search="other_ related_ persons Otras personas relacionadas rdaa:otherPFCWorkOf http://rdaregistry.info/Elements/a/otherPFCWorkOf General" data-templates="General">
+              <tr id="other__related__persons" data-search="other_ related_ persons Otras personas relacionadas rdaa:otherPFCWorkOf http://rdaregistry.info/Elements/a/otherPFCWorkOf General" data-templates="General" data-code="other_ related_ persons" data-label="Otras personas relacionadas" data-uri="http://rdaregistry.info/Elements/a/otherPFCWorkOf" data-predicate="rdaa:otherPFCWorkOf" data-template="General">
                 <td><a href="#other__related__persons">#</a></td>
                 <td><code>other_ related_ persons</code></td>
                 <td>Otras personas relacionadas</td>
@@ -1147,7 +1109,7 @@
                 <td>rdaa:otherPFCWorkOf</td>
                 <td>General</td>
               </tr>
-              <tr id="other_formats" data-search="other_formats Otros formatos rdam:relatedManifestation http://rdaregistry.info/Elements/m/relatedManifestation Tesis" data-templates="Tesis">
+              <tr id="other_formats" data-search="other_formats Otros formatos rdam:relatedManifestation http://rdaregistry.info/Elements/m/relatedManifestation Tesis" data-templates="Tesis" data-code="other_formats" data-label="Otros formatos" data-uri="http://rdaregistry.info/Elements/m/relatedManifestation" data-predicate="rdam:relatedManifestation" data-template="Tesis">
                 <td><a href="#other_formats">#</a></td>
                 <td><code>other_formats</code></td>
                 <td>Otros formatos</td>
@@ -1155,7 +1117,7 @@
                 <td>rdam:relatedManifestation</td>
                 <td>Tesis</td>
               </tr>
-              <tr id="other_title" data-search="other_title Otro título rdam:otherTitleInformation rdam:P30142 http://rdaregistry.info/Elements/m/otherTitleInformation http://rdaregistry.info/Elements/m/P30142 General" data-templates="General">
+              <tr id="other_title" data-search="other_title Otro título rdam:otherTitleInformation rdam:P30142 http://rdaregistry.info/Elements/m/otherTitleInformation http://rdaregistry.info/Elements/m/P30142 General" data-templates="General" data-code="other_title" data-label="Otro título" data-uri="http://rdaregistry.info/Elements/m/otherTitleInformation" data-predicate="rdam:otherTitleInformation" data-template="General">
                 <td><a href="#other_title">#</a></td>
                 <td><code>other_title</code></td>
                 <td>Otro título</td>
@@ -1163,7 +1125,7 @@
                 <td>rdam:otherTitleInformation<br>rdam:P30142</td>
                 <td>General</td>
               </tr>
-              <tr id="owner_agent_of" data-search="owner_agent_of Propietario rdaa:isOwnerAgentOf http://rdaregistry.info/Elements/a/isOwnerAgentOf General" data-templates="General">
+              <tr id="owner_agent_of" data-search="owner_agent_of Propietario rdaa:isOwnerAgentOf http://rdaregistry.info/Elements/a/isOwnerAgentOf General" data-templates="General" data-code="owner_agent_of" data-label="Propietario" data-uri="http://rdaregistry.info/Elements/a/isOwnerAgentOf" data-predicate="rdaa:isOwnerAgentOf" data-template="General">
                 <td><a href="#owner_agent_of">#</a></td>
                 <td><code>owner_agent_of</code></td>
                 <td>Propietario</td>
@@ -1171,7 +1133,7 @@
                 <td>rdaa:isOwnerAgentOf</td>
                 <td>General</td>
               </tr>
-              <tr id="pages" data-search="pages Páginas pagination SCHEMA.pagination https://schema.org/pagination https://schema.org/pagination Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX">
+              <tr id="pages" data-search="pages Páginas pagination SCHEMA.pagination https://schema.org/pagination https://schema.org/pagination Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX" data-code="pages" data-label="Páginas" data-uri="https://schema.org/pagination" data-predicate="SCHEMA.pagination" data-template="Analiticas de Revistas COLMEX">
                 <td><a href="#pages">#</a></td>
                 <td><code>pages</code></td>
                 <td>Páginas<br>pagination</td>
@@ -1179,7 +1141,7 @@
                 <td>SCHEMA.pagination<br>https://schema.org/pagination</td>
                 <td>Analiticas de Revistas COLMEX</td>
               </tr>
-              <tr id="part" data-search="part Parte &quot;has alternative numeric and/or alphabetic designation of first issue or part of sequence&quot; rdam:alternativeNumericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence http://rdaregistry.info/Elements/m/alternativeNumericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX">
+              <tr id="part" data-search="part Parte &quot;has alternative numeric and/or alphabetic designation of first issue or part of sequence&quot; rdam:alternativeNumericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence http://rdaregistry.info/Elements/m/alternativeNumericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX" data-code="part" data-label="Parte" data-uri="http://rdaregistry.info/Elements/m/alternativeNumericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence" data-predicate="rdam:alternativeNumericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence" data-template="Analiticas de Revistas COLMEX">
                 <td><a href="#part">#</a></td>
                 <td><code>part</code></td>
                 <td>Parte<br>&quot;has alternative numeric and/or alphabetic designation of first issue or part of sequence&quot;</td>
@@ -1187,7 +1149,7 @@
                 <td>rdam:alternativeNumericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence</td>
                 <td>Analiticas de Revistas COLMEX</td>
               </tr>
-              <tr id="part_of_place" data-search="part_of_place Ciudad/municipio/localidad rdac:isPartOfPlace  General" data-templates="General">
+              <tr id="part_of_place" data-search="part_of_place Ciudad/municipio/localidad rdac:isPartOfPlace  General" data-templates="General" data-code="part_of_place" data-label="Ciudad/municipio/localidad" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#part_of_place" data-predicate="rdac:isPartOfPlace" data-template="General">
                 <td><a href="#part_of_place">#</a></td>
                 <td><code>part_of_place</code></td>
                 <td>Ciudad/municipio/localidad</td>
@@ -1195,7 +1157,7 @@
                 <td>rdac:isPartOfPlace</td>
                 <td>General</td>
               </tr>
-              <tr id="period" data-search="period Periodo &quot;has alternative chronological designation of last issue or part of sequence&quot; rdam:alternativeNumericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence http://rdaregistry.info/Elements/m/alternativeNumericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX">
+              <tr id="period" data-search="period Periodo &quot;has alternative chronological designation of last issue or part of sequence&quot; rdam:alternativeNumericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence http://rdaregistry.info/Elements/m/alternativeNumericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX" data-code="period" data-label="Periodo" data-uri="http://rdaregistry.info/Elements/m/alternativeNumericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence" data-predicate="rdam:alternativeNumericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence" data-template="Analiticas de Revistas COLMEX">
                 <td><a href="#period">#</a></td>
                 <td><code>period</code></td>
                 <td>Periodo<br>&quot;has alternative chronological designation of last issue or part of sequence&quot;</td>
@@ -1203,7 +1165,7 @@
                 <td>rdam:alternativeNumericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence</td>
                 <td>Analiticas de Revistas COLMEX</td>
               </tr>
-              <tr id="period_of_activity_of_corporate_body" data-search="period_of_activity_of_corporate_body Epoca/Periodo rdaa:periodOfActivityOfCorporateBody http://rdaregistry.info/Elements/a/periodOfActivityOfCorporateBody Tesis jurisprudenciales" data-templates="Tesis jurisprudenciales">
+              <tr id="period_of_activity_of_corporate_body" data-search="period_of_activity_of_corporate_body Epoca/Periodo rdaa:periodOfActivityOfCorporateBody http://rdaregistry.info/Elements/a/periodOfActivityOfCorporateBody Tesis jurisprudenciales" data-templates="Tesis jurisprudenciales" data-code="period_of_activity_of_corporate_body" data-label="Epoca/Periodo" data-uri="http://rdaregistry.info/Elements/a/periodOfActivityOfCorporateBody" data-predicate="rdaa:periodOfActivityOfCorporateBody" data-template="Tesis jurisprudenciales">
                 <td><a href="#period_of_activity_of_corporate_body">#</a></td>
                 <td><code>period_of_activity_of_corporate_body</code></td>
                 <td>Epoca/Periodo</td>
@@ -1211,7 +1173,7 @@
                 <td>rdaa:periodOfActivityOfCorporateBody</td>
                 <td>Tesis jurisprudenciales</td>
               </tr>
-              <tr id="photographer" data-search="photographer Fotográfo rdaa:isPhotographerAgentOf http://rdaregistry.info/Elements/a/isPhotographerAgentOf General" data-templates="General">
+              <tr id="photographer" data-search="photographer Fotográfo rdaa:isPhotographerAgentOf http://rdaregistry.info/Elements/a/isPhotographerAgentOf General" data-templates="General" data-code="photographer" data-label="Fotográfo" data-uri="http://rdaregistry.info/Elements/a/isPhotographerAgentOf" data-predicate="rdaa:isPhotographerAgentOf" data-template="General">
                 <td><a href="#photographer">#</a></td>
                 <td><code>photographer</code></td>
                 <td>Fotográfo</td>
@@ -1219,7 +1181,7 @@
                 <td>rdaa:isPhotographerAgentOf</td>
                 <td>General</td>
               </tr>
-              <tr id="photographer_corporate_body_of_work" data-search="photographer_corporate_body_of_work Agencia fotográfica rdaa:photographerCorporateBodyOfWork http://rdaregistry.info/Elements/a/photographerCorporateBodyOfWork Fotografía" data-templates="Fotografía">
+              <tr id="photographer_corporate_body_of_work" data-search="photographer_corporate_body_of_work Agencia fotográfica rdaa:photographerCorporateBodyOfWork http://rdaregistry.info/Elements/a/photographerCorporateBodyOfWork Fotografía" data-templates="Fotografía" data-code="photographer_corporate_body_of_work" data-label="Agencia fotográfica" data-uri="http://rdaregistry.info/Elements/a/photographerCorporateBodyOfWork" data-predicate="rdaa:photographerCorporateBodyOfWork" data-template="Fotografía">
                 <td><a href="#photographer_corporate_body_of_work">#</a></td>
                 <td><code>photographer_corporate_body_of_work</code></td>
                 <td>Agencia fotográfica</td>
@@ -1227,7 +1189,7 @@
                 <td>rdaa:photographerCorporateBodyOfWork</td>
                 <td>Fotografía</td>
               </tr>
-              <tr id="place_of_publication" data-search="place_of_publication Lugar de publicación rdam:PlaceOfPublication http://rdaregistry.info/Elements/m/PlaceOfPublication General" data-templates="General">
+              <tr id="place_of_publication" data-search="place_of_publication Lugar de publicación rdam:PlaceOfPublication http://rdaregistry.info/Elements/m/PlaceOfPublication General" data-templates="General" data-code="place_of_publication" data-label="Lugar de publicación" data-uri="http://rdaregistry.info/Elements/m/PlaceOfPublication" data-predicate="rdam:PlaceOfPublication" data-template="General">
                 <td><a href="#place_of_publication">#</a></td>
                 <td><code>place_of_publication</code></td>
                 <td>Lugar de publicación</td>
@@ -1235,7 +1197,7 @@
                 <td>rdam:PlaceOfPublication</td>
                 <td>General</td>
               </tr>
-              <tr id="preceded_by_work" data-search="preceded_by_work Precedentes rdaw:precededByWork http://rdaregistry.info/Elements/w/precededByWork Tesis jurisprudenciales" data-templates="Tesis jurisprudenciales">
+              <tr id="preceded_by_work" data-search="preceded_by_work Precedentes rdaw:precededByWork http://rdaregistry.info/Elements/w/precededByWork Tesis jurisprudenciales" data-templates="Tesis jurisprudenciales" data-code="preceded_by_work" data-label="Precedentes" data-uri="http://rdaregistry.info/Elements/w/precededByWork" data-predicate="rdaw:precededByWork" data-template="Tesis jurisprudenciales">
                 <td><a href="#preceded_by_work">#</a></td>
                 <td><code>preceded_by_work</code></td>
                 <td>Precedentes</td>
@@ -1243,7 +1205,7 @@
                 <td>rdaw:precededByWork</td>
                 <td>Tesis jurisprudenciales</td>
               </tr>
-              <tr id="preservation_level" data-search="preservation_Level Estado de la preservación original premis:preservationLevel  Preservación" data-templates="Preservación">
+              <tr id="preservation_level" data-search="preservation_Level Estado de la preservación original premis:preservationLevel  Preservación" data-templates="Preservación" data-code="preservation_Level" data-label="Estado de la preservación original" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#preservation_level" data-predicate="premis:preservationLevel" data-template="Preservación">
                 <td><a href="#preservation_level">#</a></td>
                 <td><code>preservation_Level</code></td>
                 <td>Estado de la preservación original</td>
@@ -1251,7 +1213,7 @@
                 <td>premis:preservationLevel</td>
                 <td>Preservación</td>
               </tr>
-              <tr id="primary_topic" data-search="primary_topic Materia FOAF:isPrimaryTopicOf  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="primary_topic" data-search="primary_topic Materia FOAF:isPrimaryTopicOf  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="primary_topic" data-label="Materia" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#primary_topic" data-predicate="FOAF:isPrimaryTopicOf" data-template="Arquetipo Documentos Legales">
                 <td><a href="#primary_topic">#</a></td>
                 <td><code>primary_topic</code></td>
                 <td>Materia</td>
@@ -1259,7 +1221,7 @@
                 <td>FOAF:isPrimaryTopicOf</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="production_method" data-search="production_method Medio de producción rdam:productionMethod http://rdaregistry.info/Elements/m/productionMethod Bases de datos" data-templates="Bases de datos">
+              <tr id="production_method" data-search="production_method Medio de producción rdam:productionMethod http://rdaregistry.info/Elements/m/productionMethod Bases de datos" data-templates="Bases de datos" data-code="production_method" data-label="Medio de producción" data-uri="http://rdaregistry.info/Elements/m/productionMethod" data-predicate="rdam:productionMethod" data-template="Bases de datos">
                 <td><a href="#production_method">#</a></td>
                 <td><code>production_method</code></td>
                 <td>Medio de producción</td>
@@ -1267,7 +1229,7 @@
                 <td>rdam:productionMethod</td>
                 <td>Bases de datos</td>
               </tr>
-              <tr id="project" data-search="project Proyecto foaf:project  General" data-templates="General">
+              <tr id="project" data-search="project Proyecto foaf:project  General" data-templates="General" data-code="project" data-label="Proyecto" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#project" data-predicate="foaf:project" data-template="General">
                 <td><a href="#project">#</a></td>
                 <td><code>project</code></td>
                 <td>Proyecto</td>
@@ -1275,7 +1237,7 @@
                 <td>foaf:project</td>
                 <td>General</td>
               </tr>
-              <tr id="provenance" data-search="provenance Procedencia dc:provenance http://purl.org/dc/terms/provenance General" data-templates="General">
+              <tr id="provenance" data-search="provenance Procedencia dc:provenance http://purl.org/dc/terms/provenance General" data-templates="General" data-code="provenance" data-label="Procedencia" data-uri="http://purl.org/dc/terms/provenance" data-predicate="dc:provenance" data-template="General">
                 <td><a href="#provenance">#</a></td>
                 <td><code>provenance</code></td>
                 <td>Procedencia</td>
@@ -1283,7 +1245,7 @@
                 <td>dc:provenance</td>
                 <td>General</td>
               </tr>
-              <tr id="pub_conacyt" data-search="pub_conacyt  dc11:type DC11.type  Conacyt" data-templates="Conacyt">
+              <tr id="pub_conacyt" data-search="pub_conacyt  dc11:type DC11.type  Conacyt" data-templates="Conacyt" data-code="pub_conacyt" data-label="pub_conacyt" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#pub_conacyt" data-predicate="dc11:type" data-template="Conacyt">
                 <td><a href="#pub_conacyt">#</a></td>
                 <td><code>pub_conacyt</code></td>
                 <td>pub_conacyt</td>
@@ -1291,7 +1253,7 @@
                 <td>dc11:type<br>DC11.type</td>
                 <td>Conacyt</td>
               </tr>
-              <tr id="publisher" data-search="publisher Editorial Datos de publicación/producción rdam:publicationStatement http://rdaregistry.info/Elements/m/publicationStatement General" data-templates="General">
+              <tr id="publisher" data-search="publisher Editorial Datos de publicación/producción rdam:publicationStatement http://rdaregistry.info/Elements/m/publicationStatement General" data-templates="General" data-code="publisher" data-label="Editorial" data-uri="http://rdaregistry.info/Elements/m/publicationStatement" data-predicate="rdam:publicationStatement" data-template="General">
                 <td><a href="#publisher">#</a></td>
                 <td><code>publisher</code></td>
                 <td>Editorial<br>Datos de publicación/producción</td>
@@ -1299,7 +1261,7 @@
                 <td>rdam:publicationStatement</td>
                 <td>General</td>
               </tr>
-              <tr id="related_corporate_body_of_timespan" data-search="related_corporate_body_of_timespan Organización relacionada rdat: relatedCorporateBodyOfTimespan  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="related_corporate_body_of_timespan" data-search="related_corporate_body_of_timespan Organización relacionada rdat: relatedCorporateBodyOfTimespan  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="related_corporate_body_of_timespan" data-label="Organización relacionada" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#related_corporate_body_of_timespan" data-predicate="rdat: relatedCorporateBodyOfTimespan" data-template="Arquetipo Documentos Legales">
                 <td><a href="#related_corporate_body_of_timespan">#</a></td>
                 <td><code>related_corporate_body_of_timespan</code></td>
                 <td>Organización relacionada</td>
@@ -1307,7 +1269,7 @@
                 <td>rdat: relatedCorporateBodyOfTimespan</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="related_family_timespan" data-search="related_family_timespan Familia relacionada rdat:relatedFamilyOfTimespan  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="related_family_timespan" data-search="related_family_timespan Familia relacionada rdat:relatedFamilyOfTimespan  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="related_family_timespan" data-label="Familia relacionada" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#related_family_timespan" data-predicate="rdat:relatedFamilyOfTimespan" data-template="Arquetipo Documentos Legales">
                 <td><a href="#related_family_timespan">#</a></td>
                 <td><code>related_family_timespan</code></td>
                 <td>Familia relacionada</td>
@@ -1315,7 +1277,7 @@
                 <td>rdat:relatedFamilyOfTimespan</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="related_object_identifier_type" data-search="related_Object_Identifier_Type Tipo de identificador premis:relatedObjectIdentifierType  Preservación" data-templates="Preservación">
+              <tr id="related_object_identifier_type" data-search="related_Object_Identifier_Type Tipo de identificador premis:relatedObjectIdentifierType  Preservación" data-templates="Preservación" data-code="related_Object_Identifier_Type" data-label="Tipo de identificador" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#related_object_identifier_type" data-predicate="premis:relatedObjectIdentifierType" data-template="Preservación">
                 <td><a href="#related_object_identifier_type">#</a></td>
                 <td><code>related_Object_Identifier_Type</code></td>
                 <td>Tipo de identificador</td>
@@ -1323,7 +1285,7 @@
                 <td>premis:relatedObjectIdentifierType</td>
                 <td>Preservación</td>
               </tr>
-              <tr id="related_object_identifier_value" data-search="related_Object_Identifier_Value Identificador de la fuente de digitalización premis:relatedObjectIdentifierValue  Preservación" data-templates="Preservación">
+              <tr id="related_object_identifier_value" data-search="related_Object_Identifier_Value Identificador de la fuente de digitalización premis:relatedObjectIdentifierValue  Preservación" data-templates="Preservación" data-code="related_Object_Identifier_Value" data-label="Identificador de la fuente de digitalización" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#related_object_identifier_value" data-predicate="premis:relatedObjectIdentifierValue" data-template="Preservación">
                 <td><a href="#related_object_identifier_value">#</a></td>
                 <td><code>related_Object_Identifier_Value</code></td>
                 <td>Identificador de la fuente de digitalización</td>
@@ -1331,7 +1293,7 @@
                 <td>premis:relatedObjectIdentifierValue</td>
                 <td>Preservación</td>
               </tr>
-              <tr id="related_person_of" data-search="related_person_of Persona relacionada o tercero interesado rdat:relatedPersonOf  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="related_person_of" data-search="related_person_of Persona relacionada o tercero interesado rdat:relatedPersonOf  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="related_person_of" data-label="Persona relacionada o tercero interesado" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#related_person_of" data-predicate="rdat:relatedPersonOf" data-template="Arquetipo Documentos Legales">
                 <td><a href="#related_person_of">#</a></td>
                 <td><code>related_person_of</code></td>
                 <td>Persona relacionada o tercero interesado</td>
@@ -1339,7 +1301,7 @@
                 <td>rdat:relatedPersonOf</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="related_place_of_timespan" data-search="related_place_of_timespan Lugar del hecho rdat:relatedPlaceOfTimespan  Hechos" data-templates="Hechos">
+              <tr id="related_place_of_timespan" data-search="related_place_of_timespan Lugar del hecho rdat:relatedPlaceOfTimespan  Hechos" data-templates="Hechos" data-code="related_place_of_timespan" data-label="Lugar del hecho" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#related_place_of_timespan" data-predicate="rdat:relatedPlaceOfTimespan" data-template="Hechos">
                 <td><a href="#related_place_of_timespan">#</a></td>
                 <td><code>related_place_of_timespan</code></td>
                 <td>Lugar del hecho</td>
@@ -1347,7 +1309,7 @@
                 <td>rdat:relatedPlaceOfTimespan</td>
                 <td>Hechos</td>
               </tr>
-              <tr id="related_url" data-search="related_url URL rdam:uniformResourceLocator RDFS.seeAlso http://rdaregistry.info/Elements/m/uniformResourceLocator General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto">
+              <tr id="related_url" data-search="related_url URL rdam:uniformResourceLocator RDFS.seeAlso http://rdaregistry.info/Elements/m/uniformResourceLocator General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto" data-code="related_url" data-label="URL" data-uri="http://rdaregistry.info/Elements/m/uniformResourceLocator" data-predicate="rdam:uniformResourceLocator" data-template="General">
                 <td><a href="#related_url">#</a></td>
                 <td><code>related_url</code></td>
                 <td>URL</td>
@@ -1355,7 +1317,7 @@
                 <td>rdam:uniformResourceLocator<br>RDFS.seeAlso</td>
                 <td>General<br>General - Incluidos por defecto</td>
               </tr>
-              <tr id="related_work_of_work" data-search="related_work_of_work Documento relacionado rdaw:RelatedWorkOfWork http://rdaregistry.info/Elements/w/RelatedWorkOfWork General RDDM/ Para Rodrigo Cuéllar" data-templates="General RDDM/ Para Rodrigo Cuéllar">
+              <tr id="related_work_of_work" data-search="related_work_of_work Documento relacionado rdaw:RelatedWorkOfWork http://rdaregistry.info/Elements/w/RelatedWorkOfWork General RDDM/ Para Rodrigo Cuéllar" data-templates="General RDDM/ Para Rodrigo Cuéllar" data-code="related_work_of_work" data-label="Documento relacionado" data-uri="http://rdaregistry.info/Elements/w/RelatedWorkOfWork" data-predicate="rdaw:RelatedWorkOfWork" data-template="General RDDM/ Para Rodrigo Cuéllar">
                 <td><a href="#related_work_of_work">#</a></td>
                 <td><code>related_work_of_work</code></td>
                 <td>Documento relacionado</td>
@@ -1363,7 +1325,7 @@
                 <td>rdaw:RelatedWorkOfWork</td>
                 <td>General RDDM/ Para Rodrigo Cuéllar</td>
               </tr>
-              <tr id="researcher_agent_of" data-search="researcher_agent_of Investigador rdaa:researcherAgentOf http://rdaregistry.info/Elements/a/researcherAgentOf Bases de datos" data-templates="Bases de datos">
+              <tr id="researcher_agent_of" data-search="researcher_agent_of Investigador rdaa:researcherAgentOf http://rdaregistry.info/Elements/a/researcherAgentOf Bases de datos" data-templates="Bases de datos" data-code="researcher_agent_of" data-label="Investigador" data-uri="http://rdaregistry.info/Elements/a/researcherAgentOf" data-predicate="rdaa:researcherAgentOf" data-template="Bases de datos">
                 <td><a href="#researcher_agent_of">#</a></td>
                 <td><code>researcher_agent_of</code></td>
                 <td>Investigador</td>
@@ -1371,7 +1333,7 @@
                 <td>rdaa:researcherAgentOf</td>
                 <td>Bases de datos</td>
               </tr>
-              <tr id="resource_access_restrictions" data-search="resource_access_restrictions Restricción de acceso del recurso rdam:resourceAccessRestrictions http://rdaregistry.info/Elements/m/resourceAccessRestrictions General" data-templates="General">
+              <tr id="resource_access_restrictions" data-search="resource_access_restrictions Restricción de acceso del recurso rdam:resourceAccessRestrictions http://rdaregistry.info/Elements/m/resourceAccessRestrictions General" data-templates="General" data-code="resource_access_restrictions" data-label="Restricción de acceso del recurso" data-uri="http://rdaregistry.info/Elements/m/resourceAccessRestrictions" data-predicate="rdam:resourceAccessRestrictions" data-template="General">
                 <td><a href="#resource_access_restrictions">#</a></td>
                 <td><code>resource_access_restrictions</code></td>
                 <td>Restricción de acceso del recurso</td>
@@ -1379,7 +1341,7 @@
                 <td>rdam:resourceAccessRestrictions</td>
                 <td>General</td>
               </tr>
-              <tr id="resource_type" data-search="resource_type Tipo de recurso rdaw:contentType rdaw:formOfWork http://rdaregistry.info/Elements/w/contentType http://rdaregistry.info/Elements/w/formOfWork General/Obligatorio General General - Incluidos por defecto" data-templates="General/Obligatorio||General||General - Incluidos por defecto">
+              <tr id="resource_type" data-search="resource_type Tipo de recurso rdaw:contentType rdaw:formOfWork http://rdaregistry.info/Elements/w/contentType http://rdaregistry.info/Elements/w/formOfWork General/Obligatorio General General - Incluidos por defecto" data-templates="General/Obligatorio||General||General - Incluidos por defecto" data-code="resource_type" data-label="Tipo de recurso" data-uri="http://rdaregistry.info/Elements/w/contentType" data-predicate="rdaw:contentType" data-template="General/Obligatorio">
                 <td><a href="#resource_type">#</a></td>
                 <td><code>resource_type</code></td>
                 <td>Tipo de recurso</td>
@@ -1387,7 +1349,7 @@
                 <td>rdaw:contentType<br>rdaw:formOfWork</td>
                 <td>General/Obligatorio<br>General<br>General - Incluidos por defecto</td>
               </tr>
-              <tr id="resource_use_restrictions" data-search="resource_use_restrictions Restricciones de uso del recurso rdam:restrictionsOnUseOfResource http://rdaregistry.info/Elements/m/restrictionsOnUseOfResource General" data-templates="General">
+              <tr id="resource_use_restrictions" data-search="resource_use_restrictions Restricciones de uso del recurso rdam:restrictionsOnUseOfResource http://rdaregistry.info/Elements/m/restrictionsOnUseOfResource General" data-templates="General" data-code="resource_use_restrictions" data-label="Restricciones de uso del recurso" data-uri="http://rdaregistry.info/Elements/m/restrictionsOnUseOfResource" data-predicate="rdam:restrictionsOnUseOfResource" data-template="General">
                 <td><a href="#resource_use_restrictions">#</a></td>
                 <td><code>resource_use_restrictions</code></td>
                 <td>Restricciones de uso del recurso</td>
@@ -1395,7 +1357,7 @@
                 <td>rdam:restrictionsOnUseOfResource</td>
                 <td>General</td>
               </tr>
-              <tr id="responsibility_statement" data-search="responsibility_statement Mención de responsabilidad rdam:statementOfResponsibilityRelatingToTitleProper http://rdaregistry.info/Elements/m/statementOfResponsibilityRelatingToTitleProper General" data-templates="General">
+              <tr id="responsibility_statement" data-search="responsibility_statement Mención de responsabilidad rdam:statementOfResponsibilityRelatingToTitleProper http://rdaregistry.info/Elements/m/statementOfResponsibilityRelatingToTitleProper General" data-templates="General" data-code="responsibility_statement" data-label="Mención de responsabilidad" data-uri="http://rdaregistry.info/Elements/m/statementOfResponsibilityRelatingToTitleProper" data-predicate="rdam:statementOfResponsibilityRelatingToTitleProper" data-template="General">
                 <td><a href="#responsibility_statement">#</a></td>
                 <td><code>responsibility_statement</code></td>
                 <td>Mención de responsabilidad</td>
@@ -1403,7 +1365,7 @@
                 <td>rdam:statementOfResponsibilityRelatingToTitleProper</td>
                 <td>General</td>
               </tr>
-              <tr id="reviewer" data-search="reviewer Lector/revisor Lector/Revisor bf2:Reviewer &lt;http://bibfra.me/vocab/relation/reviewer&gt; http://id.loc.gov/ontologies/bibframe/Reviewer General" data-templates="General">
+              <tr id="reviewer" data-search="reviewer Lector/revisor Lector/Revisor bf2:Reviewer &lt;http://bibfra.me/vocab/relation/reviewer&gt; http://id.loc.gov/ontologies/bibframe/Reviewer General" data-templates="General" data-code="reviewer" data-label="Lector/revisor" data-uri="http://id.loc.gov/ontologies/bibframe/Reviewer" data-predicate="bf2:Reviewer" data-template="General">
                 <td><a href="#reviewer">#</a></td>
                 <td><code>reviewer</code></td>
                 <td>Lector/revisor<br>Lector/Revisor</td>
@@ -1411,7 +1373,7 @@
                 <td>bf2:Reviewer<br>&lt;http://bibfra.me/vocab/relation/reviewer&gt;</td>
                 <td>General</td>
               </tr>
-              <tr id="rights_statement" data-search="rights_statement  EDM.rights  General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto">
+              <tr id="rights_statement" data-search="rights_statement  EDM.rights  General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto" data-code="rights_statement" data-label="rights_statement" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#rights_statement" data-predicate="EDM.rights" data-template="General">
                 <td><a href="#rights_statement">#</a></td>
                 <td><code>rights_statement</code></td>
                 <td>rights_statement</td>
@@ -1419,7 +1381,7 @@
                 <td>EDM.rights</td>
                 <td>General<br>General - Incluidos por defecto</td>
               </tr>
-              <tr id="scale" data-search="scale Escala rdae:scale  Mapas" data-templates="Mapas">
+              <tr id="scale" data-search="scale Escala rdae:scale  Mapas" data-templates="Mapas" data-code="scale" data-label="Escala" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#scale" data-predicate="rdae:scale" data-template="Mapas">
                 <td><a href="#scale">#</a></td>
                 <td><code>scale</code></td>
                 <td>Escala</td>
@@ -1427,7 +1389,7 @@
                 <td>rdae:scale</td>
                 <td>Mapas</td>
               </tr>
-              <tr id="source" data-search="source Fuente dc:source DC.source http://purl.org/dc/terms/source General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto">
+              <tr id="source" data-search="source Fuente dc:source DC.source http://purl.org/dc/terms/source General General - Incluidos por defecto" data-templates="General||General - Incluidos por defecto" data-code="source" data-label="Fuente" data-uri="http://purl.org/dc/terms/source" data-predicate="dc:source" data-template="General">
                 <td><a href="#source">#</a></td>
                 <td><code>source</code></td>
                 <td>Fuente</td>
@@ -1435,7 +1397,7 @@
                 <td>dc:source<br>DC.source</td>
                 <td>General<br>General - Incluidos por defecto</td>
               </tr>
-              <tr id="source_consulted" data-search="source consulted  rdaz:sourceConsulted.en http://rdaregistry.info/Elements/z/sourceConsulted.en Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX">
+              <tr id="source_consulted" data-search="source consulted  rdaz:sourceConsulted.en http://rdaregistry.info/Elements/z/sourceConsulted.en Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX" data-code="source consulted" data-label="source consulted" data-uri="http://rdaregistry.info/Elements/z/sourceConsulted.en" data-predicate="rdaz:sourceConsulted.en" data-template="Analiticas de Revistas COLMEX">
                 <td><a href="#source_consulted">#</a></td>
                 <td><code>source consulted</code></td>
                 <td>source consulted</td>
@@ -1443,7 +1405,7 @@
                 <td>rdaz:sourceConsulted.en</td>
                 <td>Analiticas de Revistas COLMEX</td>
               </tr>
-              <tr id="speaker_agent_of" data-search="speaker_agent_of Conferencista/ponente rdaa:speakerAgentOf http://rdaregistry.info/Elements/a/speakerAgentOf Tesis jurisprudenciales" data-templates="Tesis jurisprudenciales">
+              <tr id="speaker_agent_of" data-search="speaker_agent_of Conferencista/ponente rdaa:speakerAgentOf http://rdaregistry.info/Elements/a/speakerAgentOf Tesis jurisprudenciales" data-templates="Tesis jurisprudenciales" data-code="speaker_agent_of" data-label="Conferencista/ponente" data-uri="http://rdaregistry.info/Elements/a/speakerAgentOf" data-predicate="rdaa:speakerAgentOf" data-template="Tesis jurisprudenciales">
                 <td><a href="#speaker_agent_of">#</a></td>
                 <td><code>speaker_agent_of</code></td>
                 <td>Conferencista/ponente</td>
@@ -1451,7 +1413,7 @@
                 <td>rdaa:speakerAgentOf</td>
                 <td>Tesis jurisprudenciales</td>
               </tr>
-              <tr id="subject" data-search="subject Tema topico Tema Topico rdaw:subjectRelationship http://rdaregistry.info/Elements/w/subjectRelationship t General" data-templates="t||General">
+              <tr id="subject" data-search="subject Tema topico Tema Topico rdaw:subjectRelationship http://rdaregistry.info/Elements/w/subjectRelationship t General" data-templates="t||General" data-code="subject" data-label="Tema topico" data-uri="http://rdaregistry.info/Elements/w/subjectRelationship" data-predicate="rdaw:subjectRelationship" data-template="t">
                 <td><a href="#subject">#</a></td>
                 <td><code>subject</code></td>
                 <td>Tema topico<br>Tema Topico</td>
@@ -1459,7 +1421,7 @@
                 <td>rdaw:subjectRelationship</td>
                 <td>t<br>General</td>
               </tr>
-              <tr id="subject_conacyt" data-search="subject_conacyt  rdaw:intendedAudience RDAW.intendedAudience http://rdaregistry.info/Elements/w/intendedAudience Conacyt" data-templates="Conacyt">
+              <tr id="subject_conacyt" data-search="subject_conacyt  rdaw:intendedAudience RDAW.intendedAudience http://rdaregistry.info/Elements/w/intendedAudience Conacyt" data-templates="Conacyt" data-code="subject_conacyt" data-label="subject_conacyt" data-uri="http://rdaregistry.info/Elements/w/intendedAudience" data-predicate="rdaw:intendedAudience" data-template="Conacyt">
                 <td><a href="#subject_conacyt">#</a></td>
                 <td><code>subject_conacyt</code></td>
                 <td>subject_conacyt</td>
@@ -1467,7 +1429,7 @@
                 <td>rdaw:intendedAudience<br>RDAW.intendedAudience</td>
                 <td>Conacyt</td>
               </tr>
-              <tr id="subject_corporate" data-search="subject_corporate Tema autor corporativo Temas rdaw:subjectCorporateBody http://rdaregistry.info/Elements/w/subjectCorporateBody General" data-templates="General">
+              <tr id="subject_corporate" data-search="subject_corporate Tema autor corporativo Temas rdaw:subjectCorporateBody http://rdaregistry.info/Elements/w/subjectCorporateBody General" data-templates="General" data-code="subject_corporate" data-label="Tema autor corporativo" data-uri="http://rdaregistry.info/Elements/w/subjectCorporateBody" data-predicate="rdaw:subjectCorporateBody" data-template="General">
                 <td><a href="#subject_corporate">#</a></td>
                 <td><code>subject_corporate</code></td>
                 <td>Tema autor corporativo<br>Temas</td>
@@ -1475,7 +1437,7 @@
                 <td>rdaw:subjectCorporateBody</td>
                 <td>General</td>
               </tr>
-              <tr id="subject_family" data-search="subject_family Tema familia rdaw:subjectFamily http://rdaregistry.info/Elements/w/subjectFamily General" data-templates="General">
+              <tr id="subject_family" data-search="subject_family Tema familia rdaw:subjectFamily http://rdaregistry.info/Elements/w/subjectFamily General" data-templates="General" data-code="subject_family" data-label="Tema familia" data-uri="http://rdaregistry.info/Elements/w/subjectFamily" data-predicate="rdaw:subjectFamily" data-template="General">
                 <td><a href="#subject_family">#</a></td>
                 <td><code>subject_family</code></td>
                 <td>Tema familia</td>
@@ -1483,7 +1445,7 @@
                 <td>rdaw:subjectFamily</td>
                 <td>General</td>
               </tr>
-              <tr id="subject_person" data-search="subject_person Tema persona rdaw:subjectPerson http://rdaregistry.info/Elements/w/subjectPerson General" data-templates="General">
+              <tr id="subject_person" data-search="subject_person Tema persona rdaw:subjectPerson http://rdaregistry.info/Elements/w/subjectPerson General" data-templates="General" data-code="subject_person" data-label="Tema persona" data-uri="http://rdaregistry.info/Elements/w/subjectPerson" data-predicate="rdaw:subjectPerson" data-template="General">
                 <td><a href="#subject_person">#</a></td>
                 <td><code>subject_person</code></td>
                 <td>Tema persona</td>
@@ -1491,7 +1453,7 @@
                 <td>rdaw:subjectPerson</td>
                 <td>General</td>
               </tr>
-              <tr id="subject_timespan" data-search="subject_timespan Tema del hecho criminal rdaw.subjectTimeSpan  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="subject_timespan" data-search="subject_timespan Tema del hecho criminal rdaw.subjectTimeSpan  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="subject_timespan" data-label="Tema del hecho criminal" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#subject_timespan" data-predicate="rdaw.subjectTimeSpan" data-template="Arquetipo Documentos Legales">
                 <td><a href="#subject_timespan">#</a></td>
                 <td><code>subject_timespan</code></td>
                 <td>Tema del hecho criminal</td>
@@ -1499,7 +1461,7 @@
                 <td>rdaw.subjectTimeSpan</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="subject_uniform_title" data-search="subject_uniform_title Tema título uniforme rdaw:subjectUniformTitle http://rdaregistry.info/Elements/w/subjectUniformTitle General" data-templates="General">
+              <tr id="subject_uniform_title" data-search="subject_uniform_title Tema título uniforme rdaw:subjectUniformTitle http://rdaregistry.info/Elements/w/subjectUniformTitle General" data-templates="General" data-code="subject_uniform_title" data-label="Tema título uniforme" data-uri="http://rdaregistry.info/Elements/w/subjectUniformTitle" data-predicate="rdaw:subjectUniformTitle" data-template="General">
                 <td><a href="#subject_uniform_title">#</a></td>
                 <td><code>subject_uniform_title</code></td>
                 <td>Tema título uniforme</td>
@@ -1507,7 +1469,7 @@
                 <td>rdaw:subjectUniformTitle</td>
                 <td>General</td>
               </tr>
-              <tr id="subject_work" data-search="subject_work Tema obra rdaw:subjectWork http://rdaregistry.info/Elements/w/subjectWork General" data-templates="General">
+              <tr id="subject_work" data-search="subject_work Tema obra rdaw:subjectWork http://rdaregistry.info/Elements/w/subjectWork General" data-templates="General" data-code="subject_work" data-label="Tema obra" data-uri="http://rdaregistry.info/Elements/w/subjectWork" data-predicate="rdaw:subjectWork" data-template="General">
                 <td><a href="#subject_work">#</a></td>
                 <td><code>subject_work</code></td>
                 <td>Tema obra</td>
@@ -1515,7 +1477,7 @@
                 <td>rdaw:subjectWork</td>
                 <td>General</td>
               </tr>
-              <tr id="summary" data-search="Summary Resumen rdae:summarizationOfTheContent  General" data-templates="General">
+              <tr id="summary" data-search="Summary Resumen rdae:summarizationOfTheContent  General" data-templates="General" data-code="Summary" data-label="Resumen" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#summary" data-predicate="rdae:summarizationOfTheContent" data-template="General">
                 <td><a href="#summary">#</a></td>
                 <td><code>Summary</code></td>
                 <td>Resumen</td>
@@ -1523,7 +1485,7 @@
                 <td>rdae:summarizationOfTheContent</td>
                 <td>General</td>
               </tr>
-              <tr id="summary_of_work" data-search="summary_of_work Resumen del proyecto rdaw:summaryOfWork http://rdaregistry.info/Elements/w/summaryOfWork Bases de datos" data-templates="Bases de datos">
+              <tr id="summary_of_work" data-search="summary_of_work Resumen del proyecto rdaw:summaryOfWork http://rdaregistry.info/Elements/w/summaryOfWork Bases de datos" data-templates="Bases de datos" data-code="summary_of_work" data-label="Resumen del proyecto" data-uri="http://rdaregistry.info/Elements/w/summaryOfWork" data-predicate="rdaw:summaryOfWork" data-template="Bases de datos">
                 <td><a href="#summary_of_work">#</a></td>
                 <td><code>summary_of_work</code></td>
                 <td>Resumen del proyecto</td>
@@ -1531,7 +1493,7 @@
                 <td>rdaw:summaryOfWork</td>
                 <td>Bases de datos</td>
               </tr>
-              <tr id="supplementary_content_or_bibliography" data-search="supplementary_content_or_bibliography Contenido suplementario/Bibliografía rdae:summarizationOfTheContent  General" data-templates="General">
+              <tr id="supplementary_content_or_bibliography" data-search="supplementary_content_or_bibliography Contenido suplementario/Bibliografía rdae:summarizationOfTheContent  General" data-templates="General" data-code="supplementary_content_or_bibliography" data-label="Contenido suplementario/Bibliografía" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#supplementary_content_or_bibliography" data-predicate="rdae:summarizationOfTheContent" data-template="General">
                 <td><a href="#supplementary_content_or_bibliography">#</a></td>
                 <td><code>supplementary_content_or_bibliography</code></td>
                 <td>Contenido suplementario/Bibliografía</td>
@@ -1539,7 +1501,7 @@
                 <td>rdae:summarizationOfTheContent</td>
                 <td>General</td>
               </tr>
-              <tr id="system_requirements" data-search="system_requirements Requerimientos de sistema rdam:equipmentOrSystemRequirement http://rdaregistry.info/Elements/m/equipmentOrSystemRequirement General Tesis" data-templates="General||Tesis">
+              <tr id="system_requirements" data-search="system_requirements Requerimientos de sistema rdam:equipmentOrSystemRequirement http://rdaregistry.info/Elements/m/equipmentOrSystemRequirement General Tesis" data-templates="General||Tesis" data-code="system_requirements" data-label="Requerimientos de sistema" data-uri="http://rdaregistry.info/Elements/m/equipmentOrSystemRequirement" data-predicate="rdam:equipmentOrSystemRequirement" data-template="General">
                 <td><a href="#system_requirements">#</a></td>
                 <td><code>system_requirements</code></td>
                 <td>Requerimientos de sistema</td>
@@ -1547,7 +1509,7 @@
                 <td>rdam:equipmentOrSystemRequirement</td>
                 <td>General<br>Tesis</td>
               </tr>
-              <tr id="table_of_contents" data-search="table_of_contents Contenido Tabla de contenidos bf:tableOfContents rdaw:wholePartWorkRelationship http://rdaregistry.info/Elements/w/wholePartWorkRelationship General" data-templates="General">
+              <tr id="table_of_contents" data-search="table_of_contents Contenido Tabla de contenidos bf:tableOfContents rdaw:wholePartWorkRelationship http://rdaregistry.info/Elements/w/wholePartWorkRelationship General" data-templates="General" data-code="table_of_contents" data-label="Contenido" data-uri="http://rdaregistry.info/Elements/w/wholePartWorkRelationship" data-predicate="bf:tableOfContents" data-template="General">
                 <td><a href="#table_of_contents">#</a></td>
                 <td><code>table_of_contents</code></td>
                 <td>Contenido<br>Tabla de contenidos</td>
@@ -1555,7 +1517,7 @@
                 <td>bf:tableOfContents<br>rdaw:wholePartWorkRelationship</td>
                 <td>General</td>
               </tr>
-              <tr id="temporal_coverage" data-search="Temporal coverage Cobertura Temporal BF2.temporalCoverage rdaw:coverageOfTheContent http://rdaregistry.info/Elements/w/coverageOfTheContent General" data-templates="General">
+              <tr id="temporal_coverage" data-search="Temporal coverage Cobertura Temporal BF2.temporalCoverage rdaw:coverageOfTheContent http://rdaregistry.info/Elements/w/coverageOfTheContent General" data-templates="General" data-code="Temporal coverage" data-label="Cobertura Temporal" data-uri="http://rdaregistry.info/Elements/w/coverageOfTheContent" data-predicate="BF2.temporalCoverage" data-template="General">
                 <td><a href="#temporal_coverage">#</a></td>
                 <td><code>Temporal coverage</code></td>
                 <td>Cobertura Temporal</td>
@@ -1563,7 +1525,7 @@
                 <td>BF2.temporalCoverage<br>rdaw:coverageOfTheContent</td>
                 <td>General</td>
               </tr>
-              <tr id="temporary_coverage" data-search="temporary_coverage Cobertura temporal bf2:temporalCoverage http://id.loc.gov/ontologies/bibframe/temporalCoverage General" data-templates="General">
+              <tr id="temporary_coverage" data-search="temporary_coverage Cobertura temporal bf2:temporalCoverage http://id.loc.gov/ontologies/bibframe/temporalCoverage General" data-templates="General" data-code="temporary_coverage" data-label="Cobertura temporal" data-uri="http://id.loc.gov/ontologies/bibframe/temporalCoverage" data-predicate="bf2:temporalCoverage" data-template="General">
                 <td><a href="#temporary_coverage">#</a></td>
                 <td><code>temporary_coverage</code></td>
                 <td>Cobertura temporal</td>
@@ -1571,7 +1533,7 @@
                 <td>bf2:temporalCoverage</td>
                 <td>General</td>
               </tr>
-              <tr id="thematic_collection" data-search="thematic_collection Colección tematica bf2:collection http://id.loc.gov/ontologies/bibframe/collection General" data-templates="General">
+              <tr id="thematic_collection" data-search="thematic_collection Colección tematica bf2:collection http://id.loc.gov/ontologies/bibframe/collection General" data-templates="General" data-code="thematic_collection" data-label="Colección tematica" data-uri="http://id.loc.gov/ontologies/bibframe/collection" data-predicate="bf2:collection" data-template="General">
                 <td><a href="#thematic_collection">#</a></td>
                 <td><code>thematic_collection</code></td>
                 <td>Colección tematica</td>
@@ -1579,7 +1541,7 @@
                 <td>bf2:collection</td>
                 <td>General</td>
               </tr>
-              <tr id="themes" data-search="Themes Temas rdaw:subjectCorporateBody http://rdaregistry.info/Elements/w/subjectCorporateBody General" data-templates="General">
+              <tr id="themes" data-search="Themes Temas rdaw:subjectCorporateBody http://rdaregistry.info/Elements/w/subjectCorporateBody General" data-templates="General" data-code="Themes" data-label="Temas" data-uri="http://rdaregistry.info/Elements/w/subjectCorporateBody" data-predicate="rdaw:subjectCorporateBody" data-template="General">
                 <td><a href="#themes">#</a></td>
                 <td><code>Themes</code></td>
                 <td>Temas</td>
@@ -1587,7 +1549,7 @@
                 <td>rdaw:subjectCorporateBody</td>
                 <td>General</td>
               </tr>
-              <tr id="timespan_described_in" data-search="timespan_described_in Descripción de hechos rdat:timespanDescribedIn  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="timespan_described_in" data-search="timespan_described_in Descripción de hechos rdat:timespanDescribedIn  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="timespan_described_in" data-label="Descripción de hechos" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#timespan_described_in" data-predicate="rdat:timespanDescribedIn" data-template="Arquetipo Documentos Legales">
                 <td><a href="#timespan_described_in">#</a></td>
                 <td><code>timespan_described_in</code></td>
                 <td>Descripción de hechos</td>
@@ -1595,7 +1557,7 @@
                 <td>rdat:timespanDescribedIn</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="title" data-search="title Título rdam:titleProper http://rdaregistry.info/Elements/m/titleProper General" data-templates="General">
+              <tr id="title" data-search="title Título rdam:titleProper http://rdaregistry.info/Elements/m/titleProper General" data-templates="General" data-code="title" data-label="Título" data-uri="http://rdaregistry.info/Elements/m/titleProper" data-predicate="rdam:titleProper" data-template="General">
                 <td><a href="#title">#</a></td>
                 <td><code>title</code></td>
                 <td>Título</td>
@@ -1603,7 +1565,7 @@
                 <td>rdam:titleProper</td>
                 <td>General</td>
               </tr>
-              <tr id="title_of_series" data-search="title_of_series Serie rdam: hasTitleOfSeries http://rdaregistry.info/Elements/m/hasTitleOfSeries Arquetipo Libros/Capitulos" data-templates="Arquetipo Libros/Capitulos">
+              <tr id="title_of_series" data-search="title_of_series Serie rdam: hasTitleOfSeries http://rdaregistry.info/Elements/m/hasTitleOfSeries Arquetipo Libros/Capitulos" data-templates="Arquetipo Libros/Capitulos" data-code="title_of_series" data-label="Serie" data-uri="http://rdaregistry.info/Elements/m/hasTitleOfSeries" data-predicate="rdam: hasTitleOfSeries" data-template="Arquetipo Libros/Capitulos">
                 <td><a href="#title_of_series">#</a></td>
                 <td><code>title_of_series</code></td>
                 <td>Serie</td>
@@ -1611,7 +1573,7 @@
                 <td>rdam: hasTitleOfSeries</td>
                 <td>Arquetipo Libros/Capitulos</td>
               </tr>
-              <tr id="translator" data-search="translator Traductor rdaa:isTranslatorAgentOf http://rdaregistry.info/Elements/a/isTranslatorAgentOf General" data-templates="General">
+              <tr id="translator" data-search="translator Traductor rdaa:isTranslatorAgentOf http://rdaregistry.info/Elements/a/isTranslatorAgentOf General" data-templates="General" data-code="translator" data-label="Traductor" data-uri="http://rdaregistry.info/Elements/a/isTranslatorAgentOf" data-predicate="rdaa:isTranslatorAgentOf" data-template="General">
                 <td><a href="#translator">#</a></td>
                 <td><code>translator</code></td>
                 <td>Traductor</td>
@@ -1619,7 +1581,7 @@
                 <td>rdaa:isTranslatorAgentOf</td>
                 <td>General</td>
               </tr>
-              <tr id="type_of_content" data-search="Type of content Tipo de contenido   General" data-templates="General">
+              <tr id="type_of_content" data-search="Type of content Tipo de contenido   General" data-templates="General" data-code="Type of content" data-label="Tipo de contenido" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#type_of_content" data-predicate="" data-template="General">
                 <td><a href="#type_of_content">#</a></td>
                 <td><code>Type of content</code></td>
                 <td>Tipo de contenido</td>
@@ -1627,7 +1589,7 @@
                 <td></td>
                 <td>General</td>
               </tr>
-              <tr id="type_conacyt" data-search="type_conacyt  dc:type DC.type http://purl.org/dc/terms/type Conacyt" data-templates="Conacyt">
+              <tr id="type_conacyt" data-search="type_conacyt  dc:type DC.type http://purl.org/dc/terms/type Conacyt" data-templates="Conacyt" data-code="type_conacyt" data-label="type_conacyt" data-uri="http://purl.org/dc/terms/type" data-predicate="dc:type" data-template="Conacyt">
                 <td><a href="#type_conacyt">#</a></td>
                 <td><code>type_conacyt</code></td>
                 <td>type_conacyt</td>
@@ -1635,7 +1597,7 @@
                 <td>dc:type<br>DC.type</td>
                 <td>Conacyt</td>
               </tr>
-              <tr id="type_of_file" data-search="type_of_file Tipo de archivo rdam:fileType http://rdaregistry.info/Elements/m/fileType General (No Programar) Tesis" data-templates="General (No Programar)||Tesis">
+              <tr id="type_of_file" data-search="type_of_file Tipo de archivo rdam:fileType http://rdaregistry.info/Elements/m/fileType General (No Programar) Tesis" data-templates="General (No Programar)||Tesis" data-code="type_of_file" data-label="Tipo de archivo" data-uri="http://rdaregistry.info/Elements/m/fileType" data-predicate="rdam:fileType" data-template="General (No Programar)">
                 <td><a href="#type_of_file">#</a></td>
                 <td><code>type_of_file</code></td>
                 <td>Tipo de archivo</td>
@@ -1643,7 +1605,7 @@
                 <td>rdam:fileType</td>
                 <td>General (No Programar)<br>Tesis</td>
               </tr>
-              <tr id="type_of_illustrations" data-search="type_of_illustrations Tipo de Ilustraciones rdae:illustrativeContent  General" data-templates="General">
+              <tr id="type_of_illustrations" data-search="type_of_illustrations Tipo de Ilustraciones rdae:illustrativeContent  General" data-templates="General" data-code="type_of_illustrations" data-label="Tipo de Ilustraciones" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#type_of_illustrations" data-predicate="rdae:illustrativeContent" data-template="General">
                 <td><a href="#type_of_illustrations">#</a></td>
                 <td><code>type_of_illustrations</code></td>
                 <td>Tipo de Ilustraciones</td>
@@ -1651,7 +1613,7 @@
                 <td>rdae:illustrativeContent</td>
                 <td>General</td>
               </tr>
-              <tr id="type_of_thesis" data-search="type_of_thesis Tipo de tesis rdaw:dissertationOrThesisInformation http://rdaregistry.info/Elements/w/dissertationOrThesisInformation Tesis" data-templates="Tesis">
+              <tr id="type_of_thesis" data-search="type_of_thesis Tipo de tesis rdaw:dissertationOrThesisInformation http://rdaregistry.info/Elements/w/dissertationOrThesisInformation Tesis" data-templates="Tesis" data-code="type_of_thesis" data-label="Tipo de tesis" data-uri="http://rdaregistry.info/Elements/w/dissertationOrThesisInformation" data-predicate="rdaw:dissertationOrThesisInformation" data-template="Tesis">
                 <td><a href="#type_of_thesis">#</a></td>
                 <td><code>type_of_thesis</code></td>
                 <td>Tipo de tesis</td>
@@ -1659,7 +1621,7 @@
                 <td>rdaw:dissertationOrThesisInformation</td>
                 <td>Tesis</td>
               </tr>
-              <tr id="use_restrictions" data-search="use_restrictions p Restricción de uso del recurso rdam:restrictionsOnUseOfManifestation http://rdaregistry.info/Elements/m/restrictionsOnUseOfManifestation Tesis" data-templates="Tesis">
+              <tr id="use_restrictions" data-search="use_restrictions p Restricción de uso del recurso rdam:restrictionsOnUseOfManifestation http://rdaregistry.info/Elements/m/restrictionsOnUseOfManifestation Tesis" data-templates="Tesis" data-code="use_restrictions" data-label="p" data-uri="http://rdaregistry.info/Elements/m/restrictionsOnUseOfManifestation" data-predicate="rdam:restrictionsOnUseOfManifestation" data-template="Tesis">
                 <td><a href="#use_restrictions">#</a></td>
                 <td><code>use_restrictions</code></td>
                 <td>p<br>Restricción de uso del recurso</td>
@@ -1667,7 +1629,7 @@
                 <td>rdam:restrictionsOnUseOfManifestation</td>
                 <td>Tesis</td>
               </tr>
-              <tr id="video_characteristic" data-search="video_characteristic Características del video rdam:hasVideoCharacteristic http://rdaregistry.info/Elements/m/hasVideoCharacteristic Videos" data-templates="Videos">
+              <tr id="video_characteristic" data-search="video_characteristic Características del video rdam:hasVideoCharacteristic http://rdaregistry.info/Elements/m/hasVideoCharacteristic Videos" data-templates="Videos" data-code="video_characteristic" data-label="Características del video" data-uri="http://rdaregistry.info/Elements/m/hasVideoCharacteristic" data-predicate="rdam:hasVideoCharacteristic" data-template="Videos">
                 <td><a href="#video_characteristic">#</a></td>
                 <td><code>video_characteristic</code></td>
                 <td>Características del video</td>
@@ -1675,7 +1637,7 @@
                 <td>rdam:hasVideoCharacteristic</td>
                 <td>Videos</td>
               </tr>
-              <tr id="video_format" data-search="video_format Formato del video rdam:hasVideoFormat http://rdaregistry.info/Elements/m/hasVideoFormat Videos" data-templates="Videos">
+              <tr id="video_format" data-search="video_format Formato del video rdam:hasVideoFormat http://rdaregistry.info/Elements/m/hasVideoFormat Videos" data-templates="Videos" data-code="video_format" data-label="Formato del video" data-uri="http://rdaregistry.info/Elements/m/hasVideoFormat" data-predicate="rdam:hasVideoFormat" data-template="Videos">
                 <td><a href="#video_format">#</a></td>
                 <td><code>video_format</code></td>
                 <td>Formato del video</td>
@@ -1683,7 +1645,7 @@
                 <td>rdam:hasVideoFormat</td>
                 <td>Videos</td>
               </tr>
-              <tr id="volume" data-search="volume Volumen rdam:numberingOfSerials http://rdaregistry.info/Elements/m/numberingOfSerials Arquetipo Analíticas Tipo 2" data-templates="Arquetipo Analíticas Tipo 2">
+              <tr id="volume" data-search="volume Volumen rdam:numberingOfSerials http://rdaregistry.info/Elements/m/numberingOfSerials Arquetipo Analíticas Tipo 2" data-templates="Arquetipo Analíticas Tipo 2" data-code="volume" data-label="Volumen" data-uri="http://rdaregistry.info/Elements/m/numberingOfSerials" data-predicate="rdam:numberingOfSerials" data-template="Arquetipo Analíticas Tipo 2">
                 <td><a href="#volume">#</a></td>
                 <td><code>volume</code></td>
                 <td>Volumen</td>
@@ -1691,7 +1653,7 @@
                 <td>rdam:numberingOfSerials</td>
                 <td>Arquetipo Analíticas Tipo 2</td>
               </tr>
-              <tr id="volumen" data-search="volumen Volúmen &quot;has numbering of serials&quot; rdam:numberingOfSerials http://rdaregistry.info/Elements/m/numberingOfSerials Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX">
+              <tr id="volumen" data-search="volumen Volúmen &quot;has numbering of serials&quot; rdam:numberingOfSerials http://rdaregistry.info/Elements/m/numberingOfSerials Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX" data-code="volumen" data-label="Volúmen" data-uri="http://rdaregistry.info/Elements/m/numberingOfSerials" data-predicate="rdam:numberingOfSerials" data-template="Analiticas de Revistas COLMEX">
                 <td><a href="#volumen">#</a></td>
                 <td><code>volumen</code></td>
                 <td>Volúmen<br>&quot;has numbering of serials&quot;</td>
@@ -1699,7 +1661,7 @@
                 <td>rdam:numberingOfSerials</td>
                 <td>Analiticas de Revistas COLMEX</td>
               </tr>
-              <tr id="witness" data-search="witness Testigo MARCRelators:witness  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales">
+              <tr id="witness" data-search="witness Testigo MARCRelators:witness  Arquetipo Documentos Legales" data-templates="Arquetipo Documentos Legales" data-code="witness" data-label="Testigo" data-uri="https://biblioteca.colmex.mx/esquemas/metadatos#witness" data-predicate="MARCRelators:witness" data-template="Arquetipo Documentos Legales">
                 <td><a href="#witness">#</a></td>
                 <td><code>witness</code></td>
                 <td>Testigo</td>
@@ -1707,7 +1669,7 @@
                 <td>MARCRelators:witness</td>
                 <td>Arquetipo Documentos Legales</td>
               </tr>
-              <tr id="writer_of_suplementary_textual_content" data-search="writer_of_suplementary_textual_content Prologuista rdaa:isWriterOfSuplementaryTextualContent http://rdaregistry.info/Elements/a/isWriterOfSuplementaryTextualContent General" data-templates="General">
+              <tr id="writer_of_suplementary_textual_content" data-search="writer_of_suplementary_textual_content Prologuista rdaa:isWriterOfSuplementaryTextualContent http://rdaregistry.info/Elements/a/isWriterOfSuplementaryTextualContent General" data-templates="General" data-code="writer_of_suplementary_textual_content" data-label="Prologuista" data-uri="http://rdaregistry.info/Elements/a/isWriterOfSuplementaryTextualContent" data-predicate="rdaa:isWriterOfSuplementaryTextualContent" data-template="General">
                 <td><a href="#writer_of_suplementary_textual_content">#</a></td>
                 <td><code>writer_of_suplementary_textual_content</code></td>
                 <td>Prologuista</td>
@@ -1715,7 +1677,7 @@
                 <td>rdaa:isWriterOfSuplementaryTextualContent</td>
                 <td>General</td>
               </tr>
-              <tr id="year" data-search="year Año &quot;has chronological designation of first issue or part of sequence&quot; rdam:chronologicalDesignationOfFirstIssueOrPartOfSequence http://rdaregistry.info/Elements/m/chronologicalDesignationOfFirstIssueOrPartOfSequence Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX">
+              <tr id="year" data-search="year Año &quot;has chronological designation of first issue or part of sequence&quot; rdam:chronologicalDesignationOfFirstIssueOrPartOfSequence http://rdaregistry.info/Elements/m/chronologicalDesignationOfFirstIssueOrPartOfSequence Analiticas de Revistas COLMEX" data-templates="Analiticas de Revistas COLMEX" data-code="year" data-label="Año" data-uri="http://rdaregistry.info/Elements/m/chronologicalDesignationOfFirstIssueOrPartOfSequence" data-predicate="rdam:chronologicalDesignationOfFirstIssueOrPartOfSequence" data-template="Analiticas de Revistas COLMEX">
                 <td><a href="#year">#</a></td>
                 <td><code>year</code></td>
                 <td>Año<br>&quot;has chronological designation of first issue or part of sequence&quot;</td>

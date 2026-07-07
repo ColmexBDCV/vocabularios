@@ -271,28 +271,34 @@ tbody tr:last-child td {
   width: 280px;
 }
 
-.th-filter {
-  display: grid;
-  gap: 8px;
-}
-
-.th-filter span {
-  font-weight: 700;
-}
-
-.th-filter select {
-  width: 100%;
-  min-height: 34px;
-  border: 1px solid #c8d0d8;
-  border-radius: 6px;
-  background: var(--surface);
-  color: var(--text);
-  font: inherit;
-  font-size: 0.9rem;
-}
-
 .uri-cell a {
   overflow-wrap: anywhere;
+}
+
+.sort-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+}
+
+.sort-button span {
+  color: #9aa3aa;
+  font-size: 1rem;
+}
+
+.sort-button:hover span,
+.sort-button:focus span {
+  color: var(--accent);
 }
 
 .table-footer {

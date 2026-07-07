@@ -5,14 +5,15 @@
   const tbody = table.querySelector("tbody");
   const rows = Array.from(tbody.querySelectorAll("tr"));
   const searchInput = document.querySelector("[data-table-search]");
-  const templateFilter = document.querySelector("[data-template-filter]");
-  const templateSort = document.querySelector("[data-template-sort]");
+  const sortButtons = Array.from(document.querySelectorAll("[data-sort-column]"));
   const pageSizeSelect = document.querySelector("[data-page-size]");
   const summary = document.querySelector("[data-table-summary]");
   const currentPageEl = document.querySelector("[data-page-current]");
   const prevButton = document.querySelector("[data-page-prev]");
   const nextButton = document.querySelector("[data-page-next]");
   let currentPage = 1;
+  let sortColumn = "";
+  let sortDirection = "asc";
 
   function normalized(value) {
     return (value || "").toString().trim().toLowerCase();
@@ -25,20 +26,16 @@
 
   function filteredRows() {
     const query = normalized(searchInput && searchInput.value);
-    const template = templateFilter ? templateFilter.value : "";
-    const sortDirection = templateSort ? templateSort.value : "";
     const result = rows.filter((row) => {
       const matchesQuery = !query || normalized(row.dataset.search).includes(query);
-      const rowTemplates = row.dataset.templates || "";
-      const matchesTemplate = !template || rowTemplates.split("||").includes(template);
-      return matchesQuery && matchesTemplate;
+      return matchesQuery;
     });
 
-    if (sortDirection) {
+    if (sortColumn) {
       result.sort((a, b) => {
-        const aTemplate = normalized((a.dataset.templates || "").split("||")[0]);
-        const bTemplate = normalized((b.dataset.templates || "").split("||")[0]);
-        const comparison = aTemplate.localeCompare(bTemplate, "es", { sensitivity: "base" });
+        const aValue = normalized(a.dataset[sortColumn]);
+        const bValue = normalized(b.dataset[sortColumn]);
+        const comparison = aValue.localeCompare(bValue, "es", { sensitivity: "base" });
         return sortDirection === "desc" ? -comparison : comparison;
       });
     }
@@ -75,14 +72,37 @@
     if (nextButton) nextButton.disabled = currentPage >= totalPages;
   }
 
+  function updateSortButtons() {
+    sortButtons.forEach((button) => {
+      const active = button.dataset.sortColumn === sortColumn;
+      button.dataset.sortDirection = active ? sortDirection : "";
+      const icon = button.querySelector("span");
+      if (icon) {
+        icon.textContent = active ? (sortDirection === "asc" ? "↑" : "↓") : "↕";
+      }
+      button.setAttribute("aria-sort", active ? (sortDirection === "asc" ? "ascending" : "descending") : "none");
+    });
+  }
+
   function resetAndRender() {
     currentPage = 1;
     render();
   }
 
   if (searchInput) searchInput.addEventListener("input", resetAndRender);
-  if (templateFilter) templateFilter.addEventListener("change", resetAndRender);
-  if (templateSort) templateSort.addEventListener("change", resetAndRender);
+  sortButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const nextColumn = button.dataset.sortColumn;
+      if (sortColumn === nextColumn) {
+        sortDirection = sortDirection === "asc" ? "desc" : "asc";
+      } else {
+        sortColumn = nextColumn;
+        sortDirection = "asc";
+      }
+      updateSortButtons();
+      resetAndRender();
+    });
+  });
   if (pageSizeSelect) pageSizeSelect.addEventListener("change", resetAndRender);
   if (prevButton) {
     prevButton.addEventListener("click", () => {
@@ -97,5 +117,6 @@
     });
   }
 
+  updateSortButtons();
   render();
 })();
