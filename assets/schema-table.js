@@ -64,7 +64,7 @@
     if (summary) {
       const first = visible.length ? start + 1 : 0;
       const last = Math.min(end, visible.length);
-      summary.textContent = `Mostrando ${first} a ${last} de ${visible.length} campos`;
+      summary.textContent = `Showing ${first} to ${last} of ${visible.length} entries`;
     }
 
     if (currentPageEl) currentPageEl.textContent = String(currentPage);
