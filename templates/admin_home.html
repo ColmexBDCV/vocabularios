@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Administración{% endblock %}
+{% block content %}
+  <div class="page-heading">
+    <div>
+      <h1>Administración</h1>
+      <p>Sesión iniciada como {{ session.get("username") }}.</p>
+    </div>
+  </div>
+
+  <section class="admin-grid" aria-label="Opciones de administración">
+    <a class="admin-card" href="{{ admin_path('/fields') }}">
+      <span class="admin-card-label">Esquema de metadatos</span>
+      <strong>Administrar campos</strong>
+      <span>Revisar, crear, editar o eliminar campos publicados en el esquema.</span>
+    </a>
+
+    <a class="admin-card" href="{{ admin_path('/fields/new') }}">
+      <span class="admin-card-label">Nuevo registro</span>
+      <strong>Crear campo</strong>
+      <span>Agregar un campo con URI, plantilla, predicado, MARC y notas.</span>
+    </a>
+
+    <a class="admin-card" href="/vocabularios/esquemas/metadatos/">
+      <span class="admin-card-label">Vista pública</span>
+      <strong>Ver esquema publicado</strong>
+      <span>Comprobar cómo se muestran los campos a las personas usuarias.</span>
+    </a>
+
+    <a class="admin-card" href="{{ admin_path('/password') }}">
+      <span class="admin-card-label">Cuenta</span>
+      <strong>Cambiar contraseña</strong>
+      <span>Actualizar la contraseña del usuario administrador.</span>
+    </a>
+  </section>
+{% endblock %}

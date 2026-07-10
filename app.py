@@ -94,7 +94,7 @@ def create_app() -> Flask:
         session["user_id"] = user["id"]
         session["username"] = user["username"]
         session["csrf_token"] = secrets.token_urlsafe(32)
-        return redirect(admin_path("/fields"))
+        return redirect(admin_path(""))
 
     @app.post("/vocabularios/logout")
     @app.post("/logout")
@@ -139,7 +139,7 @@ def create_app() -> Flask:
     @app.get("/admin")
     @login_required
     def admin_index():
-        return redirect(admin_path("/fields"))
+        return render_template("admin_home.html")
 
     @app.get("/vocabularios/admin/fields")
     @app.get("/admin/fields")

@@ -13,7 +13,7 @@
       <nav>
         <a href="/vocabularios/esquemas/metadatos/">Público</a>
         {% if session.get("user_id") %}
-          <a href="{{ admin_path('/fields') }}">Administrar</a>
+          <a href="{{ admin_path('') }}">Administrar</a>
           <a href="{{ admin_path('/password') }}">Cambiar contraseña</a>
           <form action="{{ auth_path('/logout') }}" method="post">
             <button type="submit">Salir</button>

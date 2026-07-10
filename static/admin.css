@@ -150,6 +150,45 @@ textarea {
   align-items: center;
 }
 
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.admin-card {
+  display: grid;
+  gap: 8px;
+  min-height: 168px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  padding: 22px;
+  text-decoration: none;
+}
+
+.admin-card:hover,
+.admin-card:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.admin-card-label {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.admin-card strong {
+  font-size: 1.35rem;
+}
+
+.admin-card span:last-child {
+  color: var(--muted);
+}
+
 .delete-form {
   margin-top: 24px;
 }
@@ -257,6 +296,24 @@ code {
   justify-content: space-between;
   gap: 20px;
   margin: 20px 0 16px;
+}
+
+@media (max-width: 760px) {
+  .admin-grid,
+  .two-col,
+  .flags {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar,
+  .page-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .topbar nav {
+    flex-wrap: wrap;
+  }
 }
 
 .table-controls label {
