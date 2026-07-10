@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Administrar campos{% endblock %}
+{% block content %}
+  <div class="page-heading">
+    <div>
+      <h1>Campos de metadatos</h1>
+      <p>{{ fields|length }} campos en la base de datos.</p>
+    </div>
+    <a class="button" href="{{ admin_path('/fields/new') }}">Nuevo campo</a>
+  </div>
+  <div class="table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>Campo Hyrax (código)</th>
+          <th>Descriptores</th>
+          <th>Predicados</th>
+          <th>Plantilla</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for field in fields %}
+          <tr>
+            <td><code>{{ field.code }}</code></td>
+            <td>{{ field.labels[0] if field.labels else "" }}</td>
+            <td>{{ field.predicates[0] if field.predicates else "" }}</td>
+            <td>{{ field.templates|join(", ") }}</td>
+            <td><a href="{{ admin_field_path(field.id, '/edit') }}">Editar</a></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

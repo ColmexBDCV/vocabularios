@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Esquema de metadatos</title>
+    <link rel="stylesheet" href="/vocabularios/assets/vocabularios.css">
+    <script src="/vocabularios/assets/schema-table.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <a class="site-logo" href="/vocabularios/" aria-label="Biblioteca Daniel Cosío Villegas">
+        <img src="/vocabularios/assets/biblioteca-dcv-cm-rojo.png" alt="Biblioteca Daniel Cosío Villegas, abierta a todo público">
+      </a>
+
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+        <span>Usted está aquí:</span>
+        <a href="/vocabularios/">Catálogo público de vocabularios locales</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Esquema de metadatos</span>
+      </nav>
+
+      <header class="page-header">
+        <h1>Esquema de metadatos</h1>
+        <dl class="metadata">
+          <div>
+            <dt>Namespace</dt>
+            <dd><code>{{ schema_base }}#</code></dd>
+          </div>
+          <div>
+            <dt>Fecha de emisión</dt>
+            <dd>{{ issued }}</dd>
+          </div>
+          <div>
+            <dt>Mantenedor</dt>
+            <dd>{{ maintainer }}</dd>
+          </div>
+        </dl>
+        <ul class="inline-links">
+          <li><a href="/vocabularios/esquemas/metadatos.json">JSON</a></li>
+          <li><a href="/vocabularios/esquemas/metadatos.jsonld">JSON-LD</a></li>
+        </ul>
+      </header>
+
+      <section class="description-block" aria-labelledby="description">
+        <h2 id="description">Descripción</h2>
+        <p>Este esquema publica los campos de metadatos utilizados en las plantillas de la Biblioteca Daniel Cosío Villegas para apoyar el mapeo de columnas CSV, hojas de cálculo y otros datos externos hacia términos documentados. Incluye códigos Hyrax, etiquetas, predicados, equivalencias MARC, plantillas aplicables y notas de uso.</p>
+      </section>
+
+      <section aria-labelledby="fields">
+        <h2 id="fields">Campos publicados</h2>
+        <div class="table-controls" data-schema-controls>
+          <label>
+            Show
+            <select data-page-size>
+              <option value="10">10</option>
+              <option value="25" selected>25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="all">Todos</option>
+            </select>
+            entries
+          </label>
+          <label>
+            Search:
+            <input type="search" data-table-search>
+          </label>
+        </div>
+        <div class="table-wrap">
+          <table class="schema-table" data-schema-table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th><button type="button" class="sort-button" data-sort-column="code">Código <span aria-hidden="true">↕</span></button></th>
+                <th><button type="button" class="sort-button" data-sort-column="label">Etiqueta <span aria-hidden="true">↕</span></button></th>
+                <th><button type="button" class="sort-button" data-sort-column="uri">URI <span aria-hidden="true">↕</span></button></th>
+                <th><button type="button" class="sort-button" data-sort-column="predicate">Predicado <span aria-hidden="true">↕</span></button></th>
+                <th><button type="button" class="sort-button" data-sort-column="template">Plantillas <span aria-hidden="true">↕</span></button></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for field in fields %}
+                {% set row_id = field.code|lower|replace(' ', '_') %}
+                {% set label_text = field.labels|join(' ') %}
+                {% set uri_text = field.uris|join(' ') %}
+                {% set predicate_text = field.predicates|join(' ') %}
+                {% set template_text = field.templates|join(' ') %}
+                <tr id="{{ row_id }}" data-search="{{ field.code }} {{ label_text }} {{ predicate_text }} {{ uri_text }} {{ template_text }}" data-templates="{{ field.templates|join('||') }}" data-code="{{ field.code }}" data-label="{{ field.labels[0] if field.labels else field.code }}" data-uri="{{ field.uris[0] if field.uris else '' }}" data-predicate="{{ field.predicates[0] if field.predicates else '' }}" data-template="{{ field.templates[0] if field.templates else '' }}">
+                  <td><a href="#{{ row_id }}">#</a></td>
+                  <td><code>{{ field.code }}</code></td>
+                  <td>
+                    {% if field.labels %}
+                      {% for label in field.labels %}{{ label }}{% if not loop.last %}<br>{% endif %}{% endfor %}
+                    {% else %}
+                      {{ field.code }}
+                    {% endif %}
+                  </td>
+                  <td class="uri-cell">
+                    {% for uri in field.uris %}
+                      <a href="{{ uri }}" title="{{ uri }}">Ver URI</a>{% if not loop.last %}<br>{% endif %}
+                    {% endfor %}
+                  </td>
+                  <td>
+                    {% for predicate in field.predicates %}{{ predicate }}{% if not loop.last %}<br>{% endif %}{% endfor %}
+                  </td>
+                  <td>
+                    {% for template in field.templates %}{{ template }}{% if not loop.last %}<br>{% endif %}{% endfor %}
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <div class="table-footer" data-schema-footer>
+          <p data-table-summary></p>
+          <nav class="pagination" aria-label="Paginación de campos">
+            <button type="button" data-page-prev>Previous</button>
+            <span data-page-current>1</span>
+            <button type="button" data-page-next>Next</button>
+          </nav>
+        </div>
+      </section>
+
+      <footer class="license-block" aria-labelledby="license">
+        <img src="/vocabularios/assets/cc0-1-0-deed.png" alt="CC0 1.0 Deed, CC0 1.0 Universal">
+        <div>
+          <h2 id="license">Licencia</h2>
+          <p>Este esquema se publica bajo CC0 1.0 Universal. La institución renuncia, en la medida permitida por la ley, a los derechos de autor y derechos conexos sobre las definiciones, etiquetas y archivos de este esquema, con el fin de facilitar su reutilización, interoperabilidad y preservación.</p>
+        </div>
+      </footer>
+
+      <footer class="institution-footer" aria-label="Información institucional">
+        <img src="/vocabularios/assets/colmex-footer.png" alt="El Colegio de México. Conocimiento, Ciencia y Cultura">
+        <p>El Colegio de México A.C. | Carretera Picacho Ajusco No. 20 | Ampliación Fuentes del Pedregal | Alcaldía Tlalpan | C.P. 14110 | Ciudad de México, México</p>
+        <p><a href="https://maps.app.goo.gl/dbJocSaUdQ79G5XJA">Cómo llegar</a></p>
+        <p class="contact-line"><span>5255 5449-3000 ext. 2121 y 2122</span><span><a href="mailto:biblio2@colmex.mx">biblio2@colmex.mx</a></span><span>Lun-Vie 8:30-20:30</span></p>
+      </footer>
+    </main>
+  </body>
+</html>

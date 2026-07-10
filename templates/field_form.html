@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %}Editar campo{% endblock %}
+{% block content %}
+  <section class="panel">
+    <h1>{{ "Nuevo campo" if not field.id else "Editar campo" }}</h1>
+    <form method="post" action="{{ action }}" class="form two-col">
+      <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+      <label>
+        URI del campo
+        <input type="url" name="id" value="{{ field.id }}" required {% if field.id %}readonly{% endif %}>
+      </label>
+      <label>
+        Campo Hyrax (código)
+        <input name="code" value="{{ field.code }}" required>
+      </label>
+      <label>
+        Descriptores
+        <input name="labels" value="{{ field.labels[0] if field.labels else '' }}" required>
+      </label>
+      <label>
+        Plantilla
+        <input name="templates" value="{{ field.templates[0] if field.templates else '' }}" required>
+      </label>
+      <label>
+        Predicados
+        <input name="predicates" value="{{ field.predicates[0] if field.predicates else '' }}" required>
+      </label>
+      <label>
+        URI de predicado
+        <input type="url" name="uris" value="{{ field.uris[0] if field.uris else '' }}" required>
+      </label>
+      <label>
+        MARC
+        <input name="marc" value="{{ field.marc[0] if field.marc else '' }}" required>
+      </label>
+      <label>
+        Notas
+        <textarea name="notes">{{ field.notes|join("\n") }}</textarea>
+      </label>
+      <label class="wide">
+        Descripción para mapeo con IA
+        <textarea name="aiUseDescription" rows="5" required>{{ field.aiUseDescription }}</textarea>
+      </label>
+      <label class="wide">
+        Términos de coincidencia para IA
+        <textarea name="matchTerms" required>{{ field.mappingHints.matchTerms|default([])|join("\n") }}</textarea>
+      </label>
+      <div class="wide flags">
+        <label>Multiple?
+          <select name="multiple" required>
+            <option value="" {{ "selected" if field.multiple is none else "" }} disabled>Seleccione</option>
+            <option value="true" {{ "selected" if field.multiple is true else "" }}>Sí</option>
+            <option value="false" {{ "selected" if field.multiple is false else "" }}>No</option>
+          </select>
+        </label>
+        <label>Obligatorio para el sistema
+          <select name="required" required>
+            <option value="" {{ "selected" if field.required is none else "" }} disabled>Seleccione</option>
+            <option value="true" {{ "selected" if field.required is true else "" }}>Sí</option>
+            <option value="false" {{ "selected" if field.required is false else "" }}>No</option>
+          </select>
+        </label>
+        <label>En uso
+          <select name="inUse" required>
+            <option value="" {{ "selected" if field.inUse is none else "" }} disabled>Seleccione</option>
+            <option value="true" {{ "selected" if field.inUse is true else "" }}>Sí</option>
+            <option value="false" {{ "selected" if field.inUse is false else "" }}>No</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-actions wide">
+        <button type="submit">Guardar</button>
+        <a href="{{ admin_path('/fields') }}">Cancelar</a>
+      </div>
+    </form>
+    {% if field.id %}
+      <form method="post" action="{{ admin_field_path(field.id, '/delete') }}" class="delete-form">
+        <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+        <button type="submit">Eliminar campo</button>
+      </form>
+    {% endif %}
+  </section>
+{% endblock %}

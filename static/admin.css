@@ -1,0 +1,441 @@
+:root {
+  --background: #f7f7f4;
+  --surface: #ffffff;
+  --text: #1e2328;
+  --muted: #5e6871;
+  --line: #d8ddd8;
+  --accent: #7a163f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--accent);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+  padding: 14px 24px;
+}
+
+.brand {
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.topbar nav {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.topbar form {
+  margin: 0;
+}
+
+.topbar button,
+.button,
+.form-actions button {
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 64px;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+}
+
+p {
+  color: var(--muted);
+}
+
+.panel,
+.table-card,
+.messages {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 20px;
+}
+
+.narrow {
+  max-width: 440px;
+}
+
+.messages {
+  margin-bottom: 20px;
+}
+
+.messages p {
+  margin: 0;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid #c8d0d8;
+  border-radius: 6px;
+  font: inherit;
+  padding: 10px;
+}
+
+textarea {
+  min-height: 96px;
+}
+
+.flags {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.delete-form {
+  margin-top: 24px;
+}
+
+.delete-form button {
+  border: 1px solid #b42318;
+  border-radius: 6px;
+  background: #fff;
+  color: #b42318;
+  cursor: pointer;
+  font: inherit;
+  padding: 8px 12px;
+}
+
+.table-card {
+  overflow-x: auto;
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--line);
+  padding: 13px 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: var(--muted);
+}
+
+code {
+  overflow-wrap: anywhere;
+}
+
+.site-logo {
+  display: block;
+  width: min(720px, 100%);
+  margin-bottom: 36px;
+}
+
+.site-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.page-header {
+  margin-bottom: 40px;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.metadata {
+  display: grid;
+  gap: 14px;
+  margin: 20px 0 0;
+}
+
+.metadata div {
+  display: grid;
+  gap: 4px;
+}
+
+.metadata dt {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.metadata dd {
+  margin: 0;
+}
+
+.description-block p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.inline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  padding: 0;
+  margin: 16px 0 0;
+  list-style: none;
+}
+
+.table-controls {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 20px 0 16px;
+}
+
+.table-controls label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  font-weight: 400;
+}
+
+.table-controls select,
+.table-controls input {
+  min-height: 40px;
+  border: 1px solid #c8d0d8;
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+.table-controls select {
+  padding: 0 34px 0 10px;
+}
+
+.table-controls input {
+  width: 260px;
+  padding: 0 10px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.schema-table {
+  min-width: 1180px;
+}
+
+.schema-table thead th {
+  border-bottom: 2px solid #1e2328 !important;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.schema-table th:first-child,
+.schema-table td:first-child {
+  width: 48px;
+}
+
+.schema-table th:nth-child(2),
+.schema-table td:nth-child(2) {
+  width: 190px;
+}
+
+.schema-table th:nth-child(3),
+.schema-table td:nth-child(3) {
+  width: 260px;
+}
+
+.schema-table th:nth-child(4),
+.schema-table td:nth-child(4) {
+  width: 140px;
+}
+
+.schema-table th:nth-child(6),
+.schema-table td:nth-child(6) {
+  width: 280px;
+}
+
+.uri-cell a {
+  overflow-wrap: anywhere;
+}
+
+.sort-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+}
+
+.sort-button span {
+  color: #9aa3aa;
+  flex: 0 0 auto;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.sort-button:hover span,
+.sort-button:focus span {
+  color: var(--accent);
+}
+
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.table-footer p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.pagination {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pagination button,
+.pagination span {
+  min-width: 42px;
+  min-height: 38px;
+  border: 1px solid #c8d0d8;
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+.pagination button {
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  color: #9aa3aa;
+  background: #f0f1f2;
+}
+
+.pagination span {
+  display: grid;
+  place-items: center;
+  border-color: var(--text);
+}
+
+.links {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 760px) {
+  .topbar,
+  .page-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .two-col,
+  .flags {
+    grid-template-columns: 1fr;
+  }
+
+  .table-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .table-controls input {
+    width: 100%;
+  }
+
+  .table-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

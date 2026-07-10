@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Esquema de metadatos{% endblock %}</title>
+    <link rel="stylesheet" href="/vocabularios/static/admin.css">
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/vocabularios/esquemas/metadatos/">Esquema de metadatos</a>
+      <nav>
+        <a href="/vocabularios/esquemas/metadatos/">Público</a>
+        {% if session.get("user_id") %}
+          <a href="{{ admin_path('/fields') }}">Administrar</a>
+          <a href="{{ admin_path('/password') }}">Cambiar contraseña</a>
+          <form action="{{ auth_path('/logout') }}" method="post">
+            <button type="submit">Salir</button>
+          </form>
+        {% else %}
+          <a href="{{ auth_path('/login') }}">Ingresar</a>
+        {% endif %}
+      </nav>
+    </header>
+    <main class="page">
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div class="messages">
+            {% for message in messages %}
+              <p>{{ message }}</p>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+      {% block content %}{% endblock %}
+    </main>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>
